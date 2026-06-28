@@ -1,221 +1,1649 @@
 [
-  {"barcode": "737628006504", "name": "Quest Chocolate Chip Cookie Dough", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "737628006511", "name": "Quest Chocolate Brownie", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "737628006535", "name": "Quest Cookies & Cream", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "737628006542", "name": "Quest S'mores", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "737628006559", "name": "Quest Blueberry Muffin", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "737628006566", "name": "Quest Double Chocolate Chunk", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "737628006573", "name": "Quest Peanut Butter Supreme", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "737628006580", "name": "Quest White Chocolate Raspberry", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "737628006597", "name": "Quest Oatmeal Chocolate Chip", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "737628006603", "name": "Quest Mint Chocolate Chunk", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "737628006610", "name": "Quest Chocolate Peanut Butter", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "737628006627", "name": "Quest Birthday Cake", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "737628006634", "name": "Quest Lemon Cake", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "737628006641", "name": "Quest Maple Waffle", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "737628006658", "name": "Quest Rocky Road", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "850046331012", "name": "RXBAR Chocolate Sea Salt", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "850046331029", "name": "RXBAR Peanut Butter", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "850046331036", "name": "RXBAR Blueberry", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "850046331043", "name": "RXBAR Coconut Chocolate", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "850046331050", "name": "RXBAR Mixed Berry", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "850046331067", "name": "RXBAR Pumpkin Spice", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "850046331074", "name": "RXBAR Apple Cinnamon", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "850046331081", "name": "RXBAR Coffee Chocolate", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "850046331098", "name": "RXBAR Vanilla Almond", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "662425074225", "name": "ONE Birthday Cake", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "662425074232", "name": "ONE Maple Glazed Doughnut", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "662425074249", "name": "ONE Chocolate Chip Cookie Dough", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "662425074256", "name": "ONE Almond Bliss", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "662425074263", "name": "ONE Peanut Butter Pie", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "662425074270", "name": "ONE Blueberry Cobbler", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "662425074287", "name": "ONE Lemon Cake", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "662425074294", "name": "ONE S'mores", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "662425074300", "name": "ONE Cinnamon Roll", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "662425074317", "name": "ONE Chocolate Brownie", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "788434107816", "name": "Pure Protein Chocolate Deluxe", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "788434107823", "name": "Pure Protein Chewy Chocolate Chip", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "788434107830", "name": "Pure Protein Peanut Butter", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "788434107847", "name": "Pure Protein Strawberry Greek Yogurt", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "788434107854", "name": "Pure Protein Chocolate Peanut Butter", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "722252060432", "name": "Clif Builder's Chocolate", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "722252060449", "name": "Clif Builder's Chocolate Peanut Butter", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "722252060456", "name": "Clif Builder's Cookies 'n Cream", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "722252060463", "name": "Clif Builder's Vanilla Almond", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "722252060470", "name": "Clif Builder's Mint Chocolate", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "602652170012", "name": "think! High Protein Brownie Crunch", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "602652170029", "name": "think! High Protein Chocolate Fudge", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "602652170036", "name": "think! High Protein Lemon Delight", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "602652170043", "name": "think! High Protein Cookies & Creme", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "602652170050", "name": "think! High Protein White Chocolate", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "021908600012", "name": "Kind Protein Crunchy Peanut Butter", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "021908600029", "name": "Kind Protein Dark Chocolate Nut", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "021908600036", "name": "Kind Protein Almond Butter Dark Chocolate", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "021908600043", "name": "Kind Protein Caramel Almond Sea Salt", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "021908600050", "name": "Kind Protein Breakfast Peanut Butter Dark Chocolate", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "038000137016", "name": "Special K Protein Meal Bar Chocolate Caramel", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "038000137023", "name": "Special K Protein Meal Bar Strawberry", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "038000137030", "name": "Special K Protein Meal Bar Chocolate Peanut Butter", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "016000461012", "name": "Nature Valley Protein Peanut Butter Dark Chocolate", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "016000461029", "name": "Nature Valley Protein Salted Caramel Nut", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "016000461036", "name": "Nature Valley Protein Coconut Almond", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "016000461043", "name": "Nature Valley Protein Honey Peanut Almond", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "041220933012", "name": "Premier Protein Chocolate Peanut Butter", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "041220933029", "name": "Premier Protein Cookies & Cream", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "041220933036", "name": "Premier Protein Chocolate Mint", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "041220933043", "name": "Premier Protein Cinnamon Roll", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "041220933050", "name": "Premier Protein Birthday Cake", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "041220933067", "name": "Premier Protein Lemon Bar", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "041220933074", "name": "Premier Protein Strawberries & Cream", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "041220933081", "name": "Premier Protein Peanut Butter", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "041220933098", "name": "Premier Protein Chocolate Caramel", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "052000338012", "name": "Gatorade Whey Protein Bar Chocolate Chip", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "052000338029", "name": "Gatorade Whey Protein Bar Cookies and Crème", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "052000338036", "name": "Gatorade Whey Protein Bar Mint Chocolate Crunch", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "052000338043", "name": "Gatorade Whey Protein Bar S'mores", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "096619814012", "name": "Kirkland Signature Protein Bar Chocolate Brownie", "category": "protein_bar", "retailer": "Costco"},
-  {"barcode": "096619814029", "name": "Kirkland Signature Protein Bar Chocolate Chip Cookie Dough", "category": "protein_bar", "retailer": "Costco"},
-  {"barcode": "096619814036", "name": "Kirkland Signature Protein Bar Peanut Butter Chunk", "category": "protein_bar", "retailer": "Costco"},
-  {"barcode": "096619814043", "name": "Kirkland Signature Protein Bar Cookies & Cream", "category": "protein_bar", "retailer": "Costco"},
-  {"barcode": "096619814050", "name": "Kirkland Signature Protein Bar Birthday Cake", "category": "protein_bar", "retailer": "Costco"},
-  {"barcode": "810026890012", "name": "Barebells Caramel Cashew", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "810026890029", "name": "Barebells Hazelnut & Nougat", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "810026890036", "name": "Barebells Cookies & Cream", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "810026890043", "name": "Barebells Salty Peanut", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "810026890050", "name": "Barebells White Chocolate Almond", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "810026890067", "name": "Barebells Creamy Crisp", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "810026890074", "name": "Barebells Peanut Caramel", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "854856007012", "name": "Perfect Bar Dark Chocolate Chip Peanut Butter", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "854856007029", "name": "Perfect Bar Peanut Butter", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "854856007036", "name": "Perfect Bar Almond Butter", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "854856007043", "name": "Perfect Bar Coconut Peanut Butter", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "854856007050", "name": "Perfect Bar Chocolate Hazelnut Crisp", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "854856007067", "name": "Perfect Bar Snickerdoodle", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "854856007074", "name": "Perfect Bar Salted Caramel", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "854856007081", "name": "Perfect Bar Dark Chocolate Almond", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "894700010012", "name": "Chobani Non-Fat Plain Greek Yogurt", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "894700010029", "name": "Chobani Non-Fat Vanilla Greek Yogurt", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "894700010036", "name": "Chobani Non-Fat Strawberry Greek Yogurt", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "894700010043", "name": "Chobani Non-Fat Blueberry Greek Yogurt", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "894700010050", "name": "Chobani Non-Fat Peach Greek Yogurt", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "894700010067", "name": "Chobani Non-Fat Black Cherry Greek Yogurt", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "894700010074", "name": "Chobani Non-Fat Raspberry Greek Yogurt", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "894700010081", "name": "Chobani Non-Fat Mango Greek Yogurt", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "894700010098", "name": "Chobani Non-Fat Mixed Berry Greek Yogurt", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "894700010104", "name": "Chobani Zero Sugar Plain", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "894700010111", "name": "Chobani Zero Sugar Vanilla", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "894700010128", "name": "Chobani Zero Sugar Mixed Berry", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "894700010135", "name": "Chobani Complete Vanilla", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "894700010142", "name": "Chobani Complete Strawberry", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "894700010159", "name": "Chobani Complete Mixed Berry Vanilla", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "689544773829", "name": "Fage Total 0% Plain Greek Yogurt", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "689544773836", "name": "Fage Total 2% Plain Greek Yogurt", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "689544773843", "name": "Fage Total 5% Plain Greek Yogurt", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "689544773850", "name": "Fage Total 0% Split Cup Honey", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "689544773867", "name": "Fage Total 0% Split Cup Strawberry", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "689544773874", "name": "Fage Total 0% Split Cup Blueberry", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "689544773881", "name": "Fage Total 0% Split Cup Cherry", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "689544773898", "name": "Fage Total 0% Split Cup Peach", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "689544773904", "name": "Fage TruBlend Plain", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "689544773911", "name": "Fage TruBlend Strawberry", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "689544773928", "name": "Fage TruBlend Blueberry", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "689544773935", "name": "Fage TruBlend Vanilla", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "689544773942", "name": "Fage Total 0% Plain Large", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "689544773959", "name": "Fage Crossovers Coconut Curry", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "689544773966", "name": "Fage Crossovers Olive Thyme", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "036632013012", "name": "Oikos Triple Zero Plain", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "036632013029", "name": "Oikos Triple Zero Vanilla", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "036632013036", "name": "Oikos Triple Zero Strawberry", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "036632013043", "name": "Oikos Triple Zero Blueberry", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "036632013050", "name": "Oikos Triple Zero Peach", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "036632013067", "name": "Oikos Triple Zero Mixed Berry", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "036632013074", "name": "Oikos Pro Plain", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "036632013081", "name": "Oikos Pro Vanilla", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "036632013098", "name": "Oikos Pro Strawberry", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "036632013104", "name": "Oikos Pro Peach", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "036632013111", "name": "Oikos Pro Mixed Berry", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "036632013128", "name": "Oikos Nonfat Plain", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "036632013135", "name": "Oikos Nonfat Vanilla", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "036632013142", "name": "Oikos Nonfat Strawberry", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "036632013159", "name": "Oikos Nonfat Blueberry", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "019012210012", "name": "Siggi's Plain Non-Fat Yogurt", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "019012210029", "name": "Siggi's Vanilla Non-Fat Yogurt", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "019012210036", "name": "Siggi's Strawberry Non-Fat Yogurt", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "019012210043", "name": "Siggi's Blueberry Non-Fat Yogurt", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "019012210050", "name": "Siggi's Raspberry Non-Fat Yogurt", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "019012210067", "name": "Siggi's Peach Non-Fat Yogurt", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "019012210074", "name": "Siggi's Mixed Berries Non-Fat Yogurt", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "019012210081", "name": "Siggi's Coconut Non-Fat Yogurt", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "019012210098", "name": "Siggi's Pumpkin & Spice Non-Fat Yogurt", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "019012210104", "name": "Siggi's Plain Whole Milk Yogurt", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "019012210111", "name": "Siggi's Vanilla Whole Milk Yogurt", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "019012210128", "name": "Siggi's Strawberry Whole Milk Yogurt", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "019012210135", "name": "Siggi's Blueberry Whole Milk Yogurt", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "019012210142", "name": "Siggi's Raspberry Whole Milk Yogurt", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "019012210159", "name": "Siggi's Mixed Berries Whole Milk Yogurt", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "036000488012", "name": "Two Good Plain Greek Yogurt", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "036000488029", "name": "Two Good Vanilla Greek Yogurt", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "036000488036", "name": "Two Good Strawberry Greek Yogurt", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "036000488043", "name": "Two Good Mixed Berry Greek Yogurt", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "036000488050", "name": "Two Good Peach Greek Yogurt", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "036000488067", "name": "Two Good Blueberry Greek Yogurt", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "036000488074", "name": "Two Good Raspberry Greek Yogurt", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "036000488081", "name": "Two Good Coconut Greek Yogurt", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "036000488098", "name": "Two Good Key Lime Greek Yogurt", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "036000488104", "name": "Two Good Black Cherry Greek Yogurt", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "096619813012", "name": "Kirkland Signature Organic Greek Yogurt Plain", "category": "greek_yogurt", "retailer": "Costco"},
-  {"barcode": "096619813029", "name": "Kirkland Signature Organic Greek Yogurt Vanilla", "category": "greek_yogurt", "retailer": "Costco"},
-  {"barcode": "096619813036", "name": "Kirkland Signature Organic Greek Yogurt Strawberry", "category": "greek_yogurt", "retailer": "Costco"},
-  {"barcode": "096619813043", "name": "Kirkland Signature Organic Greek Yogurt Blueberry", "category": "greek_yogurt", "retailer": "Costco"},
-  {"barcode": "096619813050", "name": "Kirkland Signature Organic Greek Yogurt Honey", "category": "greek_yogurt", "retailer": "Costco"},
-  {"barcode": "052159004012", "name": "Stonyfield Organic Greek Plain", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "052159004029", "name": "Stonyfield Organic Greek Vanilla", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "052159004036", "name": "Stonyfield Organic Greek Strawberry", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "052159004043", "name": "Stonyfield Organic Greek Blueberry", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "052159004050", "name": "Stonyfield Organic Greek Peach", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "052159004067", "name": "Stonyfield Organic Greek Raspberry", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "052159004074", "name": "Stonyfield Organic Greek Cherry", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "052159004081", "name": "Stonyfield Organic Greek Black Cherry", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "052159004098", "name": "Stonyfield Organic Greek Mixed Berry", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "052159004104", "name": "Stonyfield Organic Greek Honey", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "070470001012", "name": "Yoplait Greek 100 Protein Plain", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "070470001029", "name": "Yoplait Greek 100 Protein Vanilla", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "070470001036", "name": "Yoplait Greek 100 Protein Strawberry", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "070470001043", "name": "Yoplait Greek 100 Protein Mixed Berry", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "070470001050", "name": "Yoplait Greek 100 Protein Peach", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "070470001067", "name": "Yoplait Greek 100 Protein Cherry", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "070470001074", "name": "Yoplait Greek 100 Protein Coconut", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "070470001081", "name": "Yoplait Greek 100 Protein Raspberry", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "070470001098", "name": "Yoplait Greek 100 Protein Blueberry", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "070470001104", "name": "Yoplait Greek 100 Protein Black Cherry", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "818290012012", "name": "Ratio Protein Yogurt Vanilla", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "818290012029", "name": "Ratio Protein Yogurt Strawberry", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "818290012036", "name": "Ratio Protein Yogurt Coconut", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "818290012043", "name": "Ratio Protein Yogurt Mango", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "818290012050", "name": "Ratio Protein Yogurt Blueberry", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "818290012067", "name": "Ratio Protein Yogurt Mixed Berry", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "818290012074", "name": "Ratio Protein Yogurt Key Lime", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "818290012081", "name": "Ratio Protein Yogurt Peach", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "818290012098", "name": "Ratio Protein Yogurt Black Cherry", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "818290012104", "name": "Ratio Protein Yogurt Raspberry", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "300340013012", "name": "Light & Fit Greek Plain", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "300340013029", "name": "Light & Fit Greek Vanilla", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "300340013036", "name": "Light & Fit Greek Strawberry", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "300340013043", "name": "Light & Fit Greek Blueberry", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "300340013050", "name": "Light & Fit Greek Peach", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "300340013067", "name": "Light & Fit Greek Mixed Berry", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "300340013074", "name": "Light & Fit Greek Cherry", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "300340013081", "name": "Light & Fit Greek Raspberry", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "300340013098", "name": "Light & Fit Greek Coconut", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "300340013104", "name": "Light & Fit Greek Key Lime", "category": "greek_yogurt", "retailer": "Target"},
-  {"barcode": "757528040012", "name": "Power Crunch Protein Energy Bar Original", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "757528040029", "name": "Power Crunch Protein Energy Bar Peanut Butter Fudge", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "757528040036", "name": "Power Crunch Protein Energy Bar French Vanilla Creme", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "757528040043", "name": "Power Crunch Protein Energy Bar Triple Chocolate", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "757528040050", "name": "Power Crunch Protein Energy Bar Cookies & Creme", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "757528040067", "name": "Power Crunch Protein Energy Bar Strawberry Creme", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "757528040074", "name": "Power Crunch Protein Energy Bar Red Velvet", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "757528040081", "name": "Power Crunch Protein Energy Bar Salted Fudge", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "757528040098", "name": "Power Crunch Protein Energy Bar Cinnamon Roll", "category": "protein_bar", "retailer": "Target"},
-  {"barcode": "757528040104", "name": "Power Crunch Protein Energy Bar Peanut Butter Creme", "category": "protein_bar", "retailer": "Target"}
+  {
+    "barcode": "0888849000012",
+    "name": "Chocolate Chip Cookie Dough",
+    "category": "protein_bar",
+    "countries": [
+      "en:france",
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849000005",
+    "name": "Cookies & Cream Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:france",
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849004621",
+    "name": "Oatmeal Chocolate Chip Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:france",
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849000432",
+    "name": "QuestBar Protein Bar Cinnamon Roll",
+    "category": "protein_bar",
+    "countries": [
+      "en:france",
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849000456",
+    "name": "Chocolate Peanut Butter",
+    "category": "protein_bar",
+    "countries": [
+      "en:france",
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849014217",
+    "name": "Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849000210",
+    "name": "WHITE CHOCOLATE RASPBERRY PROTEIN BAR",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849000173",
+    "name": "Cookies & Cream Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:canada",
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849010936",
+    "name": "CHOCOLATE PEANUT BUTTER",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849001224",
+    "name": "S'mores Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849005956",
+    "name": "Birthday Cake Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:france",
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849003860",
+    "name": "Cookies & Cream Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:france",
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0793573238474",
+    "name": "Bar Cookies & Cream",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849000418",
+    "name": "Quest Chocolate Brownie Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:bolivia",
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849005406",
+    "name": "Quest Crispy Protein Bar Chocolate Caramel Pecan",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849005994",
+    "name": "Protein Cookie Chocolate Chip",
+    "category": "protein_bar",
+    "countries": [
+      "en:belgium",
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849011582",
+    "name": "Crispy Cookies and Cream",
+    "category": "protein_bar",
+    "countries": [
+      "en:germany",
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0822249000005",
+    "name": "Protein Bar, Cookies & Cream",
+    "category": "protein_bar",
+    "countries": [
+      "en:italy",
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849000036",
+    "name": "CHOCOLATE CHIP COOKIE DOUGH",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849000630",
+    "name": "Apple Pie",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849004614",
+    "name": "Blueberry Muffin Flavored Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:france",
+      "en:luxembourg",
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849003853",
+    "name": "Chocolate Chip Cookie Dough Flavored Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849003891",
+    "name": "S'MORES Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849009305",
+    "name": "Chocolate Chip Cookie Dough Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849010943",
+    "name": "Chocolate Peanut Butter Crispy Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849015153",
+    "name": "CRISPY PROTEIN BAR BIRTHDAY CAKE FLAVORED",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849015788",
+    "name": "Overload Protein Bar Chocolate Explosion",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849001231",
+    "name": "S'MORES",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849001354",
+    "name": "Mint Chocolate Chunk Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:france",
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849000425",
+    "name": "Chocolate brownie flavor protein bars",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849003907",
+    "name": "Chocolate Peanut Butter Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849005178",
+    "name": "Oatmeal Chocolate Chip Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849011117",
+    "name": "Protein Bar, Oatmeal Chocolate Chip",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "88885100",
+    "name": "Quest Blueberry Cobbler Hero Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849010554",
+    "name": "Hero Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849007646",
+    "name": "peppermint bark Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849012732",
+    "name": "Protein bars",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0822249010936",
+    "name": "Hero Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0822249003877",
+    "name": "White Chocolate Raspberry Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849015818",
+    "name": "Overload Sundae Funday Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0377463354354",
+    "name": "Protein Bar, Cookies & Cream",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0793573214539",
+    "name": "Chocolate Chip Cookie Dough",
+    "category": "protein_bar",
+    "countries": [
+      "en:bolivia",
+      "en:france",
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0793573238467",
+    "name": "Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849000029",
+    "name": "Cookies & Cream Protein Bars",
+    "category": "protein_bar",
+    "countries": [
+      "en:france",
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849000241",
+    "name": "Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849000494",
+    "name": "protein bar, vanilla almond crunch",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849000739",
+    "name": "Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849001378",
+    "name": "Mint chocolate chunk protein bars",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849005222",
+    "name": "Blueberry Muffin Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:france",
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849006373",
+    "name": "Maple waffle protein bar, maple waffle",
+    "category": "protein_bar",
+    "countries": [
+      "en:france",
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849007677",
+    "name": "Pumpkin Pie Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849000647",
+    "name": "Protein bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:france",
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849008650",
+    "name": "Chocolate Sprinkled Doughnut",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849006397",
+    "name": "Peanut butter brownie smash protein bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849000463",
+    "name": "Chocolate peanut butter protein bar, chocolate peanut butter",
+    "category": "protein_bar",
+    "countries": [
+      "en:spain",
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849008490",
+    "name": "quest protein bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849003884",
+    "name": "Mint Chocolate Chunk Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849003877",
+    "name": "WHITE CHOCOLATE RASPBERRY PROTEIN BAR",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849006687",
+    "name": "Birthday cake protein bar, birthday cake",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849006151",
+    "name": "CRISPY CHOCOLATE CARAMEL PECAN FLAVORED PROTEIN BAR",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849004638",
+    "name": "Blueberry Muffin protein bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849003914",
+    "name": "Double Chocolate Chunk Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849011605",
+    "name": "CRISPY COOKIES & CREAM FLAVORED PROTEIN BAR",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "1240000004304",
+    "name": "Caramel Chocolate Chunk flavour Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:australia",
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849010578",
+    "name": "Crispy Chocolate Coocnut Hero Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849011278",
+    "name": "Quest Lemon Cake",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849011599",
+    "name": "Cookies and crème protein bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0822249005956",
+    "name": "Protein Bar - Birthday Cake flavor",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849010912",
+    "name": "Quest protein bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849044634",
+    "name": "Quest bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0822249011582",
+    "name": "Quest hero protein bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849003945",
+    "name": "APPLE PIE PROTEIN BAR",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0822249000418",
+    "name": "Chocolate Brownie Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849015832",
+    "name": "Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849015771",
+    "name": "Quest Overloaded Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849015801",
+    "name": "PROTEIN BAR",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849016730",
+    "name": "Peanut Butter & Jelly Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849015665",
+    "name": "Strawberry Shortcake Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0793573225924",
+    "name": "Protein  Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0793573933300",
+    "name": "Chocolate Brownie",
+    "category": "protein_bar",
+    "countries": [
+      "en:bolivia",
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849000227",
+    "name": "White Chocolate Raspberry Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849000616",
+    "name": "Peanut butter supreme protein bar, peanut butter supreme",
+    "category": "protein_bar",
+    "countries": [
+      "en:france",
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849000692",
+    "name": "Strawberry cheesecake protein bar, strawberry cheesecake",
+    "category": "protein_bar",
+    "countries": [
+      "en:france",
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849000715",
+    "name": "Questbar, Protein Bar, Lemon Cream Pie",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849001903",
+    "name": "Protein Bar, Pumpkin Pie",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849001965",
+    "name": "Cereal protein bar, Waffle",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849008018",
+    "name": "Chocolate hazelnut protein bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849005420",
+    "name": "Protein bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:france",
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "82224486",
+    "name": "Mint Chocolate Chunk protein bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0810793010021",
+    "name": "Cookies & Cream Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849008025",
+    "name": "Chocolate hazelnut protein bar, chocolate hazelnut",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849005468",
+    "name": "Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849008032",
+    "name": "Quest protein bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "22210456",
+    "name": "Quest Chocolate Peanut Butter Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849008865",
+    "name": "Chocolate chip cookie dough protein bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849008971",
+    "name": "Oatmeal chocolate chip flavor protein bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849008889",
+    "name": "Chocolate Chip Cookie Dough Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849011827",
+    "name": "Quest protein bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849011988",
+    "name": "Quest Protein Bar",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0888849008919",
+    "name": "Cookies & cream protein bars",
+    "category": "protein_bar",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632019448",
+    "name": "Oikos Triple Zero Blended Greek Yogurt Vanilla",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632019530",
+    "name": "BLENDED GREEK YOGURT",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632024329",
+    "name": "BLENDED GREEK YOGURT",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632008343",
+    "name": "Vanilla Flavored Greek Yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states",
+      "en:world"
+    ]
+  },
+  {
+    "barcode": "0036632019622",
+    "name": "OIKOS Triple Zero Blended Greek Yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632019547",
+    "name": "TRIPLE ZERO BLENDED GREEK YOGURT",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states",
+      "en:world"
+    ]
+  },
+  {
+    "barcode": "0056800355741",
+    "name": "Greek Yogurt Lactose Free Plain",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:canada",
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632008350",
+    "name": "Mixed Berry Flavored Oikos Triple Zero",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states",
+      "en:world"
+    ]
+  },
+  {
+    "barcode": "0036632042576",
+    "name": "Oikos Pro Strawberry Flavored Greek Yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632019684",
+    "name": "OIKOS Triple Zero Blended Greek Yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:germany",
+      "en:united-states",
+      "en:world"
+    ]
+  },
+  {
+    "barcode": "0056800510133",
+    "name": "Greek Yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:canada",
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632020819",
+    "name": "Vanilla Bean Blended Greek Yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0056800295740",
+    "name": "Oikos 0% greek yogurt 30% less sugar",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:canada",
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632018649",
+    "name": "Oikos Greek Yogurt Blended - Lemon Meringue Flavor - Made with Whole Milk, Cane Sweetened",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632019875",
+    "name": "TRIPLE ZERO BLENDED GREEK YOGURT",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632020161",
+    "name": "BLENDED GREEK YOGURT",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states",
+      "en:world"
+    ]
+  },
+  {
+    "barcode": "0036632020918",
+    "name": "Blended Greek Yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632020840",
+    "name": "BLENDED GREEK YOGURT",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632008732",
+    "name": "oikos, greek frozen yogurt, strawberry",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632008794",
+    "name": "Dannon, oikos, triple zero blended nonfat greek yogurt, plain, plain",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632027146",
+    "name": "Dannon, oikos, nonfat greek yogurt, plain, plain",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632027542",
+    "name": "Greek Yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632032157",
+    "name": "Off-the-charts cherry pie flavor not-so-traditional blended greek yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:france",
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "10043613",
+    "name": "Oikos triple zero blended Greek yogurt vanilla",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632020888",
+    "name": "Greek Yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "03667019",
+    "name": "Wild berry Greek yogurt cup",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632020369",
+    "name": "Oikos Triple Zero Blended Greek Yogurt Blueberry Flavored",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states",
+      "en:world"
+    ]
+  },
+  {
+    "barcode": "0036632020796",
+    "name": "Vanilla Bean Blended Greek Yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0056800911763",
+    "name": "Double Greek Yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632023131",
+    "name": "BLENDED GREEK YOGURT",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632023117",
+    "name": "Vanilla Bean Blended Greek Yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632008282",
+    "name": "Dannon, oikos, greek frozen yogurt, cafe latte",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632008701",
+    "name": "Dannon, oikos, greek yogurt, vanilla",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632018328",
+    "name": "Dannon, oikos, greek nonfat yogurt, peach",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632018359",
+    "name": "Dannon, oikos, greek nonfat yogurt, strawberry banana",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632018366",
+    "name": "Dannon, oikos, greek nonfat yogurt, blackberry",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632018373",
+    "name": "Dannon, oikos, greek nonfat yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632018656",
+    "name": "Dannon, oikos, greek yogurt, apple pie",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632018663",
+    "name": "Dannon, oikos, greek yogurt, caramel macchiato",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632019387",
+    "name": "Dannon, oikos, caramel on top with traditional greek yogurt dairy snack, bananas foster",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632019455",
+    "name": "Dannon, oikos, chocolate on top greek yogurt & sauce, vanilla sundae",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632032904",
+    "name": "Dannon, oikos, greek frozen yogurt, chocolate",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0366232027146",
+    "name": "Oikos, Greek Nonfat Yogurt, Plain",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0052159521202",
+    "name": "Stonyfield, oikos, organic nonfat greek yogurt, blueberry",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632020635",
+    "name": "greek yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632020833",
+    "name": "Oikos Blended Greek Yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "03660195",
+    "name": "Greek yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0456253003990",
+    "name": "Oikos Triple Zero Peach Flavor Blended Greek Yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0078632019448",
+    "name": "Oikos Triple Zero Vanilla Greek Yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0050045004532",
+    "name": "Honey Greek Yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "92000366320208300299",
+    "name": "Oikos blended greek yogart",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "36300301",
+    "name": "Oikos Triple Zero Blended Greek Yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "92000366320207900119",
+    "name": "Greek yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0033334020802",
+    "name": "Greek Yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0053850330070",
+    "name": "Greek yogurt- plain",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0053800333717",
+    "name": "Key Lime Greek Yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0059354650034",
+    "name": "30% less sugar greek yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0043700330954",
+    "name": "Greek yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "00011359",
+    "name": "Blended greek yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "00450510",
+    "name": "Triple Zero Greek Yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632011435",
+    "name": "Blended Greek Yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0053700355741",
+    "name": "Greek yogurt lactose free 0%",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "7836593533433",
+    "name": "Triple Zero Blended Greek Yogurt Vanilla",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0122121721111",
+    "name": "Okios Triple Zero Vanilla Greek Yogurt Tub",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632011282",
+    "name": "Maple Sweetened Plain Blended Greek Nonfat Yogurt, Maple Sweetened Plain",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632011213",
+    "name": "Almond Butter & Sweetened Plain Flavor Blended Greek Yogurt, Almond Butter & Sweetened Plain",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632011237",
+    "name": "Almond Butter & Coconut Flavor Greek Yogurt, Almond Butter; Coconut",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632011206",
+    "name": "Almond Butter & Vanilla Greek Yogurt, Almond Butter; Vanilla",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "36432516",
+    "name": "Triple Zero Blended Greek Yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "10542981",
+    "name": "Oikos Pro Vanilla Greek Yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "03947039",
+    "name": "Greek Yogurt Strawberry Raspberry",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0056800511840",
+    "name": "Greek Yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632039200",
+    "name": "vanilla",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states",
+      "en:world"
+    ]
+  },
+  {
+    "barcode": "0036632039026",
+    "name": "Two Good Blueberry Yogurt-Cultured Ultra-Filtered Milk",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states",
+      "en:world"
+    ]
+  },
+  {
+    "barcode": "0036632039194",
+    "name": "Two Good Plain Yogurt-Cultured Ultra-Filtered Milk",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states",
+      "en:world"
+    ]
+  },
+  {
+    "barcode": "0036632039460",
+    "name": "Two Good Black Cherry Yogurt-Cultured Ultra-Filtered Milk",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states",
+      "en:world"
+    ]
+  },
+  {
+    "barcode": "0036632039668",
+    "name": "Two Good Smoothie Drinks - Strawberry Banana",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states",
+      "en:world"
+    ]
+  },
+  {
+    "barcode": "0036632040435",
+    "name": "Key Lime Yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632039323",
+    "name": "Two Good Coconut Yogurt-Cultured Ultra-Filtered Milk",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states",
+      "en:world"
+    ]
+  },
+  {
+    "barcode": "0036632039507",
+    "name": "two good pumpkin yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632039477",
+    "name": "Two Good Strawberry Banana Yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0033334039064",
+    "name": "Low-fat Greek yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "03683460",
+    "name": "Two Good vanilla yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0033334039682",
+    "name": "Peach Smoothie Yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0032664039058",
+    "name": "Yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0033334039224",
+    "name": "Coconut Yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036634069038",
+    "name": "Strawberry Yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0036632040442",
+    "name": "Yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0033334039019",
+    "name": "Strawberry Yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "09275881",
+    "name": "Vanilla Yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0053500820616",
+    "name": "Raspberry yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0096619483556",
+    "name": "organic GREEK YOGURT plain",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:france",
+      "en:mexico",
+      "en:spain",
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0096619000036",
+    "name": "Greek Yogurt plain",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "3090089483556",
+    "name": "Organic Greek Yogurt, Plain",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0096619385089",
+    "name": "GREEK YOGURT PLAIN NONFAT",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0003340087496",
+    "name": "Organic Greek Yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "8963570088156",
+    "name": "Organic Greek Yogurt Plain",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0009661948355",
+    "name": "Organic Greek Plain Yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "0196633818553",
+    "name": "Greek Yogurt plain",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  },
+  {
+    "barcode": "12507290",
+    "name": "Organic Greek Yogurt",
+    "category": "greek_yogurt",
+    "countries": [
+      "en:united-states"
+    ]
+  }
 ]
