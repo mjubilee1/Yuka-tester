@@ -1,0 +1,10 @@
+{
+  "added_sugar_high": "{added_sugar_g}g added sugar per serving. For cutting, aim for ≤{max_added_sugar}g.",
+  "added_sugar_moderate": "{added_sugar_g}g sugar — acceptable occasionally, not daily for cutting.",
+  "protein_low": "{protein_g}g protein — below target. Aim for ≥{min_protein}g per serving.",
+  "protein_moderate": "{protein_g}g protein — OK but not optimal for cutting.",
+  "calories_high": "{calories} calories — calorie-dense for a cutting snack.",
+  "calories_moderate": "{calories} cal — fine if it fits your daily budget.",
+  "protein_efficiency_low": "Low protein per calorie ({protein_per_100_cal}g per 100 cal).",
+  "data_incomplete": "Nutrition data incomplete — verdict is low confidence."
+}

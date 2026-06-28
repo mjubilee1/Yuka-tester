@@ -1,0 +1,1 @@
+event_id,participant_id,trip_date,timestamp,barcode,product_name,category,verdict,reason_chip,reason_text,cart_changed,cart_change_detail,comparison_pair_id,ab_group,capture_method,seconds_to_capture,response_time_sec

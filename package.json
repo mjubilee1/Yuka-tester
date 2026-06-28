@@ -1,0 +1,21 @@
+{
+  "name": "yuka-tester",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Pre-build validation toolkit for AI Grocery Decision Engine — concierge scoring, barcode audit, capture A/B analysis",
+  "scripts": {
+    "score": "tsx scripts/cli.ts",
+    "compare": "tsx scripts/cli.ts compare",
+    "audit:barcodes": "tsx scripts/barcode-audit.ts",
+    "fetch:seeds": "tsx scripts/fetch-seed-barcodes.ts",
+    "analyze:capture": "tsx scripts/analyze-capture.ts",
+    "analyze:concierge": "tsx scripts/analyze-concierge.ts",
+    "test:scoring": "tsx scoring/src/rules.test.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
