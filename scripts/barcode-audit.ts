@@ -1,12 +1,17 @@
 #!/usr/bin/env node
 /**
- * Barcode audit: measure Open Food Facts hit rate for beachhead categories.
- * Usage: npm run audit:barcodes [-- --limit 50] [-- --delay 300]
+ * Barcode audit: measure LOCAL CACHE hit rate for beachhead seed barcodes.
+ *
+ * Uses product-cache/index.json only — no live OFF API (see docs/07-off-data-strategy.md).
+ * Run `npm run build:cache` first to populate the cache.
+ *
+ * Usage: npm run audit:barcodes [-- --limit 200]
  */
 import { readFileSync, writeFileSync, mkdirSync } from "fs";
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
-import { lookupOpenFoodFacts, hasCoreNutrition } from "../scoring/src/off-client.js";
+import { lookupProduct, hasCoreNutrition } from "../scoring/src/off-client.js";
+import { cacheStats, loadCacheIndex } from "../scoring/src/product-cache.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
@@ -25,34 +30,36 @@ interface AuditRow {
   found: boolean;
   confidence: string;
   has_core_nutrition: boolean;
-  off_product_name: string;
+  cached_product_name: string;
   error: string;
-}
-
-function sleep(ms: number) {
-  return new Promise((r) => setTimeout(r, ms));
 }
 
 function parseArgs() {
   const args = process.argv.slice(2);
   let limit = 200;
-  let delay = 350;
-
   for (let i = 0; i < args.length; i++) {
     if (args[i] === "--limit" && args[i + 1]) limit = parseInt(args[i + 1], 10);
-    if (args[i] === "--delay" && args[i + 1]) delay = parseInt(args[i + 1], 10);
   }
-
-  return { limit, delay };
+  return { limit };
 }
 
 async function main() {
-  const { limit, delay } = parseArgs();
+  const { limit } = parseArgs();
+  const stats = cacheStats();
+
+  if (!stats.loaded) {
+    console.error("No product cache found. Run: npm run build:cache");
+    console.error("See docs/07-off-data-strategy.md");
+    process.exit(1);
+  }
+
+  console.log(`Cache loaded: ${stats.count} products (built ${stats.built_at})\n`);
+
   const seedPath = join(ROOT, "data/seed-barcodes.json");
   const seed = JSON.parse(readFileSync(seedPath, "utf-8")) as SeedEntry[];
   const toAudit = seed.slice(0, limit);
 
-  console.log(`Auditing ${toAudit.length} barcodes against Open Food Facts...\n`);
+  console.log(`Auditing ${toAudit.length} seed barcodes against LOCAL CACHE...\n`);
 
   const results: AuditRow[] = [];
   let found = 0;
@@ -61,9 +68,8 @@ async function main() {
 
   for (let i = 0; i < toAudit.length; i++) {
     const entry = toAudit[i];
-    process.stdout.write(`[${i + 1}/${toAudit.length}] ${entry.barcode} ... `);
+    const lookup = await lookupProduct(entry.barcode, { cacheOnly: true });
 
-    const lookup = await lookupOpenFoodFacts(entry.barcode);
     const row: AuditRow = {
       barcode: entry.barcode,
       name: entry.name,
@@ -73,23 +79,22 @@ async function main() {
       has_core_nutrition: lookup.product
         ? hasCoreNutrition(lookup.product.nutrition)
         : false,
-      off_product_name: lookup.product?.name ?? "",
+      cached_product_name: lookup.product?.name ?? "",
       error: lookup.error ?? "",
     };
 
     results.push(row);
-
     if (lookup.found) found++;
     if (lookup.product?.confidence === "high") highConf++;
     if (row.has_core_nutrition) coreNutrition++;
 
     console.log(
-      lookup.found
-        ? `${row.confidence}${row.has_core_nutrition ? " +nutrition" : ""}`
-        : "MISS"
+      `[${i + 1}/${toAudit.length}] ${entry.barcode} ... ${
+        lookup.found
+          ? `${row.confidence}${row.has_core_nutrition ? " +nutrition" : ""}`
+          : "MISS"
+      }`
     );
-
-    if (i < toAudit.length - 1) await sleep(delay);
   }
 
   const hitRate = ((found / toAudit.length) * 100).toFixed(1);
@@ -111,10 +116,14 @@ async function main() {
 
   const proteinBars = byCategory("protein_bar");
   const yogurt = byCategory("greek_yogurt");
+  const index = loadCacheIndex();
 
   const summary = {
     audited_at: new Date().toISOString(),
-    total: toAudit.length,
+    audit_mode: "local_cache_only",
+    cache_built_at: index?.built_at,
+    cache_total_products: index?.count,
+    seed_list_audited: toAudit.length,
     found,
     hit_rate_pct: parseFloat(hitRate),
     high_confidence: highConf,
@@ -123,6 +132,7 @@ async function main() {
     core_nutrition_rate_pct: parseFloat(coreRate),
     gate_80_pass: parseFloat(highRate) >= 80,
     ocr_needed: parseFloat(highRate) < 70,
+    note: "Measures shippable local cache coverage, not live OFF API availability",
     by_category: { protein_bar: proteinBars, greek_yogurt: yogurt },
     results,
   };
@@ -136,26 +146,30 @@ async function main() {
   writeFileSync(jsonPath, JSON.stringify(summary, null, 2));
 
   const csvHeader =
-    "barcode,name,category,found,confidence,has_core_nutrition,off_product_name,error\n";
+    "barcode,name,category,found,confidence,has_core_nutrition,cached_product_name,error\n";
   const csvRows = results
     .map(
       (r) =>
-        `${r.barcode},"${r.name.replace(/"/g, '""')}",${r.category},${r.found},${r.confidence},${r.has_core_nutrition},"${r.off_product_name.replace(/"/g, '""')}","${r.error.replace(/"/g, '""')}"`
+        `${r.barcode},"${r.name.replace(/"/g, '""')}",${r.category},${r.found},${r.confidence},${r.has_core_nutrition},"${r.cached_product_name.replace(/"/g, '""')}","${r.error.replace(/"/g, '""')}"`
     )
     .join("\n");
   writeFileSync(csvPath, csvHeader + csvRows);
 
-  console.log("\n=== AUDIT SUMMARY ===");
-  console.log(`Total audited:     ${toAudit.length}`);
-  console.log(`Found in OFF:      ${found} (${hitRate}%)`);
+  console.log("\n=== LOCAL CACHE AUDIT SUMMARY ===");
+  console.log(`Mode:              local cache only (no live API)`);
+  console.log(`Cache size:        ${index?.count ?? 0} products`);
+  console.log(`Seed list audited: ${toAudit.length}`);
+  console.log(`Found in cache:    ${found} (${hitRate}%)`);
   console.log(`High confidence:   ${highConf} (${highRate}%)`);
   console.log(`Core nutrition:    ${coreNutrition} (${coreRate}%)`);
   console.log(`Protein bars:      ${proteinBars.hit_rate}% hit, ${proteinBars.high_rate}% high conf`);
   console.log(`Greek yogurt:      ${yogurt.hit_rate}% hit, ${yogurt.high_rate}% high conf`);
   console.log(`80% gate:          ${summary.gate_80_pass ? "PASS" : "FAIL"}`);
   console.log(`OCR needed:        ${summary.ocr_needed ? "YES (<70% high conf)" : "NO"}`);
+  if (!summary.gate_80_pass) {
+    console.log(`\nTo improve: npm run build:cache  OR add to data/curated-products.json`);
+  }
   console.log(`\nResults: ${jsonPath}`);
-  console.log(`CSV:     ${csvPath}`);
 }
 
 main().catch((e) => {

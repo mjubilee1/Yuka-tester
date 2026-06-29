@@ -1,0 +1,92 @@
+[
+  {
+    "barcode": "0894700010137",
+    "name": "Greek Yogurt Nonfat Plain",
+    "brand": "Chobani",
+    "category": "greek_yogurt",
+    "nutrition": {
+      "calories": 90,
+      "protein_g": 16,
+      "added_sugar_g": 0,
+      "sugar_g": 4,
+      "carbs_g": 6,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "sodium_mg": 65
+    },
+    "source": "curated",
+    "confidence": "high"
+  },
+  {
+    "barcode": "0689544083016",
+    "name": "Total 0% Milkfat Plain",
+    "brand": "Fage",
+    "category": "greek_yogurt",
+    "nutrition": {
+      "calories": 90,
+      "protein_g": 18,
+      "added_sugar_g": 0,
+      "sugar_g": 5,
+      "carbs_g": 5,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "sodium_mg": 60
+    },
+    "source": "curated",
+    "confidence": "high"
+  },
+  {
+    "barcode": "0888849000012",
+    "name": "Chocolate Chip Cookie Dough Protein Bar",
+    "brand": "Quest",
+    "category": "protein_bar",
+    "nutrition": {
+      "calories": 190,
+      "protein_g": 21,
+      "added_sugar_g": 1,
+      "sugar_g": 1,
+      "carbs_g": 21,
+      "fat_g": 8,
+      "fiber_g": 14,
+      "sodium_mg": 190
+    },
+    "source": "curated",
+    "confidence": "high"
+  },
+  {
+    "barcode": "850046331012",
+    "name": "Chocolate Sea Salt",
+    "brand": "RXBAR",
+    "category": "protein_bar",
+    "nutrition": {
+      "calories": 210,
+      "protein_g": 12,
+      "added_sugar_g": 0,
+      "sugar_g": 13,
+      "carbs_g": 23,
+      "fat_g": 9,
+      "fiber_g": 5,
+      "sodium_mg": 240
+    },
+    "source": "curated",
+    "confidence": "high"
+  },
+  {
+    "barcode": "0096619483556",
+    "name": "Organic Greek Yogurt Plain",
+    "brand": "Kirkland Signature",
+    "category": "greek_yogurt",
+    "nutrition": {
+      "calories": 100,
+      "protein_g": 18,
+      "added_sugar_g": 0,
+      "sugar_g": 7,
+      "carbs_g": 7,
+      "fat_g": 0,
+      "fiber_g": 0,
+      "sodium_mg": 65
+    },
+    "source": "curated",
+    "confidence": "high"
+  }
+]

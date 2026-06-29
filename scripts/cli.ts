@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import { compareProducts, scoreProduct } from "../scoring/src/score.js";
-import { lookupOpenFoodFacts } from "../scoring/src/off-client.js";
+import { lookupProduct } from "../scoring/src/off-client.js";
+import { cacheStats } from "../scoring/src/product-cache.js";
 
 function formatResult(result: ReturnType<typeof scoreProduct>): string {
   const v = result.verdict.toUpperCase();
@@ -35,11 +36,15 @@ async function main() {
   const args = process.argv.slice(2);
 
   if (args.length === 0 || args.includes("--help")) {
+    const cache = cacheStats();
     console.log(`Usage:
   npm run score -- <barcode>
   npm run compare -- <barcode1> <barcode2>
 
-Concierge decision engine for cutting shoppers (protein bars + Greek yogurt).`);
+Concierge decision engine for cutting shoppers (protein bars + Greek yogurt).
+Lookup order: local cache → live OFF API (1 call per scan).
+
+Cache: ${cache.loaded ? `${cache.count} products (${cache.built_at})` : "not built — run npm run build:cache"}`);
     process.exit(0);
   }
 
@@ -52,8 +57,8 @@ Concierge decision engine for cutting shoppers (protein bars + Greek yogurt).`);
     }
 
     const [lookupA, lookupB] = await Promise.all([
-      lookupOpenFoodFacts(barcodes[0]),
-      lookupOpenFoodFacts(barcodes[1]),
+      lookupProduct(barcodes[0]),
+      lookupProduct(barcodes[1]),
     ]);
 
     if (!lookupA.found || !lookupA.product) {
@@ -74,7 +79,7 @@ Concierge decision engine for cutting shoppers (protein bars + Greek yogurt).`);
   }
 
   const barcode = args[0];
-  const lookup = await lookupOpenFoodFacts(barcode);
+  const lookup = await lookupProduct(barcode);
 
   if (!lookup.found || !lookup.product) {
     console.error(`Not found: ${lookup.error ?? "unknown"}`);

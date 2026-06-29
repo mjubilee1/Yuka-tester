@@ -50,6 +50,10 @@ Launch coverage is limited to these aisles until 80%+ barcode hit rate is proven
 
 All other grocery categories. No "full store" positioning until beachhead hit rate and W2 retention pass gates.
 
+### Data source
+
+Bulk validation uses **local product cache** built from OFF static data policy (see [`docs/07-off-data-strategy.md`](07-off-data-strategy.md)). Live OFF API: 1 call per real user scan only.
+
 ---
 
 ## One habit metric

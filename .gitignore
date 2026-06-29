@@ -3,6 +3,7 @@
 node_modules/
 dist/
 data/audit-results/
+data/product-cache/
 .DS_Store
 *.log
 .env
