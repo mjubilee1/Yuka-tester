@@ -1,0 +1,23 @@
+{
+  "goal": "cutting",
+  "displayName": "Cutting / fat loss",
+  "description": "High protein, controlled calories, low added sugar",
+  "protein_bar": {
+    "added_sugar_g": { "buy_max": 4, "maybe_max": 8 },
+    "protein_g": { "buy_min": 18, "maybe_min": 12 },
+    "calories": { "buy_max": 220, "maybe_max": 280 },
+    "protein_per_calorie_min": { "buy": 0.08, "maybe": 0.06 }
+  },
+  "greek_yogurt": {
+    "added_sugar_g": { "buy_max": 6, "maybe_max": 10 },
+    "protein_g": { "buy_min": 15, "maybe_min": 10 },
+    "calories": { "buy_max": 150, "maybe_max": 200 },
+    "protein_per_calorie_min": { "buy": 0.1, "maybe": 0.07 }
+  },
+  "default": {
+    "added_sugar_g": { "buy_max": 5, "maybe_max": 9 },
+    "protein_g": { "buy_min": 15, "maybe_min": 10 },
+    "calories": { "buy_max": 250, "maybe_max": 300 },
+    "protein_per_calorie_min": { "buy": 0.08, "maybe": 0.06 }
+  }
+}

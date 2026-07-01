@@ -88,6 +88,13 @@ scripts/                     # CLI, cache build, audit, analysis
 
 If cache <80% after bootstrap: add to `curated-products.json` or plan OCR path.
 
-## GTM
+## Mobile app (Expo)
+
+```bash
+npm run sync:mobile-cache   # after build:cache
+npm run mobile              # start Expo dev server
+```
+
+See [`mobile/README.md`](mobile/README.md).
 
 Single channel: micro-influencer / fitness coach loop. See `docs/05-gtm-first100.md`.

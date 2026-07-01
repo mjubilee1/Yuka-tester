@@ -1,0 +1,3804 @@
+{
+  "built_at": "2026-06-29T00:17:04.259Z",
+  "source": "seed_bootstrap_2026-06-29T00:17:04.254Z",
+  "count": 203,
+  "products": {
+    "10043613": {
+      "barcode": "10043613",
+      "name": "Oikos triple zero blended Greek yogurt vanilla",
+      "brand": "Danone",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 110,
+        "protein_g": 17,
+        "added_sugar_g": null,
+        "sugar_g": 6,
+        "carbs_g": 11,
+        "fat_g": 0,
+        "fiber_g": 3,
+        "sodium_mg": 75
+      },
+      "ingredients": "CULTURED GRADE A NON FAT MILK, WATER CHICORY ROOT FIBER, CONTAINS LESS THAN 1% OF STEVIA LEAF EXTRACT, NATURAL FLAVORS, FRUIT JUICE& BETA CAROTENE (FOR COLOR), LEMON JUICE Certified GF tive ures Gluten-Free CONCENTRATE, SEA SALT, VITAMIN D3.",
+      "source": "open_food_facts",
+      "confidence": "high"
+    },
+    "10542981": {
+      "barcode": "10542981",
+      "name": "Oikos Pro Vanilla Greek Yogurt",
+      "brand": "Unknown",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 80,
+        "protein_g": 13,
+        "added_sugar_g": null,
+        "sugar_g": 3,
+        "carbs_g": 5,
+        "fat_g": 1,
+        "fiber_g": null,
+        "sodium_mg": null
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "12507290": {
+      "barcode": "12507290",
+      "name": "Organic Greek Yogurt",
+      "brand": "Kirkland Signature",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": null,
+        "protein_g": null,
+        "added_sugar_g": null,
+        "sugar_g": null,
+        "carbs_g": null,
+        "fat_g": null,
+        "fiber_g": null,
+        "sodium_mg": null
+      },
+      "source": "open_food_facts",
+      "confidence": "low"
+    },
+    "22210456": {
+      "barcode": "22210456",
+      "name": "Quest Chocolate Peanut Butter Protein Bar",
+      "brand": "Unknown",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": null,
+        "protein_g": null,
+        "added_sugar_g": null,
+        "sugar_g": null,
+        "carbs_g": null,
+        "fat_g": null,
+        "fiber_g": null,
+        "sodium_mg": null
+      },
+      "ingredients": "ts: protein blend (milk protein isolate, whey protein isolate), peanuts, soluble corn fiber, water, erythritol, unsweetened chocolate, natural flavors, cocoa butter, contains less thán 2% of the following: sodium caseinate, sea salt, steviol glycosides (stevía), sunflower lećithin, milk, peanuts",
+      "source": "open_food_facts",
+      "confidence": "low"
+    },
+    "36300301": {
+      "barcode": "36300301",
+      "name": "Oikos Triple Zero Blended Greek Yogurt",
+      "brand": "Oikos",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 58.823529411765,
+        "protein_g": 10,
+        "added_sugar_g": null,
+        "sugar_g": 3.5294117647059,
+        "carbs_g": 4.7058823529412,
+        "fat_g": 0,
+        "fiber_g": 0,
+        "sodium_mg": null
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "36432516": {
+      "barcode": "36432516",
+      "name": "Triple Zero Blended Greek Yogurt",
+      "brand": "Oikos",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": null,
+        "protein_g": null,
+        "added_sugar_g": null,
+        "sugar_g": null,
+        "carbs_g": null,
+        "fat_g": null,
+        "fiber_g": null,
+        "sodium_mg": null
+      },
+      "ingredients": "CULTURED NON FAT MILK, YOGURT CULTURES:, S. THERMOPHILUS AND L. BULGARICUS., CONTAINS: MILK",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "82224486": {
+      "barcode": "82224486",
+      "name": "Mint Chocolate Chunk protein bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": null,
+        "protein_g": null,
+        "added_sugar_g": null,
+        "sugar_g": null,
+        "carbs_g": null,
+        "fat_g": null,
+        "fiber_g": null,
+        "sodium_mg": null
+      },
+      "source": "open_food_facts",
+      "confidence": "low"
+    },
+    "88885100": {
+      "barcode": "88885100",
+      "name": "Quest Blueberry Cobbler Hero Protein Bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 266.66666666667,
+        "protein_g": 26.666666666667,
+        "added_sugar_g": null,
+        "sugar_g": 1.6666666666667,
+        "carbs_g": 50,
+        "fat_g": 11.666666666667,
+        "fiber_g": null,
+        "sodium_mg": 233.333333333328
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0894700010137": {
+      "barcode": "0894700010137",
+      "name": "Greek Yogurt Nonfat Plain",
+      "brand": "Chobani",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 90,
+        "protein_g": 16,
+        "added_sugar_g": 0,
+        "sugar_g": 4,
+        "carbs_g": 6,
+        "fat_g": 0,
+        "fiber_g": 0,
+        "sodium_mg": 65
+      },
+      "source": "curated",
+      "confidence": "high"
+    },
+    "0689544083016": {
+      "barcode": "0689544083016",
+      "name": "Total 0% Milkfat Plain",
+      "brand": "Fage",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 90,
+        "protein_g": 18,
+        "added_sugar_g": 0,
+        "sugar_g": 5,
+        "carbs_g": 5,
+        "fat_g": 0,
+        "fiber_g": 0,
+        "sodium_mg": 60
+      },
+      "source": "curated",
+      "confidence": "high"
+    },
+    "0888849000012": {
+      "barcode": "0888849000012",
+      "name": "Chocolate Chip Cookie Dough Protein Bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 190,
+        "protein_g": 21,
+        "added_sugar_g": 1,
+        "sugar_g": 1,
+        "carbs_g": 21,
+        "fat_g": 8,
+        "fiber_g": 14,
+        "sodium_mg": 190
+      },
+      "source": "curated",
+      "confidence": "high"
+    },
+    "850046331012": {
+      "barcode": "850046331012",
+      "name": "Chocolate Sea Salt",
+      "brand": "RXBAR",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 210,
+        "protein_g": 12,
+        "added_sugar_g": 0,
+        "sugar_g": 13,
+        "carbs_g": 23,
+        "fat_g": 9,
+        "fiber_g": 5,
+        "sodium_mg": 240
+      },
+      "source": "curated",
+      "confidence": "high"
+    },
+    "0096619483556": {
+      "barcode": "0096619483556",
+      "name": "Organic Greek Yogurt Plain",
+      "brand": "Kirkland Signature",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 100,
+        "protein_g": 18,
+        "added_sugar_g": 0,
+        "sugar_g": 7,
+        "carbs_g": 7,
+        "fat_g": 0,
+        "fiber_g": 0,
+        "sodium_mg": 65
+      },
+      "source": "curated",
+      "confidence": "high"
+    },
+    "0888849000005": {
+      "barcode": "0888849000005",
+      "name": "Cookies & Cream Protein Bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 190,
+        "protein_g": 21,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 21,
+        "fat_g": 7,
+        "fiber_g": 13,
+        "sodium_mg": 300
+      },
+      "ingredients": "Protein blend (milk protein isolate, whey protein isolate), soluble corn fiber, almonds, water, cocoa butter, natural flavors, erythritol, cocoa processed with alkali. contains less than 2% of the following: coconut oil, sea salt, sodium caseinate, sunflower lecithin, baking soda, steviol glycosides (stevia), xanthan gum, sucralose.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849004621": {
+      "barcode": "0888849004621",
+      "name": "Oatmeal Chocolate Chip Protein Bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 190,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 23,
+        "fat_g": 7,
+        "fiber_g": 12,
+        "sodium_mg": 210
+      },
+      "ingredients": "Protein blend (milk protein isolate, whey protein isolate), soluble corn fiber (prebiotic fiber), almonds, water, gluten-free oats, unsweetened chocolate, erythritol, cocoa butter, cinnamon, sea salt, natural flavors, sucralose, steviol glycosides (stevia).",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849000432": {
+      "barcode": "0888849000432",
+      "name": "QuestBar Protein Bar Cinnamon Roll",
+      "brand": "Quest Nutrition",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 170,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 23,
+        "fat_g": 7,
+        "fiber_g": 14,
+        "sodium_mg": 200
+      },
+      "ingredients": "Protein Blend (Milk Protein Isolate, Whey Protein Isolate), Soluble Corn Fiber (Prebiotic Fiber), Almonds, Water, Erythritol, Natural Flavors, Palm Oil, Sea Salt, Cinnamon, Calcium Carbonate, Stevic! Glycosides (Stevia).",
+      "source": "open_food_facts",
+      "confidence": "high"
+    },
+    "0888849000456": {
+      "barcode": "0888849000456",
+      "name": "Chocolate Peanut Butter",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 190,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 22,
+        "fat_g": 9,
+        "fiber_g": 11,
+        "sodium_mg": 220
+      },
+      "ingredients": "protein blend (milk protein isolate, whey protein isolate), peanuts, soluble corn fiber, water, erythritol, unsweetened chocolate, natural flavors, cocoa butter, contains less than 2% of the following: sodium caseinate, sea salt, steviol glycosides (stevia), sunflower lecithin,",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849014217": {
+      "barcode": "0888849014217",
+      "name": "Protein Bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 170,
+        "protein_g": 21,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 22,
+        "fat_g": 9,
+        "fiber_g": 12,
+        "sodium_mg": 220
+      },
+      "ingredients": "milk protein isolate, whey protein isolate, polydextrose, prebiotic fiber, almonds, water, unsweetened chocolate, erythritol, glycerin, cocoa butter, natural flavors, sea salt, sunflower lecithin, stevia sweetener, sucralose",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849000210": {
+      "barcode": "0888849000210",
+      "name": "WHITE CHOCOLATE RASPBERRY PROTEIN BAR",
+      "brand": "QUEST",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 180,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 22,
+        "fat_g": 8,
+        "fiber_g": 13,
+        "sodium_mg": 240
+      },
+      "ingredients": "Protein blend (milk protein isolate, whey protein isolate), soluble corn fiber, almonds, water, cocoa butter, raspberries, natural flavors, erythritol. contains less than 2% of the following: sodium caseinate, sea salt, sunflower lecithin, steviol glycosides (stevia), sucralose.",
+      "source": "open_food_facts",
+      "confidence": "high"
+    },
+    "0888849000173": {
+      "barcode": "0888849000173",
+      "name": "Cookies & Cream Protein Bar",
+      "brand": "QUEST",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 190,
+        "protein_g": 21,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 22,
+        "fat_g": 7,
+        "fiber_g": 13,
+        "sodium_mg": 300
+      },
+      "ingredients": "Protein biend (milk protein isolate, whey protein isolate), Polydextrose (fibre) (12 g per 60g serving), Almonds, Water, Cocoa butter, Erythritol, Glycerin, Maltodextrin soluble corn fibre, Natural flavours, Cocoa (processed with alkali), Palm kernel oil, Sea salt, Sodium caseinate, Sunflower lecithin and/or Soy lecithin, Sucralose (93 mg per 60 serving), Xanthan gum, Baking soda, Stevia extract.",
+      "source": "open_food_facts",
+      "confidence": "high"
+    },
+    "0888849010936": {
+      "barcode": "0888849010936",
+      "name": "CHOCOLATE PEANUT BUTTER",
+      "brand": "QUEST",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 200,
+        "protein_g": 18,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 7,
+        "fat_g": 12,
+        "fiber_g": 4,
+        "sodium_mg": 230
+      },
+      "ingredients": "protein blend (milk protein isolate, whey protein isolate), soluble corn fiber, almonds, water, unsweetened chocolate, erythritol, cocoa butter, natural flavors, palm kernel oil, sea salt, calcium carbonate, sunflower lecithin, baking soda, steviol glycosides (stevia), sucralose",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849001224": {
+      "barcode": "0888849001224",
+      "name": "S'mores Protein Bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 190,
+        "protein_g": 21,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 23,
+        "fat_g": 7,
+        "fiber_g": 12,
+        "sodium_mg": 230
+      },
+      "ingredients": "Protein blend (milk protein isolate, whey protein isolate), soluble corn fiber, almonds, water, erythritol, unsweetened chocolate, natural flavors, cocoa butter. contains less than 2% of the following: sea salt, cinnamon, sunflower lecithin, baking soda, steviol glycosides (stevia), cellulose gum, xanthan gum, sucralose.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849005956": {
+      "barcode": "0888849005956",
+      "name": "Birthday Cake Protein Bar",
+      "brand": "QUEST",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 180,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 24,
+        "fat_g": 6,
+        "fiber_g": 12,
+        "sodium_mg": 240
+      },
+      "ingredients": "protein blend (milk protein isolate, whey protein isolate), soluble corn fiber, erythritol, water, palm kernel oil, almonds, natural flavors, sodium caseinate, contains less than 2% of the following: sea salt, gum arabic, spirulina extract (color), red cabbage extract (color), turmeric extract (color), radish extract (color), sucralose, sunflower lecithin,",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849003860": {
+      "barcode": "0888849003860",
+      "name": "Cookies & Cream Protein Bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 190,
+        "protein_g": 21,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 22,
+        "fat_g": 7,
+        "fiber_g": 13,
+        "sodium_mg": 290
+      },
+      "ingredients": "Protein blend (milk protein isolate, whey protein isolate), soluble corn fiber (prebiotic fiber), almonds, water, cocoa butter, natural flavors, erythritol, palm oil, dextrin, cocoa (processed with alkali), sea salt, calcium carbonate, sunflower lecithin, sucralose, coconut oil, xanthan gum, baking soda, steviol glycosides (stevia).",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0793573238474": {
+      "barcode": "0793573238474",
+      "name": "Bar Cookies & Cream",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": null,
+        "protein_g": 21,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 22,
+        "fat_g": 7,
+        "fiber_g": 17,
+        "sodium_mg": 310
+      },
+      "ingredients": "Protein Blend (_Whey_ Protein Isolate, _Milk_ Protein Isolate), Isomalto-Oligosaccharides (Prebiotic Fiber), Water, _Almonds_, Cocoa Butter, Erythritol, Contains less than 2% of the following: Cocoa Powder, Natural Flavors, Coconut Oil, Sea Salt, Sunflower Lecithin, Dextrin, Baking Soda, Steviol Glycosides (Stevia), Sucralose.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849000418": {
+      "barcode": "0888849000418",
+      "name": "Quest Chocolate Brownie Protein Bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 170,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 1.02,
+        "carbs_g": 24,
+        "fat_g": 6,
+        "fiber_g": 15,
+        "sodium_mg": 240
+      },
+      "ingredients": "PROTEIN BLEND (MILK PROTEIN ISOLATE, WHEY PROTEIN ISOLATE), POLIDEXTROSE (PREBIOTIC FIBER), ALMONDS, WATER, COCOA PROCESSED WITH ALKALI, GLYCERIN, ERYTHRITOL, 2% NATURAL FLAVORS, SEA SALT, STEVIA (SWEETENER), SUCRALOSE, LECITHIN (SUNFLOWER LECITHIN, SOY LECITHIN).",
+      "source": "open_food_facts",
+      "confidence": "high"
+    },
+    "0888849005406": {
+      "barcode": "0888849005406",
+      "name": "Quest Crispy Protein Bar Chocolate Caramel Pecan",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 170,
+        "protein_g": 15,
+        "added_sugar_g": null,
+        "sugar_g": 0,
+        "carbs_g": 17.4,
+        "fat_g": 4.8,
+        "fiber_g": 0,
+        "sodium_mg": 180
+      },
+      "ingredients": "Proteína de leche (aislado de proteína de leche, caseinato de sodio), fibra de maíz soluble, almendras, agua, eritritol, glicerina, manteca de cacao, aceite de palma, saborizantes naturales, sal marina, carbonato de calcio, lecitina de girasol, sucralosa, nuez de pecán, estevia (glicósidos de esteviol).",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849005994": {
+      "barcode": "0888849005994",
+      "name": "Protein Cookie Chocolate Chip",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 262,
+        "protein_g": 15,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 11,
+        "fat_g": 17,
+        "fiber_g": 9,
+        "sodium_mg": 210
+      },
+      "ingredients": "PROTEIN BLEND (MILK PROTEIN ISOLATE, WHEY PROTEIN ISOLATE), BUTTER (CREAM, NATURAL FLAVOR), POLYDEXTROSE (PREBIOTIC FIBER), ERYTHRITOL, PALM OIL, UNSWEETENED CHOCOLATE, WATER, CALCIUM CASEINATE, COCOA BUTTER, GLYCERIN, CONTAINS LESS THAN 2% OF THE FOLLOWING: NATURAL FLAVORS, LECITHIN (SUNFLOWER, CANOLA, AND/OR SOY LECITHIN), SEA SALT, BAKING SODA, SODIUM CASEINATE, XANTHAN GUM, SUCRALOSE, STEVIA SWEETENER. CONTAINS: MILK, SOY. PROCESSED ON EQUIPMENT THAT ALSO PROCESSES EGGS, WHEAT, PEANUTS, AND TREE NUTS.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849011582": {
+      "barcode": "0888849011582",
+      "name": "Crispy Cookies and Cream",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 150,
+        "protein_g": 18,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 23,
+        "fat_g": 6,
+        "fiber_g": 6,
+        "sodium_mg": 230
+      },
+      "ingredients": "Protein Blend (Milk Protein Isolate, Whey Protein Isolate), Allulose, Soluble Corn Fiber, Palm Kernel Oil, Water, Erythritol, Cocoa Processed With Alkali, Sodium Caseinate, Unsweetened Chocolate, Contains Less Than 2% Of The Following: Sea Salt, Natural Flavors, Lecithin (Sunflower And/Or Soy Lecithin), Sucralose, Butter (Cream), Palm Oil, Carrageenan.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0822249000005": {
+      "barcode": "0822249000005",
+      "name": "Protein Bar, Cookies & Cream",
+      "brand": "Quest Bar",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 190,
+        "protein_g": 21,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 21,
+        "fat_g": 8,
+        "fiber_g": 13,
+        "sodium_mg": 300
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849000036": {
+      "barcode": "0888849000036",
+      "name": "CHOCOLATE CHIP COOKIE DOUGH",
+      "brand": "QUEST",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 249,
+        "protein_g": 21,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 22,
+        "fat_g": 9,
+        "fiber_g": 12,
+        "sodium_mg": 220
+      },
+      "ingredients": "Protein blend (milk protein isolate, whey protein isolate), soluble corn fiber (prebiotic fiber), almonds, water, unsweetened chocolate, natural flavors, erythritol, cocoa butter, palm oil, sea salt, calcium carbonate, sucralose, steviol glycosides (stevia).",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849000630": {
+      "barcode": "0888849000630",
+      "name": "Apple Pie",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 170,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 2,
+        "carbs_g": 24,
+        "fat_g": 6,
+        "fiber_g": 13,
+        "sodium_mg": 230
+      },
+      "ingredients": "Protein blend (milk protein isolate, whey protein isolate), soluble corn fiber, almonds, water, dried apples, natural flavors, erythritol. contains less than 2% of the following: sea salt, cinnamon, sucralose.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849004614": {
+      "barcode": "0888849004614",
+      "name": "Blueberry Muffin Flavored Protein Bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 170,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 6,
+        "carbs_g": 17,
+        "fat_g": 6,
+        "fiber_g": 13,
+        "sodium_mg": 220
+      },
+      "ingredients": "Protein Blend (Milk Protein Isolate, Whey Protein Isolate), Soluble Corn Fiber (Prebiotic Fiber), Almonds, Water, Erythritol, Dried Blueberries, Palm Kernel Oil, Natural Flavors, Cocoa Butter, Sea Salt, Cinnamon, Sucralose, Baking Soda, Cellulose Gum, Xanthan Gum, Steviol Glycosides (Stevia).",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849003853": {
+      "barcode": "0888849003853",
+      "name": "Chocolate Chip Cookie Dough Flavored Protein Bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 190,
+        "protein_g": 21,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 20,
+        "fat_g": 7.98,
+        "fiber_g": 12,
+        "sodium_mg": 220
+      },
+      "ingredients": "Protein Blend (Milk Protein Isolate, Whey Protein Isolate), Polydextrose (Prebiotic Fiber), Almonds, Water, Unsweetened Chocolate, Erythritol, Glycerin, Cocoa Butter, Natural Flavors, Sea Salt, Lecithin (Sunflower and/or Soy Lecithin), Stevia Sweetener, Sucralose",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849003891": {
+      "barcode": "0888849003891",
+      "name": "S'MORES Protein Bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 180,
+        "protein_g": 21,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 23,
+        "fat_g": 7,
+        "fiber_g": 12,
+        "sodium_mg": 210
+      },
+      "ingredients": "protein blend (milk protein isolate, whey protein isolate), polydextrose (prebiotic fiber), almonds, water, erythritol, unsweetened chocolate, glycerin, natural flavors, soluble corn fiber, cocoa butter, palm kernel oil, salt, cinnamon, lecithin (sunflower and/or soy lecithin), baking soda, stevia sweetener, xanthan gum, sucralose",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849009305": {
+      "barcode": "0888849009305",
+      "name": "Chocolate Chip Cookie Dough Protein Bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 190,
+        "protein_g": 21,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 22,
+        "fat_g": 9,
+        "fiber_g": 12,
+        "sodium_mg": 220
+      },
+      "ingredients": "protein blend, polydextrose, almonds, water, unsweetened chocolate, erythritol, glycerin, cocoa butter, natural flavors, sea salt, lecithin, stevia sweetener, sucralose",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849010943": {
+      "barcode": "0888849010943",
+      "name": "Chocolate Peanut Butter Crispy Protein Bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 370.37037037037,
+        "protein_g": 33.333333333333,
+        "added_sugar_g": null,
+        "sugar_g": 1.8518518518519,
+        "carbs_g": 37.037037037037,
+        "fat_g": 22.222222222222,
+        "fiber_g": null,
+        "sodium_mg": 425.92592592592
+      },
+      "ingredients": "protein blend, milk protein isolate, whey protein isolate, allulose, palm kernel oil, peanuts, erythritol, soluble corn fiber, water, calcium caseinate, cocoa processed with alkali, natural flavors, sea salt, peanut oil, butter, pecans, palm oil, carrageenan, sucralose, lecithin",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849015153": {
+      "barcode": "0888849015153",
+      "name": "CRISPY PROTEIN BAR BIRTHDAY CAKE FLAVORED",
+      "brand": "QUEST",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 150,
+        "protein_g": 17,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 22,
+        "fat_g": 6,
+        "fiber_g": 6,
+        "sodium_mg": 160
+      },
+      "ingredients": "Milk protein isolate, whey protein isolate, allulose, soluble corn fiber, palm kernel oil, palm oil, erythritol, water, almonds, sodium caseinate, natural flavors, salt, lecithin (sunflower and/or soy lecithin), gum arabic, butter (cream), sucralose.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849015788": {
+      "barcode": "0888849015788",
+      "name": "Overload Protein Bar Chocolate Explosion",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 210,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 8,
+        "carbs_g": 22,
+        "fat_g": 10,
+        "fiber_g": 11,
+        "sodium_mg": 230
+      },
+      "ingredients": "protein blend (milk protein isolate, whey protein isolate), polydextrose (prebiotic fiber), palm kernel oil and palm oil, water, erythritol, cocoa processed with alkali, unsweetened chocolate, natural flavors, cocoa butter, soluble corn fiber, salt, lecithin (sunflower and/or soy lecithin), nonfat milk, sucralose, tapioca starch, sunflower oil, stevia sweetener, sodium bicarbonate, xanthan gum, cellulose gum, glycerin, almonds, sodium caseinate",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849001231": {
+      "barcode": "0888849001231",
+      "name": "S'MORES",
+      "brand": "QUEST",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 180,
+        "protein_g": 21,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 22,
+        "fat_g": 7,
+        "fiber_g": 12,
+        "sodium_mg": 210
+      },
+      "ingredients": "Protein blend (milk protein isolate, whey protein isolate), soluble corn fiber, almonds, erythritol, water, unsweetened chocolate, natural flavors, cocoa butter, contains less than 2% of the following: cinnamon, sea salt, baking soda, palm oil, steviol glycoside (stevia), sunflower lecithin, sucralose, cellulose gum, xanthan gum.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849001354": {
+      "barcode": "0888849001354",
+      "name": "Mint Chocolate Chunk Protein Bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 180,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 24,
+        "fat_g": 6,
+        "fiber_g": 14,
+        "sodium_mg": 240
+      },
+      "ingredients": "Protein blend (milk protein isolate, whey protein isolate), soluble corn fiber, water, almonds, cocoa butter, cocoa processed with alkali, natural flavors, erythritol. contains less than 2% of the following: coconut oil, sea salt, baking soda, sodium caseinate, peppermint oil, spirulina extract (color), beta carotene (color), xanthan gum, steviol glycosides (stevia), sucralose, sunflower lecithin.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849000425": {
+      "barcode": "0888849000425",
+      "name": "Chocolate brownie flavor protein bars",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 170,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 4,
+        "carbs_g": 23,
+        "fat_g": 6,
+        "fiber_g": 15,
+        "sodium_mg": 250
+      },
+      "ingredients": "Protein blend (whey protein isolate, milk protein isolate), isomalto-oligosaccharides++ (prebiotic fiber), almonds, cocoa, water. contains less than 2% of the following: sea salt, lo han guo, natural flavors, sucralose.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849003907": {
+      "barcode": "0888849003907",
+      "name": "Chocolate Peanut Butter Protein Bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 190,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 23,
+        "fat_g": 7,
+        "fiber_g": 14,
+        "sodium_mg": 200
+      },
+      "ingredients": "protein blend (milk protein isolate, whey protein isolate), peanuts, polydextrose (prebiotic fiber), water, erythritol, unsweetened chocolate, glycerin, cocoa butter, sodium caseinate, natural flavors, sea salt, stevia sweetener, lecithin (sunflower and/or soy lecithin), almonds, sucralose",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849005178": {
+      "barcode": "0888849005178",
+      "name": "Oatmeal Chocolate Chip Protein Bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 180,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 23,
+        "fat_g": 7,
+        "fiber_g": 16,
+        "sodium_mg": 190
+      },
+      "ingredients": "Protein blend (milk protein isolate, whey protein isolate), soluble corn fiber, almonds, water, oats**, unsweetened chocolate, natural flavors, erythritol. contains less than 2% of the following: cocoa butter, sea salt, cinnamon, sunflower lecithin, stevia sweetener, sucralose.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849011117": {
+      "barcode": "0888849011117",
+      "name": "Protein Bar, Oatmeal Chocolate Chip",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 190,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 23,
+        "fat_g": 7,
+        "fiber_g": 9.6,
+        "sodium_mg": 190
+      },
+      "ingredients": "",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849010554": {
+      "barcode": "0888849010554",
+      "name": "Hero Protein Bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 160,
+        "protein_g": 15,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 26,
+        "fat_g": 7,
+        "fiber_g": 9,
+        "sodium_mg": 160
+      },
+      "ingredients": "protein blend (milk protein isolate, whey protein isolate), allulose, soluble corn fiber, water, erythritol, coconut, sodium caseinate, cocoa processed with alkali, natural flavors, peanuts, pecans, palm oil, carrageenan, sucralose, lecithin (sunflower and/or soy)",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849007646": {
+      "barcode": "0888849007646",
+      "name": "peppermint bark Protein Bar",
+      "brand": "QUEST",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 300,
+        "protein_g": 35,
+        "added_sugar_g": null,
+        "sugar_g": 0.83333333333333,
+        "carbs_g": 36.666666666667,
+        "fat_g": 11.666666666667,
+        "fiber_g": 20,
+        "sodium_mg": 366.666666666668
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849012732": {
+      "barcode": "0888849012732",
+      "name": "Protein bars",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 80,
+        "protein_g": 8,
+        "added_sugar_g": null,
+        "sugar_g": 2,
+        "carbs_g": 9,
+        "fat_g": 3,
+        "fiber_g": 5,
+        "sodium_mg": 110
+      },
+      "ingredients": "PROTEIN BLEND (MILK PROTEIN ISOLATE, WHEY PROTEIN ISOLATE), POLYDEXTROSE (PREBIOTIC FIBER), ALMONDS, WATER, ERYTHRITOL, COCOA BUTTER, GLYCERIN, SOLUBLE CORN FIBER CONTAINS LESS THAN 2% OF THE FOLLOWING: NATURAL FLAVORS, COCOA PROCESSED WITH ALKALI, PALM KERNEL OIL, SEA SALT, SODIUM CASEINATE, LECITHIN (SUNFLOWER AND/OR SOY LECITHIN), XANTHAN GUM, BAKING SODA, STEVIA SWEETENER, SUCRALOSE",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0822249010936": {
+      "barcode": "0822249010936",
+      "name": "Hero Protein Bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 200,
+        "protein_g": null,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 19,
+        "fat_g": 11,
+        "fiber_g": 4,
+        "sodium_mg": 220
+      },
+      "ingredients": "Protein Blend (Milk Protein Isolate, Whey Protein Isolate), Allulose, Palm Kernel Oil, Corn Fiber, Water, Sodium Caseinate, Cocoa Processed with Alkali, Peanut Oil, Butter (Cream), Pecans, Palm Oil, Carrageenan, Sucralose, Lecithin (Sunflower and/or Soy Lecithin), Salt",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0822249003877": {
+      "barcode": "0822249003877",
+      "name": "White Chocolate Raspberry Protein Bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 190,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 22,
+        "fat_g": 8,
+        "fiber_g": 13,
+        "sodium_mg": 240
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849015818": {
+      "barcode": "0888849015818",
+      "name": "Overload Sundae Funday Protein Bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 210,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 16,
+        "fat_g": 10,
+        "fiber_g": 12,
+        "sodium_mg": 220
+      },
+      "ingredients": "protein blend, milk protein isolate, whey protein isolate, polydextrose, prebiotic fiber, erythritol, palm kernel oil, palm oil, water, almonds, glycerin, soluble corn fiber, sodium caseinate, peanuts, natural flavors, unsweetened chocolate, cocoa butter, salt, nonfat milk, soy lecithin, cocoa processed with alkali, butter cream, sucralose, sodium bicarbonate, xanthan gum, annatto extract, beet root powder, gum arabic, sunflower lecithin, turmeric extract, stevia sweetener",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0377463354354": {
+      "barcode": "0377463354354",
+      "name": "Protein Bar, Cookies & Cream",
+      "brand": "Quest Bar",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 180,
+        "protein_g": 21,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 22,
+        "fat_g": 7,
+        "fiber_g": 17,
+        "sodium_mg": 310
+      },
+      "ingredients": "Protein blend (whey protein isolate, milk protein isolate), isomalto-oligosaccharides* (prebiotic fiber), water, almonds, cocoa butter, erythritol. contains less than 2% of the following: cocoa powder, natural flavors, coconut oil, sea salt, sunflower lecithin, dextrin, baking soda, steviol glycosides (stevia), sucralose.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0793573214539": {
+      "barcode": "0793573214539",
+      "name": "Chocolate Chip Cookie Dough",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 207,
+        "protein_g": 21,
+        "added_sugar_g": null,
+        "sugar_g": 0.9,
+        "carbs_g": 7,
+        "fat_g": 9,
+        "fiber_g": 14,
+        "sodium_mg": 212
+      },
+      "ingredients": "Protein blend (whey protein isolate, milk protein isolate), isomalto-oligosaccharides (prebiotic fiber), almonds, water, unsweetened chocolate, cocoa butter, erythritol, sea salt, stevia, natural flavorings, sucralose.",
+      "source": "open_food_facts",
+      "confidence": "high"
+    },
+    "0793573238467": {
+      "barcode": "0793573238467",
+      "name": "Protein Bar",
+      "brand": "Quest Bar",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 180,
+        "protein_g": 21,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 22,
+        "fat_g": 7,
+        "fiber_g": 17,
+        "sodium_mg": 310
+      },
+      "ingredients": "Protein blend (whey protein isolate, milk protein isolate), isomalto-oligosaccharides* (prebiotic fiber), water, almonds, cocoa butter, erythritol, contains less than 2% of the following: cocoa powder, natural flavors, coconut oil, sea salt, sunflower lecithin, dextrin, baking soda, steviol glycosides (stevia), sucralose.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849000029": {
+      "barcode": "0888849000029",
+      "name": "Cookies & Cream Protein Bars",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 190,
+        "protein_g": 21,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 22,
+        "fat_g": 7,
+        "fiber_g": 13,
+        "sodium_mg": 300
+      },
+      "ingredients": "Protein blend (milk protein isolate, whey protein isolate), soluble corn fiber (prebiotic fiber), almonds, water, cocoa butter, natural flavors, erythritol, palm oil, dextrin, cocoa (processed with alkali), sea salt, calcium carbonate, sunflower lecithin, sucralose, coconut oil, xanthan gum, baking soda, steviol glycosides (stevia).",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849000241": {
+      "barcode": "0888849000241",
+      "name": "Protein Bar",
+      "brand": "Quest Bar",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 170,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 9,
+        "carbs_g": 25,
+        "fat_g": 7,
+        "fiber_g": 12,
+        "sodium_mg": 240
+      },
+      "ingredients": "Protein blend (milk protein isolate, whey protein isolate), soluble corn fiber (prebiotic fiber), almonds, erythritol, water, unsweetened chocolate, cocoa (processed with alkali), natural flavors, cocoa butter, palm oil, sea salt, calcium carbonate, steviol glycosides (stevia).",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849000494": {
+      "barcode": "0888849000494",
+      "name": "protein bar, vanilla almond crunch",
+      "brand": "Quest Nutrition  Llc",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 200,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 21,
+        "fat_g": 9,
+        "fiber_g": 15,
+        "sodium_mg": 330
+      },
+      "ingredients": "Protein blend (milk protein isolate, whey protein isolate), almonds, soluble corn fiber, water, natural flavors, erythritol. contains less than 2% of the following: sea salt, sucralose.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849000739": {
+      "barcode": "0888849000739",
+      "name": "Protein Bar",
+      "brand": "Quest Nutrition  Llc",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 170,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 2,
+        "carbs_g": 25,
+        "fat_g": 5,
+        "fiber_g": 17,
+        "sodium_mg": 260
+      },
+      "ingredients": "Protein blend (whey protein isolate, milk protein isolate), isomalto-oligosaccharides* (prebiotic fiber), almonds, water, erythritol, walnuts, dried bananas. Contains less than 2% of the following: sea salt, cinnamon, steviol glycosides (stevia), natural flavors.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849001378": {
+      "barcode": "0888849001378",
+      "name": "Mint chocolate chunk protein bars",
+      "brand": "Quest Nutrition  Llc",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 170,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 24,
+        "fat_g": 6,
+        "fiber_g": 14,
+        "sodium_mg": 230
+      },
+      "ingredients": "Protein blend (milk protein isolate, whey protein isolate), soluble corn fiber (prebiotic fiber), water, almonds, cocoa butter, cocoa (processed with alkali), natural flavors, erythritol, palm oil, dextrin, sea salt, sunflower lecithin, sucralose, color (fruit juice, turmeric), coconut oil, xanthan gum, baking soda, peppermint oil, steviol glycosides (stevia).",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849005222": {
+      "barcode": "0888849005222",
+      "name": "Blueberry Muffin Protein Bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 170,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 5,
+        "carbs_g": 23,
+        "fat_g": 7,
+        "fiber_g": 13,
+        "sodium_mg": 220
+      },
+      "ingredients": "protein blend (milk protein isolate, whey protein isolate), soluble corn fiber (prebiotic fiber), almonds, water, cocoa butter, erythritol, natural flavors, dried blueberries, contains less than 2% of the following: sea salt, cinnamon, baking soda, cellulose gum, xanthan gum, sucralose, steviol glycosides (stevia),",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849006373": {
+      "barcode": "0888849006373",
+      "name": "Maple waffle protein bar, maple waffle",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 190,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 24,
+        "fat_g": 6,
+        "fiber_g": 16,
+        "sodium_mg": 290
+      },
+      "ingredients": "Protein blend (milk protein isolate, whey protein isolate), soluble corn fiber, water, almonds, erythritol, natural flavors, palm kernel oil. contains less than 2% of the following: butter (cream, salt), salt, baking soda, sodium caseinate, xanthan gum, steviol glycosides (stevia), sunflower lecithin, honey+.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849007677": {
+      "barcode": "0888849007677",
+      "name": "Pumpkin Pie Protein Bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 180,
+        "protein_g": 21,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 4,
+        "fat_g": 8,
+        "fiber_g": 12,
+        "sodium_mg": 200
+      },
+      "ingredients": "Protein blend (milk protein isolate, whey protein isolate), soluble corn fiber, erythritol, water, palm kernel oil, almonds, sodium caseinate, natural flavors (contains milk). contains less than 2% of the following: sea salt, cinnamon, spice, baking soda, lemon peel powder, beta carotene (color), fruit and vegetable juice* (color), sunflower and/or soy lecithin, xanthan gum, steviol glycosides (stevia).",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849000647": {
+      "barcode": "0888849000647",
+      "name": "Protein bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 170,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 2,
+        "carbs_g": 24,
+        "fat_g": 6,
+        "fiber_g": 13,
+        "sodium_mg": null
+      },
+      "ingredients": "Protein blend (whey protein isolate, milk protein isolate), isomalto-oligosaccharides++ (prebiotic fiber), almonds, apples, water. contains less than 2% of the following: sea salt, cinnamon, lo han guo, natural flavors, sucralose.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849008650": {
+      "barcode": "0888849008650",
+      "name": "Chocolate Sprinkled Doughnut",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 300,
+        "protein_g": 33.333333333333,
+        "added_sugar_g": null,
+        "sugar_g": 1.6666666666667,
+        "carbs_g": 38.333333333333,
+        "fat_g": 13.333333333333,
+        "fiber_g": 20,
+        "sodium_mg": 350
+      },
+      "ingredients": "",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849006397": {
+      "barcode": "0888849006397",
+      "name": "Peanut butter brownie smash protein bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 190,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 2,
+        "carbs_g": 23,
+        "fat_g": 7,
+        "fiber_g": 14,
+        "sodium_mg": 200
+      },
+      "ingredients": "Protein blend (milk protein isolate, whey protein isolate), soluble corn fiber, peanuts, water, erythritol, almonds, peanut flour, natural flavors, cocoa (processed with alkali). contains less than 2% of the following: unsweetened chocolate, cocoa butter, sea salt, sodium caseinate, monk fruit extract, steviol glycosides (stevia), sunflower lecithin.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849000463": {
+      "barcode": "0888849000463",
+      "name": "Chocolate peanut butter protein bar, chocolate peanut butter",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 190,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 22,
+        "fat_g": 9,
+        "fiber_g": 13,
+        "sodium_mg": 190
+      },
+      "ingredients": "Protein blend (milk protein isolate, whey protein isolate), peanuts, soluble corn fiber, water, erythritol, unsweetened chocolate, natural flavors, cocoa butter. contains less than 2% of the following: sodium caseinate, sea salt, steviol glycosides (stevia), sunflower lecithin.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849008490": {
+      "barcode": "0888849008490",
+      "name": "quest protein bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 333.33333333333,
+        "protein_g": 35,
+        "added_sugar_g": null,
+        "sugar_g": 1.6666666666667,
+        "carbs_g": 35,
+        "fat_g": 13.333333333333,
+        "fiber_g": null,
+        "sodium_mg": 466.66666666668
+      },
+      "ingredients": "protein blend (milk protein isolate, whey protein isolate), soluble corn fiber, almonds, water, natural flavors, cocoa butter, erythritol, contains less than 2% of the following: cocoa processed with alkali, palm kernel oil, sea salt, sodium caseinate, sunflower lecithin, xanthan gum, baking soda, stevia sweetener, sucralose",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849003884": {
+      "barcode": "0888849003884",
+      "name": "Mint Chocolate Chunk Protein Bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 170,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 6,
+        "carbs_g": 24,
+        "fat_g": 6,
+        "fiber_g": 14,
+        "sodium_mg": 240
+      },
+      "ingredients": "Protein blend (milk protein isolate, whey protein isolate), soluble corn fiber (prebiotic fiber), water, almonds, cocoa butter, cocoa (processed with alkali), natural flavors, erythritol, palm oil, dextrin, sea salt, sunflower lecithin, sucralose, color (fruit juice, turmeric), coconut oil, xanthan gum, baking soda, peppermint oil, steviol glycosides (stevia).",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849003877": {
+      "barcode": "0888849003877",
+      "name": "WHITE CHOCOLATE RASPBERRY PROTEIN BAR",
+      "brand": "QUEST",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 180,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 22,
+        "fat_g": 8,
+        "fiber_g": 13,
+        "sodium_mg": 240
+      },
+      "ingredients": "Protein blend (milk protein isolate, whey protein isolate), soluble corn fiber, almonds, water, cocoa butter, raspberries, natural flavors, erythritol. contains less than 2% of the following: sodium caseinate, sea salt, sunflower lecithin, steviol glycosides (stevia), sucralose.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849006687": {
+      "barcode": "0888849006687",
+      "name": "Birthday cake protein bar, birthday cake",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 180,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 25,
+        "fat_g": 7.02,
+        "fiber_g": 12,
+        "sodium_mg": 250
+      },
+      "ingredients": "Protein blend (milk protein isolate, whey protein isolate), soluble corn fiber, erythritol, water, palm kernel oil, almonds, natural flavors, sodium caseinate. contains less than 2% of the following: sea salt, gum arabic, spirulina extract (color), red cabbage extract (color), turmeric extract (color), radish extract (color), sucralose, sunflower lecithin.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849006151": {
+      "barcode": "0888849006151",
+      "name": "CRISPY CHOCOLATE CARAMEL PECAN FLAVORED PROTEIN BAR",
+      "brand": "QUEST",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 180,
+        "protein_g": 15,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 29,
+        "fat_g": 9,
+        "fiber_g": 11,
+        "sodium_mg": null
+      },
+      "ingredients": "Protein blend (milk protein isolate, whey protein isolate), soluble corn fiber, alluloseâ€¡, palm kernel oil, pecans, cocoa, butter (cream), water, erythritol, natural flavors. contains less than 2% of the following: sea salt, baking soda, palm oil, cellulo",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849004638": {
+      "barcode": "0888849004638",
+      "name": "Blueberry Muffin protein bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 180,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 6,
+        "carbs_g": 23,
+        "fat_g": 6,
+        "fiber_g": 13,
+        "sodium_mg": 220
+      },
+      "ingredients": "Protein blend (milk protein isolate, whey protein isolate), soluble corn fiber, almonds, water, cocoa butter, erythritol, natural flavors, dried blueberries. contains less than 2% of the following: sea salt, cinnamon, baking soda, sodium caseinate, cellulose gum, xanthan gum, steviol glycosides (stevia), sucralose, sunflower lecithin.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849003914": {
+      "barcode": "0888849003914",
+      "name": "Double Chocolate Chunk Protein Bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 170,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 24,
+        "fat_g": 7,
+        "fiber_g": 14,
+        "sodium_mg": 220
+      },
+      "ingredients": "Protein blend (milk protein isolate, whey protein isolate), soluble corn fiber, almonds, water, erythritol, unsweetened chocolate, cocoa processed with alkali, natural flavors, cocoa butter. contains less than 2% of the following: sea salt, sunflower lecithin, steviol glycosides (stevia).",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849011605": {
+      "barcode": "0888849011605",
+      "name": "CRISPY COOKIES & CREAM FLAVORED PROTEIN BAR",
+      "brand": "QUEST",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 150,
+        "protein_g": 10,
+        "added_sugar_g": null,
+        "sugar_g": 0.962,
+        "carbs_g": 23,
+        "fat_g": 6,
+        "fiber_g": 6,
+        "sodium_mg": 230
+      },
+      "ingredients": "protein blend (milk protein isolate, whey protein isolate), allulose, soluble corn fiber, palm kernel oil, water, erythritol, cocoa processed with alkali, sodium caseinate, unsweetened chocolate, sea salt, natural flavors, lecithin (sunflower and/or soy lecithin), sucralose, butter (cream), palm oil, carrageenan",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "1240000004304": {
+      "barcode": "1240000004304",
+      "name": "Caramel Chocolate Chunk flavour Protein Bar",
+      "brand": "QUEST",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 189,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 4,
+        "fat_g": 7,
+        "fiber_g": 15,
+        "sodium_mg": 271
+      },
+      "ingredients": "caramel chocolate glaze flavour protein bar, caramel flavoured chunks, milk chocolate flavoured chunks, milk protein blend, whey protein isolate, polydextrose, prebiotic fibre, water, almonds, soluble corn fibre, chocolate, shea oil, sweetened condensed milk, sugar, glucose, sweetened condensed skim milk, cocoa mass, cocoa butter, chocolate liquor, glycerin, natural flavours, cocoa butter, sea salt, butter, emulsifier, lecithin, sunflower, soy, milk",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849010578": {
+      "barcode": "0888849010578",
+      "name": "Crispy Chocolate Coocnut Hero Protein Bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 109.09090909091,
+        "protein_g": 27.272727272727,
+        "added_sugar_g": null,
+        "sugar_g": 1.8181818181818,
+        "carbs_g": 47.272727272727,
+        "fat_g": 14.545454545455,
+        "fiber_g": null,
+        "sodium_mg": 309.090909090908
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849011278": {
+      "barcode": "0888849011278",
+      "name": "Quest Lemon Cake",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 180,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 24,
+        "fat_g": 7,
+        "fiber_g": 13,
+        "sodium_mg": 210
+      },
+      "ingredients": "PROTEIN BLEND (MILK PROTEIN ISOLATE, WHEY PROTEIN ISOLATE), SOLUBLE CORN FIBER, ALMONDS, WATER, ERYTHRITOL, NATURAL FLAVORS ,PALM KERNEL OIL. CONTAINS LESS THAN 2% OF THE FOLLOWING: LEMON POWDER, SODIUM CASEINATE, SEA SALT, CITRIC ACID, XANTHAN EM, BAKING SODA, STEVIA SWEETENER, SUNFLOWER LECITHIN.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849011599": {
+      "barcode": "0888849011599",
+      "name": "Cookies and crème protein bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 78,
+        "protein_g": 9.36,
+        "added_sugar_g": null,
+        "sugar_g": 0.52,
+        "carbs_g": 3.12,
+        "fat_g": 3.12,
+        "fiber_g": 3.12,
+        "sodium_mg": 104
+      },
+      "ingredients": "PROTEIN BLEND (MILK PROTEN ISOLATE, WHEY PROTEIN ISOLATE), ALLULOSE, SOLUBLE CORN FIBER, PALM KEANEL OIL, WATER, ERYTHRITOL, COCOA PROCESSED WITH ALKALI, SODIUM CASEINATE, UNSWEETENED CHOCOLATE. CONTAINS LESS THAN 2% OF THE FOLLOWING: SEA SALT, NATURAL FLAVORS, LECITHIN (SUNFLOWER AND/OR SOY LECITHIN, SUCRALOSE, BUTTER (CREAM), PALM OIL, CARRAGEENAN.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0822249005956": {
+      "barcode": "0822249005956",
+      "name": "Protein Bar - Birthday Cake flavor",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 180,
+        "protein_g": 21,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 24,
+        "fat_g": 6,
+        "fiber_g": null,
+        "sodium_mg": 88
+      },
+      "ingredients": "protein blend, milk protein isolate, whey protein isolate, soluble corn fiber, almonds, water, erythritol, palm kernel oil, natural flavors, sea salt, sunflower lecithin, baking soda, steviol glycosides, sucralose, cocoa butter, sodium caseinate, sunflower oil, soy lecithin, cocoa processed with alkali, unsweetened chocolate, salt, calcium carbonate, cellulose gum, xanthan gum, carrageenan, guar gum, turmeric extract, radish extract",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849010912": {
+      "barcode": "0888849010912",
+      "name": "Quest protein bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 316.66666666667,
+        "protein_g": 35,
+        "added_sugar_g": null,
+        "sugar_g": 1.6666666666667,
+        "carbs_g": 36.666666666667,
+        "fat_g": 11.666666666667,
+        "fiber_g": 23.333333333333,
+        "sodium_mg": 333.333333333332
+      },
+      "ingredients": "protein blend, polydextrose, almonds, water, erythritol, unsweetened chocolate, glycerin, contains less than 2% of the following: natural flavors, soluble corn fiber, cocoa butter, palm kernel oil, salt, cinnamon, lecithin, baking soda, stevia sweetener, xanthan gum, sucralose",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849044634": {
+      "barcode": "0888849044634",
+      "name": "Quest bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 180,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 24,
+        "fat_g": 7,
+        "fiber_g": 14,
+        "sodium_mg": 220
+      },
+      "ingredients": "Protein Blend (Milk Protein Isolate, Whey Protein Isolate), Soluble Corn Fiber, Water, Almonds, Erythritol, Unsweetened Chocolate, Natural Flavors, Cocoa Processed with Alkali, Cocoa Butter, Contains Less Than 2% of the Following: Sea Salt, Sunflower Lecithin, Stevia Sweetener",
+      "source": "open_food_facts",
+      "confidence": "high"
+    },
+    "0822249011582": {
+      "barcode": "0822249011582",
+      "name": "Quest hero protein bar",
+      "brand": "Unknown",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 150,
+        "protein_g": 18,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 23,
+        "fat_g": 6,
+        "fiber_g": 14,
+        "sodium_mg": 230
+      },
+      "ingredients": "PROTEIN BLEND MILK PROTEIN ISOLATE, WHEY PROTEIN ISOLATE), ALLULOSE, SOLUBLE CORN FIBER, PALM KERNEL OIL, WATER, ERYTHRITOL, COCOA PROCESSED WITH ALKALI, SODIUM CASEINATE, UNSWEETENED CHOCOLATE. CONTAINS LESS THAN 2% OF THE FOLLOWING: SEA SALT, NATURAL FLAVORS, LECITHIN (SUNFLOWER AND/OR SOY LECITHIN), SUCRALOSE, BUTTER (CREAM), PALM OIL, CARRAGEENAN. CONTAINS: MILK, SOY. PROCESSED IN A FACILITY THAT ALSO PROCESSES PEANUTS AND TREE NUTS.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849003945": {
+      "barcode": "0888849003945",
+      "name": "APPLE PIE PROTEIN BAR",
+      "brand": "QUEST",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 170,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 2,
+        "carbs_g": 24,
+        "fat_g": 6,
+        "fiber_g": 13,
+        "sodium_mg": 230
+      },
+      "ingredients": "PROTEIN BLEND (MILK PROTEIN ISOLATE, WHEY PROTEIN ISOLATE), POLYDEXTROSE (PREBIOTIC FIBER), ALMONDS, WATER, ERYTHRITOL, DRIED APPLE (ASCORBIC ACID, CITRIC ACID, SODIUM CHLORIDE TO PREVENT BROWNING), GLYCERIN, SOLUBLE CORN FIBER., CONTAINS LESS THAN 2% OF THE FOLLOWING:, NATURAL FLAVORS, PALM KERNEL OIL, SALT, SODIUM CASEINATE, CINNAMON, BUTTER (CREAM, SALT), MALIC ACID, SUCRALOSE, LECITHIN (SUNFLOWER AND/OR SOY LECITHIN), BAKING SODA, XANTHAN GUM, STEVIA SWEETENER",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0822249000418": {
+      "barcode": "0822249000418",
+      "name": "Chocolate Brownie Protein Bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 170,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 19,
+        "fat_g": 6,
+        "fiber_g": 15,
+        "sodium_mg": 240
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849015832": {
+      "barcode": "0888849015832",
+      "name": "Protein Bar",
+      "brand": "QUEST",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 200,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 21,
+        "fat_g": 9,
+        "fiber_g": 11,
+        "sodium_mg": 220
+      },
+      "ingredients": "Erythritol, Sodium Bicarbonate, Milk, Almonds, Protein Blend (Whey Protein Isolate, Pea Protein, Egg White Protein), Polydextrose, Palm Kernel Oil, Palm Oil, Natural Flavors, Salt, Lecithin (Sunflower and/or Soy Lecithin), Nonfat Milk, Sucralose.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849015771": {
+      "barcode": "0888849015771",
+      "name": "Quest Overloaded Bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 214,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 22,
+        "fat_g": 10,
+        "fiber_g": 11,
+        "sodium_mg": 230
+      },
+      "ingredients": "PROTEIN BLEND (MILK PROTEIN ISOLATE, WHEY PROTEIN ISOLATE), POLYDEXTROSE, PALM KERNEL OIL, PALM WATER, ERYTHRITOL, COCOA PROCESSED WITH ALKALI, UNSWEETENED CHOCOLATE, GLYCERIN, ALMONDS, SODIUM CASEINATE, NATURAL FLAVORS, COCOA BUTTER, SOLUBLE CORN FIBER, SALT, LECITHIN, NONFAT MILK, SUCRALOSE, TAPIOCA STARCH, SUNFLOWER OIL, STEVIA SWEETENER, SODIUM BICARBONATE, XANTHAN GUM, CELLULOSE GUM.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849015801": {
+      "barcode": "0888849015801",
+      "name": "PROTEIN BAR",
+      "brand": "QUEST",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 210,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 25,
+        "fat_g": 10,
+        "fiber_g": 12,
+        "sodium_mg": 139
+      },
+      "ingredients": "PROTEIN BLEND (MILK PROTEIN ISOLATE, WHEY PROTEIN ISOLATE), POLYDEXTROSE, ERYTHRITOL, PALM KERNEL OIL, PALM OIL, WATER, ALMONDS, GLYCERIN, SOLUBLE CORN FIBER, SODIUM CASEINATE, PEANUTS, NATURAL FLAVORS, UNSWEETENED CHOCOLATE, COCOA BUTTER, SALT, NONFAT MILK, SOY LECITHIN, COCOA PROCESSED WITH ALKALI, BUTTER, SUCRALOSE, SODIUM BICARBONATE, XANTHAN GUM, ANNATTO EXTRACT, BEET ROOT POWDER, GUM ARABIC, SUNFLOWER LECITHIN, TURMERIC EXTRACT, STEVIA SWEETENER.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849016730": {
+      "barcode": "0888849016730",
+      "name": "Peanut Butter & Jelly Protein Bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": null,
+        "protein_g": null,
+        "added_sugar_g": null,
+        "sugar_g": null,
+        "carbs_g": null,
+        "fat_g": null,
+        "fiber_g": null,
+        "sodium_mg": null
+      },
+      "source": "open_food_facts",
+      "confidence": "low"
+    },
+    "0888849015665": {
+      "barcode": "0888849015665",
+      "name": "Strawberry Shortcake Protein Bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": null,
+        "protein_g": null,
+        "added_sugar_g": null,
+        "sugar_g": null,
+        "carbs_g": null,
+        "fat_g": null,
+        "fiber_g": null,
+        "sodium_mg": null
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0793573225924": {
+      "barcode": "0793573225924",
+      "name": "Protein  Bar",
+      "brand": "Quest Bar",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 160,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 25,
+        "fat_g": 6,
+        "fiber_g": 16,
+        "sodium_mg": 254
+      },
+      "ingredients": "Protein blend (whey protein isolate, milk protein isolate), isomalto - oligosacchandes (probiotic fiber), merythritol water, unsweetened chocolate, almonds, cocoa, cocoa butter, contains less than 2% of the following: sea salt, stevia, natural",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0793573933300": {
+      "barcode": "0793573933300",
+      "name": "Chocolate Brownie",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 180,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 23,
+        "fat_g": 6,
+        "fiber_g": 17,
+        "sodium_mg": 230
+      },
+      "ingredients": "Protein blend (Milk Protein Isolate, Whey Protein Isolate), Soluble Corn Fiber, Almonds, Water, Cocoa Processed with Alkali, Natural Flavors, Erythritol, Sea Salt, Baking Soda, Stevia Sweetener, Sucralose.",
+      "source": "open_food_facts",
+      "confidence": "high"
+    },
+    "0888849000227": {
+      "barcode": "0888849000227",
+      "name": "White Chocolate Raspberry Protein Bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 180,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 23,
+        "fat_g": 8,
+        "fiber_g": 17,
+        "sodium_mg": 270
+      },
+      "ingredients": "Protein blend (whey protein isolate, milk protein isolate), isomalto-oligosaccharides* (natural prebiotic fiber), water, almonds, cocoa butter, freeze dried raspberries, erythritol. contains less than 2% of the following: sea salt, natural flavors, stevia, sucralose.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849000616": {
+      "barcode": "0888849000616",
+      "name": "Peanut butter supreme protein bar, peanut butter supreme",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 200,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 2,
+        "carbs_g": 22,
+        "fat_g": 8,
+        "fiber_g": 15,
+        "sodium_mg": 180
+      },
+      "ingredients": "Protein blend (milk protein isolate, whey protein isolate), soluble corn fiber, peanuts, water, almonds, natural flavors, erythritol. contains less than 2% of the following: sea salt, sucralose, steviol glycosides (stevia).",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849000692": {
+      "barcode": "0888849000692",
+      "name": "Strawberry cheesecake protein bar, strawberry cheesecake",
+      "brand": "Quest bar",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 232,
+        "protein_g": 3.1,
+        "added_sugar_g": null,
+        "sugar_g": 18.4,
+        "carbs_g": 31.6,
+        "fat_g": 10.2,
+        "fiber_g": 0.6,
+        "sodium_mg": 24
+      },
+      "ingredients": "Protein blend (milk protein isolate, whey protein isolate), soluble corn fiber, almonds, water, erythritol, natural flavors, dried strawberries. contains less than 2% of the following: sea salt, steviol glycosides (stevia).",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849000715": {
+      "barcode": "0888849000715",
+      "name": "Questbar, Protein Bar, Lemon Cream Pie",
+      "brand": "Quest Nutrition  Llc",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 170,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 23,
+        "fat_g": 6,
+        "fiber_g": 14,
+        "sodium_mg": 244
+      },
+      "ingredients": "Protein Blend (_Whey Protein Isolate_, _Milk Protein Isolate_ ), Soluble Corn Fiber ( Prebiotic Fiber ), _Almonds_, Erythritol, Water, Natural Flavors, Palm Oil, Sea Salt, Citric Acid, Steviol Glycosides ( Stevia )",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849001903": {
+      "barcode": "0888849001903",
+      "name": "Protein Bar, Pumpkin Pie",
+      "brand": "Quest Nutrition  Llc",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 220,
+        "protein_g": 21,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 19,
+        "fat_g": 12,
+        "fiber_g": 12,
+        "sodium_mg": 230
+      },
+      "ingredients": "Protein blend (milk protein isolate, whey protein isolate), soluble corn fiber (prebiotic fiber), palm oil, almonds, water, erythritol, pecans, natural flavors, pumpkin powder, sea salt, butter, sunflower lecithin, baking soda, sucralose, annatto extract (color), xanthan gum, cinnamon, steviol glycosides (stevia).",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849001965": {
+      "barcode": "0888849001965",
+      "name": "Cereal protein bar, Waffle",
+      "brand": "Quest Nutrition",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 110,
+        "protein_g": 12,
+        "added_sugar_g": null,
+        "sugar_g": 8,
+        "carbs_g": 17,
+        "fat_g": 4.5,
+        "fiber_g": 6,
+        "sodium_mg": 170
+      },
+      "ingredients": "Protein blend (milk protein isolate, whey protein isolate), allulose, soluble corn fiber (prebiotic fiber), almonds, natural flavors, butter, water, palm kernel oil. Contains less than 2% of the following: erythritol, sea salt, baking soda, cellulose gum, xanthan gum, sucralose, sunflower lecithin.",
+      "source": "open_food_facts",
+      "confidence": "high"
+    },
+    "0888849008018": {
+      "barcode": "0888849008018",
+      "name": "Chocolate hazelnut protein bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 316.66666666667,
+        "protein_g": 33.333333333333,
+        "added_sugar_g": null,
+        "sugar_g": 1.6666666666667,
+        "carbs_g": 38.333333333333,
+        "fat_g": 13.333333333333,
+        "fiber_g": null,
+        "sodium_mg": 333.333333333332
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849005420": {
+      "barcode": "0888849005420",
+      "name": "Protein bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 180,
+        "protein_g": 16,
+        "added_sugar_g": null,
+        "sugar_g": 12,
+        "carbs_g": 29,
+        "fat_g": 9,
+        "fiber_g": 10,
+        "sodium_mg": 230
+      },
+      "ingredients": "Protein blend (milk protein isolate, whey protein isolate), soluble corn fiber (prebiotic fiber), allulose**, palm kernel oil, erythritol, water, butter, almonds, natural flavors. contains less than 2% of the following: sea salt, baking soda, palm oil, cellulose gum, xanthan gum, carrageenan, sucralose, sunflower lecithin.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0810793010021": {
+      "barcode": "0810793010021",
+      "name": "Cookies & Cream Protein Bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 80,
+        "protein_g": 2,
+        "added_sugar_g": null,
+        "sugar_g": 9,
+        "carbs_g": 16,
+        "fat_g": 1,
+        "fiber_g": null,
+        "sodium_mg": 25
+      },
+      "ingredients": "Malt extract, whey powder, tapioca syrup, cocoa powder process with alkali, full cream milk powder, medium-chain triglyceride oil (palm), vitamin mix (vitamin c, iron orthophosphate, vitamin e, niacin, manganese, vitamin a, pantothenic acid, vitamin b6, vitamin b1, vitamin b2, vitamin d, vitamin b12), magnesium carbonate, di-calcium phosphate, salt, ferric pyrophosphate, zinc sulfate, vanilla flavor, vitamin a acetate, folic acid",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849008025": {
+      "barcode": "0888849008025",
+      "name": "Chocolate hazelnut protein bar, chocolate hazelnut",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 190,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 23,
+        "fat_g": 8,
+        "fiber_g": 14,
+        "sodium_mg": 200
+      },
+      "ingredients": "Protein blend (milk protein isolate, whey protein isolate), soluble corn fiber, almonds, water, hazelnuts, erythritol, natural flavors. contains less than 2% of the following: cocoa processed with alkali, unsweetened chocolate, cocoa butter, sea salt, sodium caseinate, steviol glycosides (stevia), sunflower lecithin.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849005468": {
+      "barcode": "0888849005468",
+      "name": "Protein Bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 200,
+        "protein_g": 15,
+        "added_sugar_g": null,
+        "sugar_g": 12,
+        "carbs_g": 27,
+        "fat_g": 11,
+        "fiber_g": 11,
+        "sodium_mg": 220
+      },
+      "ingredients": "Protein blend (milk protein isolate, whey protein isolate), soluble corn fiber (prebiotic fiber), allulose**, palm kernel oil, pecans, cocoa, butter, water, erythritol, natural flavors. contains less than 2% of the following: sea salt, baking soda, palm oil, cellulose gum, xanthan gum, carrageenan, sucralose, sunflower lecithin.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849008032": {
+      "barcode": "0888849008032",
+      "name": "Quest protein bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 190,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 23,
+        "fat_g": 8,
+        "fiber_g": 14,
+        "sodium_mg": 200
+      },
+      "ingredients": "Protein blend (milk protein isolate, whey protein isolate), soluble corn fiber, almonds, water, hazelnuts, erythritol, natural flavors. contains less than 2% of the following: cocoa processed with alkali, unsweetened chocolate, cocoa butter, sea salt, sod",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849008865": {
+      "barcode": "0888849008865",
+      "name": "Chocolate chip cookie dough protein bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 333.33333333333,
+        "protein_g": 35,
+        "added_sugar_g": null,
+        "sugar_g": 1.6666666666667,
+        "carbs_g": 35,
+        "fat_g": 15,
+        "fiber_g": null,
+        "sodium_mg": 333.333333333332
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849008971": {
+      "barcode": "0888849008971",
+      "name": "Oatmeal chocolate chip flavor protein bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 316.66666666667,
+        "protein_g": 33.333333333333,
+        "added_sugar_g": null,
+        "sugar_g": 1.6666666666667,
+        "carbs_g": 38.333333333333,
+        "fat_g": 11.666666666667,
+        "fiber_g": null,
+        "sodium_mg": 316.666666666668
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849008889": {
+      "barcode": "0888849008889",
+      "name": "Chocolate Chip Cookie Dough Protein Bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 333.33333333333,
+        "protein_g": 35,
+        "added_sugar_g": null,
+        "sugar_g": 1.6666666666667,
+        "carbs_g": 35,
+        "fat_g": 15,
+        "fiber_g": null,
+        "sodium_mg": 333.333333333332
+      },
+      "ingredients": "prtien blend ( milk protien isolate, whey protien isolate ), soluble corn fiber , almonds , water , unsweetened chocolate , erythritol , natural flavor , coca butter.",
+      "source": "open_food_facts",
+      "confidence": "high"
+    },
+    "0888849011827": {
+      "barcode": "0888849011827",
+      "name": "Quest protein bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 333.33333333333,
+        "protein_g": 35,
+        "added_sugar_g": null,
+        "sugar_g": 1.6666666666667,
+        "carbs_g": 35,
+        "fat_g": 15,
+        "fiber_g": null,
+        "sodium_mg": 333.333333333332
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849011988": {
+      "barcode": "0888849011988",
+      "name": "Quest Protein Bar",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 333.33333333333,
+        "protein_g": 35,
+        "added_sugar_g": null,
+        "sugar_g": 1.6666666666667,
+        "carbs_g": 35,
+        "fat_g": 13.333333333333,
+        "fiber_g": null,
+        "sodium_mg": 466.66666666668
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0888849008919": {
+      "barcode": "0888849008919",
+      "name": "Cookies & cream protein bars",
+      "brand": "Quest",
+      "category": "protein_bar",
+      "nutrition": {
+        "calories": 200,
+        "protein_g": 21,
+        "added_sugar_g": null,
+        "sugar_g": 1,
+        "carbs_g": 21,
+        "fat_g": 8,
+        "fiber_g": null,
+        "sodium_mg": 0
+      },
+      "ingredients": "protein blend (milk protein isolate, whey protein isolate), soluble corn fiber, almonds, water, natural flavors, cocoa butter, dv 8% 54% erythritol, contains less than 2% of the following: cocoa processed with alkali, palm kernel oil, sea salt, sodium sugars sugars 0% caseinate, sunflower lecithin, xanthan gum, baking soda, stevia sweetener, contains: milk, almonds, processed in a facility that also processes eggs,  peanuts, soy, wheat, and other tree nuts, 42% ssium 140mg 2% tnutrition,com",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632019448": {
+      "barcode": "0036632019448",
+      "name": "Oikos Triple Zero Blended Greek Yogurt Vanilla",
+      "brand": "Oikos",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 100,
+        "protein_g": 17,
+        "added_sugar_g": null,
+        "sugar_g": 6,
+        "carbs_g": 7,
+        "fat_g": 0,
+        "fiber_g": 0,
+        "sodium_mg": 65
+      },
+      "ingredients": "Cultured grade A non fat milk, water, natural flavors, contains less than 1% of tapioca starch, stevia leaf extract, lemon juice concentrate, sea salt, vitamin D3, yogurt cultures: S. Thermophilus & L. Bulgaricus.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632019530": {
+      "barcode": "0036632019530",
+      "name": "BLENDED GREEK YOGURT",
+      "brand": "OIKOS",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 80,
+        "protein_g": 15,
+        "added_sugar_g": null,
+        "sugar_g": 5,
+        "carbs_g": 7,
+        "fat_g": 0,
+        "fiber_g": 0,
+        "sodium_mg": 55
+      },
+      "ingredients": "cultured grade A non fat milk, water, natural flavors, contains less than 1% of: tapioca starch, stevia leaf extract, lemon juice concentrate, sea salt, vitamin D3, yogurt cultures: S. thermophilus and L. bulgaricus",
+      "source": "open_food_facts",
+      "confidence": "high"
+    },
+    "0036632024329": {
+      "barcode": "0036632024329",
+      "name": "BLENDED GREEK YOGURT",
+      "brand": "OIKOS TRIPLE ZERO",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 100,
+        "protein_g": 18,
+        "added_sugar_g": null,
+        "sugar_g": 7,
+        "carbs_g": 7,
+        "fat_g": 0,
+        "fiber_g": 0,
+        "sodium_mg": 60
+      },
+      "ingredients": "Cultured non-fat milk, yogurt cultures (S. thermophilus, L. bulgaricus), milk.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632008343": {
+      "barcode": "0036632008343",
+      "name": "Vanilla Flavored Greek Yogurt",
+      "brand": "Oikos Triple Zero",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 80,
+        "protein_g": 15,
+        "added_sugar_g": null,
+        "sugar_g": 5,
+        "carbs_g": 6,
+        "fat_g": 0,
+        "fiber_g": 0,
+        "sodium_mg": 55
+      },
+      "ingredients": "Cultured grade a non fat milk, chicory root fiber, water, contains less than 1% of natural flavors, stevia leaf extract, malic acid, sodium citrate, fruit juice and beta carotene (for color), sea salt, vitamin d3.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632019622": {
+      "barcode": "0036632019622",
+      "name": "OIKOS Triple Zero Blended Greek Yogurt",
+      "brand": "OIKOS",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 90,
+        "protein_g": 15,
+        "added_sugar_g": null,
+        "sugar_g": 5,
+        "carbs_g": 7,
+        "fat_g": 0,
+        "fiber_g": 0,
+        "sodium_mg": 60
+      },
+      "ingredients": "CULTURED GRADE A NON FAT MILK, WATER, NATURAL FLAVORS, CONTAINS LESS THAN 1% OF TAPIOCA STARCH, VEGETABLE JUICE CONCENTRATE (FOR COLOR), STEVIA LEAF EXTRACT, LEMON JUICE CONCENTRATE, SEA SALT, VITAMIN D3.\nYOGURT CULTURES: S. THERMOPHILUS AND L. BULGARICUS",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632019547": {
+      "barcode": "0036632019547",
+      "name": "TRIPLE ZERO BLENDED GREEK YOGURT",
+      "brand": "OIKOS",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 90,
+        "protein_g": 15,
+        "added_sugar_g": null,
+        "sugar_g": 5,
+        "carbs_g": 6,
+        "fat_g": 0,
+        "fiber_g": null,
+        "sodium_mg": 55
+      },
+      "ingredients": "Cultured grade a non fat milk, water, contains less than 1% of  natural flavors, tapioca starch, vegetable juice concentrate (for color), stevia leaf extract, lemon juice concentrate, sea salt, vitamin D3, yogurt cultures: S. thermophilus and l bulgaricus",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0056800355741": {
+      "barcode": "0056800355741",
+      "name": "Greek Yogurt Lactose Free Plain",
+      "brand": "Oikos",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 60,
+        "protein_g": 11,
+        "added_sugar_g": null,
+        "sugar_g": 4,
+        "carbs_g": 4,
+        "fat_g": 0,
+        "fiber_g": 0,
+        "sodium_mg": 30
+      },
+      "ingredients": "Skim milk, Lactase, Active bacterial cultures. Ingrédients: Lait écrémé, Lactase, Cultures bactériennes actives.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632008350": {
+      "barcode": "0036632008350",
+      "name": "Mixed Berry Flavored Oikos Triple Zero",
+      "brand": "Oikos",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 90,
+        "protein_g": 15,
+        "added_sugar_g": null,
+        "sugar_g": 5,
+        "carbs_g": 7,
+        "fat_g": 0,
+        "fiber_g": 0,
+        "sodium_mg": 60
+      },
+      "ingredients": "Cultured grade a non fat milk, chicory root fiber, water, contains less than 1% of natural flavors, vegetable juice concentrate (for color), stevia leaf extract, malic acid, sodium citrate, sea salt, vitamin d3.",
+      "source": "open_food_facts",
+      "confidence": "high"
+    },
+    "0036632042576": {
+      "barcode": "0036632042576",
+      "name": "Oikos Pro Strawberry Flavored Greek Yogurt",
+      "brand": "Oikos",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 140,
+        "protein_g": 20,
+        "added_sugar_g": null,
+        "sugar_g": 3,
+        "carbs_g": 6,
+        "fat_g": 3,
+        "fiber_g": 0,
+        "sodium_mg": 45
+      },
+      "ingredients": "CULTURED GRADE A ULTRA-FILTERED NON FAT MILK, WATER, WHEY PROTEIN CONCENTRATE NATURAL FLAVORS, CREAM, CONTAINS LESS THAN 1% OF TAPIOCA STARCH, DANONE VEGETABLE JUICE CONCENTRATE (FOR COLOR), LEMON JUICE CONCENTRATE, STEVIA LEAF Part of the REB M. POTASSIUM SORBATE (TO MAINTAIN FRESHNESS), VITAMIN D3, YOGURT CULTURES Danone Family CUM FOR THERMOPHILUS&L BULGARICUS MIND& S. GBONES",
+      "source": "open_food_facts",
+      "confidence": "high"
+    },
+    "0036632019684": {
+      "barcode": "0036632019684",
+      "name": "OIKOS Triple Zero Blended Greek Yogurt",
+      "brand": "Danone",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 90,
+        "protein_g": 15,
+        "added_sugar_g": null,
+        "sugar_g": 5,
+        "carbs_g": 7,
+        "fat_g": 0,
+        "fiber_g": null,
+        "sodium_mg": 60
+      },
+      "ingredients": "CULTURED GRADE A NON FAT MILK, WATER, CONTAINS LESS THAN 1% OF M NATURAL FLAVORS, TAPIOCA STARCH, VEGETABLE JUICE CONCENTRATE (FOR COLOR), STEVIA LEAF EXTRACT, L LEMON JUICE CONCENTRATE, SEA SALT, VITAMIN D3, YOGURT CULTURES: S. THERMOPHILUS&L. BULGARICUS.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0056800510133": {
+      "barcode": "0056800510133",
+      "name": "Greek Yogurt",
+      "brand": "Oikos PRO",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 80,
+        "protein_g": 13,
+        "added_sugar_g": null,
+        "sugar_g": 3,
+        "carbs_g": 5,
+        "fat_g": 1,
+        "fiber_g": 0,
+        "sodium_mg": 40
+      },
+      "ingredients": "Yogurt (skim milk, active bacterial cultures), water, corn starch, natural flavour, black carrot juice concentrate (for colour), carrot juice concentrate (for colour), pectin, stevia extract, lemon juice concentrate, sea salt",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632020819": {
+      "barcode": "0036632020819",
+      "name": "Vanilla Bean Blended Greek Yogurt",
+      "brand": "Oikos",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 120,
+        "protein_g": 16,
+        "added_sugar_g": null,
+        "sugar_g": 13,
+        "carbs_g": 14,
+        "fat_g": 0,
+        "fiber_g": 0,
+        "sodium_mg": 55
+      },
+      "ingredients": "CULTURED NON FAT MILK, WATER, CANE SUGAR, PECTIN, NATURAL FLAVORS, GUAR GUM, VANILLA BEAN SPECKS, LEMON JUICE CONCENTRATE, VITAMIN D3, YOGURT CULTURES: S. THERMOPHILUS AND L. BULGARICUS",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0056800295740": {
+      "barcode": "0056800295740",
+      "name": "Oikos 0% greek yogurt 30% less sugar",
+      "brand": "Oikos triple zero",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 70,
+        "protein_g": 8,
+        "added_sugar_g": null,
+        "sugar_g": 7,
+        "carbs_g": 8,
+        "fat_g": 0,
+        "fiber_g": 0,
+        "sodium_mg": 25
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632018649": {
+      "barcode": "0036632018649",
+      "name": "Oikos Greek Yogurt Blended - Lemon Meringue Flavor - Made with Whole Milk, Cane Sweetened",
+      "brand": "Danone",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 160,
+        "protein_g": 11,
+        "added_sugar_g": null,
+        "sugar_g": 19,
+        "carbs_g": 21,
+        "fat_g": 4,
+        "fiber_g": 0,
+        "sodium_mg": 70
+      },
+      "ingredients": "Yogurt (cultuered grade A non fat milk, cream, active yogurt culteres) cane sugar, water, contains less than 1% of modified food starch, lemon juice concentrate, natural flavors, beta carotene and turmeric (for color), potassium sorbate (to maintain freshness), sodium citrate, malic acid, vitamin D3.",
+      "source": "open_food_facts",
+      "confidence": "high"
+    },
+    "0036632019875": {
+      "barcode": "0036632019875",
+      "name": "TRIPLE ZERO BLENDED GREEK YOGURT",
+      "brand": "OIKOS",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 90,
+        "protein_g": 15,
+        "added_sugar_g": null,
+        "sugar_g": 5,
+        "carbs_g": 7,
+        "fat_g": 0,
+        "fiber_g": null,
+        "sodium_mg": 55
+      },
+      "ingredients": "CULTURED GRADE A NON FAT MILK, CHICORY ROOT FIBER, WATER, CONTAINS LESS THAN 1% OF NATURAL FLAVOR, BETA CAROTENE AND ANNATTO EXTRACT (FOR COLOR), STEVIA LEAF EXTRACT, CARRAGEENAN, MALIC ACID, SEA SALT, SODIUM CITRATE, VITAMIN D3.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632020161": {
+      "barcode": "0036632020161",
+      "name": "BLENDED GREEK YOGURT",
+      "brand": "OIKOS",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 90,
+        "protein_g": 15,
+        "added_sugar_g": null,
+        "sugar_g": 5,
+        "carbs_g": 7,
+        "fat_g": 0,
+        "fiber_g": 0,
+        "sodium_mg": 60
+      },
+      "ingredients": "Cultured grade a non fat milk, chicory root fiber, water, contains less than 1% of natural flavors, vegetable juice (for color), stevia leaf extract, malic acid, sodium citrate, sea salt, vitamin d3.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632020918": {
+      "barcode": "0036632020918",
+      "name": "Blended Greek Yogurt",
+      "brand": "Oikos",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 66.7,
+        "protein_g": 13,
+        "added_sugar_g": null,
+        "sugar_g": 8,
+        "carbs_g": 13,
+        "fat_g": 0,
+        "fiber_g": 0.667,
+        "sodium_mg": 55
+      },
+      "ingredients": "cultured non fat milk, strawberries, cane sugar, water, contains less than 1% of pectin, natural flavors, fruit and vegetable juice concentrate added for color, vitamin D3, yogurt cultures, L. thermophilus and L. bulgaricus",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632020840": {
+      "barcode": "0036632020840",
+      "name": "BLENDED GREEK YOGURT",
+      "brand": "OIKOS",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 98.3,
+        "protein_g": 13.1,
+        "added_sugar_g": null,
+        "sugar_g": 11.5,
+        "carbs_g": 12.6,
+        "fat_g": 0.543,
+        "fiber_g": 0.331,
+        "sodium_mg": 46.1
+      },
+      "ingredients": "Cultured Non Fat Milk, Blueberries, Water, Cane Sugar, Contains less than 1% of Pectin, Natural Flavors, Lemon Juice Concentrate, Vitamin D3, Yogurt Cultures: S. Thermophilus & L. Bulgaricus.",
+      "source": "open_food_facts",
+      "confidence": "high"
+    },
+    "0036632008732": {
+      "barcode": "0036632008732",
+      "name": "oikos, greek frozen yogurt, strawberry",
+      "brand": "Dannon",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 140,
+        "protein_g": 6,
+        "added_sugar_g": null,
+        "sugar_g": 18,
+        "carbs_g": 25,
+        "fat_g": 2.5,
+        "fiber_g": 0,
+        "sodium_mg": 34.7
+      },
+      "ingredients": "Lactose reduced non fat milk, sugar, strawberry puree, corn syrup, cultured non fat milk, cream, non fat milk powder, contains less than 2% of lactic acid, modified food starch, carob bean gum, natural flavor, vegetable juice and beta carotene (for color), citric acid. contains active yogurt cultures including l acidophilus",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632008794": {
+      "barcode": "0036632008794",
+      "name": "Dannon, oikos, triple zero blended nonfat greek yogurt, plain, plain",
+      "brand": "Dannon",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 120,
+        "protein_g": 15,
+        "added_sugar_g": null,
+        "sugar_g": 6,
+        "carbs_g": 14,
+        "fat_g": 0,
+        "fiber_g": 6,
+        "sodium_mg": 64.5
+      },
+      "ingredients": "Cultured grade a non fat milk, chicory root fiber, water, contains less than 1% of sea salt, malic acid, vitamin d3, sodium citrate.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632027146": {
+      "barcode": "0036632027146",
+      "name": "Dannon, oikos, nonfat greek yogurt, plain, plain",
+      "brand": "Dannon",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 79.5,
+        "protein_g": 15,
+        "added_sugar_g": null,
+        "sugar_g": 6,
+        "carbs_g": 6,
+        "fat_g": 0,
+        "fiber_g": 0,
+        "sodium_mg": 49.5
+      },
+      "ingredients": "Cultured grade a non fat milk.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632027542": {
+      "barcode": "0036632027542",
+      "name": "Greek Yogurt",
+      "brand": "Oikos",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 171,
+        "protein_g": 18,
+        "added_sugar_g": null,
+        "sugar_g": 21,
+        "carbs_g": 23,
+        "fat_g": 0,
+        "fiber_g": 0,
+        "sodium_mg": 74.2
+      },
+      "ingredients": "Cultured grade a non fat milk, water, cane sugar, contains less than 1% of: corn starch, natural flavors, fruit juice (for color), carob bean gum, lemon juice concentrate, vitamin d3.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632032157": {
+      "barcode": "0036632032157",
+      "name": "Off-the-charts cherry pie flavor not-so-traditional blended greek yogurt",
+      "brand": "Danone",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 150,
+        "protein_g": 11,
+        "added_sugar_g": null,
+        "sugar_g": 16,
+        "carbs_g": 17,
+        "fat_g": 4,
+        "fiber_g": 0,
+        "sodium_mg": 49.5
+      },
+      "ingredients": "Yogurt (cultured grade a non fat milk, cream, active yogurt cultures), water, cane sugar, cherries, contains less than 1% of corn starch, vegetable juice (for color), natural flavors, carob bean gum, lemon juice concentrate, vitamin d3.",
+      "source": "open_food_facts",
+      "confidence": "high"
+    },
+    "0036632020888": {
+      "barcode": "0036632020888",
+      "name": "Greek Yogurt",
+      "brand": "Danone",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 66.666666666667,
+        "protein_g": 8.6666666666667,
+        "added_sugar_g": null,
+        "sugar_g": 6.6666666666667,
+        "carbs_g": 7.3333333333333,
+        "fat_g": 0,
+        "fiber_g": null,
+        "sodium_mg": null
+      },
+      "ingredients": "",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "03667019": {
+      "barcode": "03667019",
+      "name": "Wild berry Greek yogurt cup",
+      "brand": "Oikos triple zero",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 90,
+        "protein_g": 15,
+        "added_sugar_g": null,
+        "sugar_g": null,
+        "carbs_g": 7,
+        "fat_g": null,
+        "fiber_g": null,
+        "sodium_mg": 80
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632020369": {
+      "barcode": "0036632020369",
+      "name": "Oikos Triple Zero Blended Greek Yogurt Blueberry Flavored",
+      "brand": "Oikos",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 90,
+        "protein_g": 15,
+        "added_sugar_g": null,
+        "sugar_g": 5,
+        "carbs_g": 8,
+        "fat_g": 0,
+        "fiber_g": null,
+        "sodium_mg": 55
+      },
+      "ingredients": "cultured grade a non fat milk, water, natural flavors, tapioca starch, fruit juice concentrate, stevia leaf extract, lemon juice concentrate, sea salt, vitamin d3, yogurt cultures: s. thermophilus and l. bulgaricus",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632020796": {
+      "barcode": "0036632020796",
+      "name": "Vanilla Bean Blended Greek Yogurt",
+      "brand": "Oikos",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 100,
+        "protein_g": 14,
+        "added_sugar_g": null,
+        "sugar_g": 12,
+        "carbs_g": 14,
+        "fat_g": 0,
+        "fiber_g": 0,
+        "sodium_mg": 50
+      },
+      "ingredients": "CULTURED NON FAT MILK, WATER, CANE SUGAR CONTAINS LESS THAN 1% OF PECTIN. NATURAL FLAVORS, GUAR GUM, VANILLA BEAN SPECKS, LEMON JUICE CONCENTRATE, VITAMIN D3 YOGURT CULTURES: S. THERMOPHILUS & L. BULGARICUS.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0056800911763": {
+      "barcode": "0056800911763",
+      "name": "Double Greek Yogurt",
+      "brand": "Oikos",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 130,
+        "protein_g": 10,
+        "added_sugar_g": null,
+        "sugar_g": 13,
+        "carbs_g": 16,
+        "fat_g": 3,
+        "fiber_g": 0,
+        "sodium_mg": 40
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632023131": {
+      "barcode": "0036632023131",
+      "name": "BLENDED GREEK YOGURT",
+      "brand": "OIKOS",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 80,
+        "protein_g": 9,
+        "added_sugar_g": null,
+        "sugar_g": 9,
+        "carbs_g": 10,
+        "fat_g": 0,
+        "fiber_g": 0,
+        "sodium_mg": 40
+      },
+      "ingredients": "CULTURED NONFAT MILK, STRAWBERRIES, CANE SUGAR, WATER, PECTIN, NATURAL FLAVORS, FRUIT & VEGETABLE JUICE CONCENTRATE, BETA CAROTENE, VITAMIN D3, YOGURT CULTURES (S. THERMOPHILUS, L. BULGARICUS)",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632023117": {
+      "barcode": "0036632023117",
+      "name": "Vanilla Bean Blended Greek Yogurt",
+      "brand": "Oikos",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 80,
+        "protein_g": 11,
+        "added_sugar_g": null,
+        "sugar_g": 9,
+        "carbs_g": 9,
+        "fat_g": 0,
+        "fiber_g": 0,
+        "sodium_mg": 40
+      },
+      "ingredients": "Cultured nonfat milk, water, cane sugar, contains less than 1% of pectin, natural flavors, guar gum, vanilla bean specs, lemon juice concentrate, vitamin d3, yogurt cultures: s. Thermophilus and L. Bulgaricus",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632008282": {
+      "barcode": "0036632008282",
+      "name": "Dannon, oikos, greek frozen yogurt, cafe latte",
+      "brand": "Dannon",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 150,
+        "protein_g": 6,
+        "added_sugar_g": null,
+        "sugar_g": 19,
+        "carbs_g": 25,
+        "fat_g": 3,
+        "fiber_g": 0,
+        "sodium_mg": 40.099999999999994
+      },
+      "ingredients": "Lactose reduced non fat milk, sugar, corn syrup, cultured non fat milk, cream, non fat milk powder contains less than 2% of coffee extract, carob bean gum. contains active yogurt cultures including l acidophilus.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632008701": {
+      "barcode": "0036632008701",
+      "name": "Dannon, oikos, greek yogurt, vanilla",
+      "brand": "Dannon",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 150,
+        "protein_g": 6,
+        "added_sugar_g": null,
+        "sugar_g": 19,
+        "carbs_g": 25,
+        "fat_g": 3,
+        "fiber_g": 0,
+        "sodium_mg": 40.099999999999994
+      },
+      "ingredients": "Lactose reduced non fat milk, sugar, corn syrup, cultured non fat milk, cream, non fat milk powder, contains less than 2% of vanilla extract, carob bean gum.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632018328": {
+      "barcode": "0036632018328",
+      "name": "Dannon, oikos, greek nonfat yogurt, peach",
+      "brand": "Dannon",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 130,
+        "protein_g": 12,
+        "added_sugar_g": null,
+        "sugar_g": 19,
+        "carbs_g": 20,
+        "fat_g": 0,
+        "fiber_g": 0,
+        "sodium_mg": 49.5
+      },
+      "ingredients": "Cultured grade a non fat milk, peaches, fructose, sugar, water, contains less than 1% of modified corn starch, natural flavor, carrageenan, potassium sorbate (to maintain freshness), malic acid, sodium citrate, annatto extract (for color), vitamin d3.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632018359": {
+      "barcode": "0036632018359",
+      "name": "Dannon, oikos, greek nonfat yogurt, strawberry banana",
+      "brand": "Dannon",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 130,
+        "protein_g": 12,
+        "added_sugar_g": null,
+        "sugar_g": 19,
+        "carbs_g": 20,
+        "fat_g": 0,
+        "fiber_g": 1.05,
+        "sodium_mg": 45
+      },
+      "ingredients": "Cultured grade a non fat milk, sugar, water, strawberries, banana puree, contains less than 1% of pectin, natural flavor, carob bean gum, black carrot juice and annatto extract (for color), potassium sorbate (to maintain freshness), lemon juice concentrate, calcium lactate, vitamin d3.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632018366": {
+      "barcode": "0036632018366",
+      "name": "Dannon, oikos, greek nonfat yogurt, blackberry",
+      "brand": "Dannon",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 130,
+        "protein_g": 12,
+        "added_sugar_g": null,
+        "sugar_g": 20,
+        "carbs_g": 20,
+        "fat_g": 0,
+        "fiber_g": 1.05,
+        "sodium_mg": 45
+      },
+      "ingredients": "Cultured grade a non fat milk, sugar, water, blackberry puree, contains less than 1% of pectin, natural flavor, grape juice concentrate (for color), carob bean gum, potassium sorbate (to maintain freshness), lemon juice concentrate, calcium lactate, vitamin d3. contains active yogurt cultures.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632018373": {
+      "barcode": "0036632018373",
+      "name": "Dannon, oikos, greek nonfat yogurt",
+      "brand": "Dannon",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 130,
+        "protein_g": 12,
+        "added_sugar_g": null,
+        "sugar_g": 20,
+        "carbs_g": 21,
+        "fat_g": 0,
+        "fiber_g": 1.05,
+        "sodium_mg": 49.5
+      },
+      "ingredients": "Cultured grade a non fat milk, water, sugar, pomegranate juice concentrate, contains less than 1% of pectin, black carrot juice and grape juice concentrate (for color), natural flavor carob bean gum, potassium sorbate (to maintain freshness), calcium lactate, lemon juice concentrate, vitamin d3.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632018656": {
+      "barcode": "0036632018656",
+      "name": "Dannon, oikos, greek yogurt, apple pie",
+      "brand": "Dannon",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 160,
+        "protein_g": 11,
+        "added_sugar_g": null,
+        "sugar_g": 19,
+        "carbs_g": 21,
+        "fat_g": 4,
+        "fiber_g": 0,
+        "sodium_mg": 49.5
+      },
+      "ingredients": "Yogurt (cultured grade a non fat milk, cream, active yogurt cultures), sugar, water, apple puree, contains less than 1% of modified food starch, fruit juice and vegetable juice (for color), natural flavor, malic acid, cinnamon, sodium citrate, potassium sorbate (to maintain freshness), turmeric (for color).",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632018663": {
+      "barcode": "0036632018663",
+      "name": "Dannon, oikos, greek yogurt, caramel macchiato",
+      "brand": "Dannon",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 160,
+        "protein_g": 11,
+        "added_sugar_g": null,
+        "sugar_g": 19,
+        "carbs_g": 20,
+        "fat_g": 4,
+        "fiber_g": 0,
+        "sodium_mg": 45
+      },
+      "ingredients": "Yogurt (cultured grade a non fat milk, cream, active yogurt cultures), sugar, water, contains less than 1% of modified food starch, fruit juice and vegetable juice (for color), natural flavor, malic acid, potassium sorbate (to maintain freshness), sodium citrate.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632019387": {
+      "barcode": "0036632019387",
+      "name": "Dannon, oikos, caramel on top with traditional greek yogurt dairy snack, bananas foster",
+      "brand": "Dannon",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 210,
+        "protein_g": 10,
+        "added_sugar_g": null,
+        "sugar_g": 31,
+        "carbs_g": 33,
+        "fat_g": 4.5,
+        "fiber_g": 0,
+        "sodium_mg": 64.5
+      },
+      "ingredients": "Cultured grade a milk, water, fructose, sugar, sweetened condensed milk (milk solids, sugar), banana puree, contains less than 1% of carrageenan, modified corn starch, pectin, salt, dicalcium phosphate, gellan gum, natural flavors, locust bean gum, xanthan gum. caramel color, annatto extract (for color), potassium sorbate (to maintain freshness), lemon juice concentrate.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632019455": {
+      "barcode": "0036632019455",
+      "name": "Dannon, oikos, chocolate on top greek yogurt & sauce, vanilla sundae",
+      "brand": "Dannon",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 171,
+        "protein_g": 11,
+        "added_sugar_g": null,
+        "sugar_g": 16,
+        "carbs_g": 20,
+        "fat_g": 4.5,
+        "fiber_g": 0,
+        "sodium_mg": 84.6
+      },
+      "ingredients": "Cultured grade a milk, water, fructose, sugar, glycerine, heavy cream, contains less than 1% of modified food starch, chocolate, cocoa (processed with alkali), natural flavors, lemon juice concentrate, sodium carboxymethylcellulose, locust bean gum, lactic acid, salt, potassium sorbate (to maintain freshness), sunflower lecithin, sodium citrate.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632032904": {
+      "barcode": "0036632032904",
+      "name": "Dannon, oikos, greek frozen yogurt, chocolate",
+      "brand": "Dannon",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 150,
+        "protein_g": 7,
+        "added_sugar_g": null,
+        "sugar_g": 21,
+        "carbs_g": 24,
+        "fat_g": 3,
+        "fiber_g": 0,
+        "sodium_mg": 40.099999999999994
+      },
+      "ingredients": "Lactose reduced non fat milk, sugar, cultured non fat milk, cream corn syrup, water, cocoa processed with alkali, non fat milk powder, contains less thean 2% of carob bean gum.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0366232027146": {
+      "barcode": "0366232027146",
+      "name": "Oikos, Greek Nonfat Yogurt, Plain",
+      "brand": "Dannon",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 79.5,
+        "protein_g": 15,
+        "added_sugar_g": null,
+        "sugar_g": 6,
+        "carbs_g": 6,
+        "fat_g": 0,
+        "fiber_g": 0,
+        "sodium_mg": 50.3
+      },
+      "ingredients": "Cultured grade a non fat milk.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0052159521202": {
+      "barcode": "0052159521202",
+      "name": "Stonyfield, oikos, organic nonfat greek yogurt, blueberry",
+      "brand": "Unknown",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 100,
+        "protein_g": 6,
+        "added_sugar_g": null,
+        "sugar_g": 19,
+        "carbs_g": 21,
+        "fat_g": 0,
+        "fiber_g": 0,
+        "sodium_mg": 64.60000000000001
+      },
+      "ingredients": "Cultured pasteurized organic nonfat milk, organic sugar, organic blueberries, organic whey protein concentrate, water, organic rice syrup, organic blueberry juice concentrate, organic elderberry juice concentrate, organic carob bean gum, organic guar gum, organic vanilla extract, organic flavor, natural flavor, organic lemon juice concentrate, pectin. contains live active cultures: s. thermophilus, l. bulgaricus, l. acidophilus, bifidus and l. casei.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632020635": {
+      "barcode": "0036632020635",
+      "name": "greek yogurt",
+      "brand": "Oikos",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 93,
+        "protein_g": 15.5,
+        "added_sugar_g": null,
+        "sugar_g": 5.17,
+        "carbs_g": 10.3,
+        "fat_g": 0,
+        "fiber_g": null,
+        "sodium_mg": 67.2
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632020833": {
+      "barcode": "0036632020833",
+      "name": "Oikos Blended Greek Yogurt",
+      "brand": "Oikos",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 66.666666666667,
+        "protein_g": 9.3333333333333,
+        "added_sugar_g": null,
+        "sugar_g": 8,
+        "carbs_g": 8,
+        "fat_g": 0,
+        "fiber_g": 0,
+        "sodium_mg": null
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "03660195": {
+      "barcode": "03660195",
+      "name": "Greek yogurt",
+      "brand": "Oikos",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 150,
+        "protein_g": 67.5,
+        "added_sugar_g": null,
+        "sugar_g": 7.5,
+        "carbs_g": 15,
+        "fat_g": null,
+        "fiber_g": 4.5,
+        "sodium_mg": null
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0456253003990": {
+      "barcode": "0456253003990",
+      "name": "Oikos Triple Zero Peach Flavor Blended Greek Yogurt",
+      "brand": "Unknown",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 60,
+        "protein_g": 10,
+        "added_sugar_g": null,
+        "sugar_g": 3.3333333333333,
+        "carbs_g": 6.6666666666667,
+        "fat_g": 0,
+        "fiber_g": 2,
+        "sodium_mg": 43.333333333332
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0078632019448": {
+      "barcode": "0078632019448",
+      "name": "Oikos Triple Zero Vanilla Greek Yogurt",
+      "brand": "Dannon",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 80,
+        "protein_g": 15,
+        "added_sugar_g": null,
+        "sugar_g": 5,
+        "carbs_g": 6,
+        "fat_g": null,
+        "fiber_g": 3,
+        "sodium_mg": 55
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0050045004532": {
+      "barcode": "0050045004532",
+      "name": "Honey Greek Yogurt",
+      "brand": "Oikos",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 97.2,
+        "protein_g": 0.0864,
+        "added_sugar_g": null,
+        "sugar_g": 10.8,
+        "carbs_g": 11.9,
+        "fat_g": 1.62,
+        "fiber_g": null,
+        "sodium_mg": null
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "92000366320208300299": {
+      "barcode": "92000366320208300299",
+      "name": "Oikos blended greek yogart",
+      "brand": "Oikos",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": null,
+        "protein_g": null,
+        "added_sugar_g": null,
+        "sugar_g": null,
+        "carbs_g": null,
+        "fat_g": null,
+        "fiber_g": null,
+        "sodium_mg": null
+      },
+      "source": "open_food_facts",
+      "confidence": "low"
+    },
+    "92000366320207900119": {
+      "barcode": "92000366320207900119",
+      "name": "Greek yogurt",
+      "brand": "Oikos",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 66.666666666667,
+        "protein_g": 9.3333333333333,
+        "added_sugar_g": null,
+        "sugar_g": 8,
+        "carbs_g": 8,
+        "fat_g": 0,
+        "fiber_g": 0,
+        "sodium_mg": 0
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0033334020802": {
+      "barcode": "0033334020802",
+      "name": "Greek Yogurt",
+      "brand": "Oikos",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 135,
+        "protein_g": 24,
+        "added_sugar_g": null,
+        "sugar_g": null,
+        "carbs_g": 9,
+        "fat_g": null,
+        "fiber_g": null,
+        "sodium_mg": null
+      },
+      "source": "open_food_facts",
+      "confidence": "low"
+    },
+    "0053850330070": {
+      "barcode": "0053850330070",
+      "name": "Greek yogurt- plain",
+      "brand": "Oîkos- high protein",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 175,
+        "protein_g": 33.2,
+        "added_sugar_g": null,
+        "sugar_g": 8.75,
+        "carbs_g": 10.5,
+        "fat_g": null,
+        "fiber_g": null,
+        "sodium_mg": null
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0053800333717": {
+      "barcode": "0053800333717",
+      "name": "Key Lime Greek Yogurt",
+      "brand": "Oîkos",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 90,
+        "protein_g": 8,
+        "added_sugar_g": null,
+        "sugar_g": 10,
+        "carbs_g": 11,
+        "fat_g": 1.5,
+        "fiber_g": null,
+        "sodium_mg": null
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0059354650034": {
+      "barcode": "0059354650034",
+      "name": "30% less sugar greek yogurt",
+      "brand": "Oîkos",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 210,
+        "protein_g": 26.2,
+        "added_sugar_g": null,
+        "sugar_g": 21,
+        "carbs_g": 26.2,
+        "fat_g": null,
+        "fiber_g": null,
+        "sodium_mg": null
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0043700330954": {
+      "barcode": "0043700330954",
+      "name": "Greek yogurt",
+      "brand": "Oikos",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 130,
+        "protein_g": 17,
+        "added_sugar_g": null,
+        "sugar_g": 13,
+        "carbs_g": 15,
+        "fat_g": null,
+        "fiber_g": null,
+        "sodium_mg": 7
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "00011359": {
+      "barcode": "00011359",
+      "name": "Blended greek yogurt",
+      "brand": "Oikos",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": null,
+        "protein_g": null,
+        "added_sugar_g": null,
+        "sugar_g": null,
+        "carbs_g": null,
+        "fat_g": null,
+        "fiber_g": null,
+        "sodium_mg": null
+      },
+      "source": "open_food_facts",
+      "confidence": "low"
+    },
+    "00450510": {
+      "barcode": "00450510",
+      "name": "Triple Zero Greek Yogurt",
+      "brand": "Oikos",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 66.666666666667,
+        "protein_g": 10,
+        "added_sugar_g": null,
+        "sugar_g": 3.3333333333333,
+        "carbs_g": 6.6666666666667,
+        "fat_g": 0,
+        "fiber_g": null,
+        "sodium_mg": 43.333333333332
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632011435": {
+      "barcode": "0036632011435",
+      "name": "Blended Greek Yogurt",
+      "brand": "Oikos Triple Zero",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 90,
+        "protein_g": 15,
+        "added_sugar_g": null,
+        "sugar_g": 5,
+        "carbs_g": 7,
+        "fat_g": 0,
+        "fiber_g": 0,
+        "sodium_mg": 55
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0053700355741": {
+      "barcode": "0053700355741",
+      "name": "Greek yogurt lactose free 0%",
+      "brand": "Oikos",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 90,
+        "protein_g": 17,
+        "added_sugar_g": null,
+        "sugar_g": 6,
+        "carbs_g": 6,
+        "fat_g": 0,
+        "fiber_g": 0,
+        "sodium_mg": 50
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "7836593533433": {
+      "barcode": "7836593533433",
+      "name": "Triple Zero Blended Greek Yogurt Vanilla",
+      "brand": "Oikos",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": null,
+        "protein_g": null,
+        "added_sugar_g": null,
+        "sugar_g": null,
+        "carbs_g": null,
+        "fat_g": null,
+        "fiber_g": null,
+        "sodium_mg": null
+      },
+      "ingredients": "CULTURED GRADE A NON FAT MILK, WATER, NATURAL FLAVORS, CONTAINS LESS THAN 1% OF TAPIOCA STARCH, STEVIA LEAF EXTRACT, LEMON JUICE CONCENTRATE, SEA SALT, VITAMIN D3, YOGURT CULTURES: S. THERMOPHILUS & L. BULGARICUS",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0122121721111": {
+      "barcode": "0122121721111",
+      "name": "Okios Triple Zero Vanilla Greek Yogurt Tub",
+      "brand": "Oikos",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 100,
+        "protein_g": 17,
+        "added_sugar_g": null,
+        "sugar_g": 6,
+        "carbs_g": 8,
+        "fat_g": null,
+        "fiber_g": null,
+        "sodium_mg": 65
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632011282": {
+      "barcode": "0036632011282",
+      "name": "Maple Sweetened Plain Blended Greek Nonfat Yogurt, Maple Sweetened Plain",
+      "brand": "Oikos",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 110,
+        "protein_g": 15,
+        "added_sugar_g": null,
+        "sugar_g": 12,
+        "carbs_g": 13,
+        "fat_g": 0,
+        "fiber_g": 0,
+        "sodium_mg": 59.5
+      },
+      "ingredients": "Cultured Grade A Non Fat Milk, Maple Syrup, Water, Contains Less Than 1% Of: Pectin, Lemon Juice (From Concentrate), Natural Flavors, Carob Bean Gum.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632011213": {
+      "barcode": "0036632011213",
+      "name": "Almond Butter & Sweetened Plain Flavor Blended Greek Yogurt, Almond Butter & Sweetened Plain",
+      "brand": "Oikos",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 190,
+        "protein_g": 13,
+        "added_sugar_g": null,
+        "sugar_g": 13,
+        "carbs_g": 15,
+        "fat_g": 9,
+        "fiber_g": 1.05,
+        "sodium_mg": 45
+      },
+      "ingredients": "Yogurt (Cultured Grade A Non Fat Milk, Cream, Active Yogurt Cultures), Water, Almond Butter, Cane Sugar, Contains Less Than 1% Of Lemon Juice (From Concentrate), Modified Food Starch, Natural Flavors, Pectin, Sea Salt, Mixed Tocopherols (Preservative).",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632011237": {
+      "barcode": "0036632011237",
+      "name": "Almond Butter & Coconut Flavor Greek Yogurt, Almond Butter; Coconut",
+      "brand": "Oikos",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 190,
+        "protein_g": 13,
+        "added_sugar_g": null,
+        "sugar_g": 13,
+        "carbs_g": 15,
+        "fat_g": 9,
+        "fiber_g": 1.05,
+        "sodium_mg": 45
+      },
+      "ingredients": "Yogurt (Cultured Grade A Non Fat Milk, Cream, Active Yogurt Cultures), Water, Almond Butter, Cane Sugar, Contains Less Than 1% Of Lemon Juice (From Concentrate), Modified Food Starch, Natural Flavors, Pectin, Sea Salt, Mixed Tocopherols (Preservative)",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632011206": {
+      "barcode": "0036632011206",
+      "name": "Almond Butter & Vanilla Greek Yogurt, Almond Butter; Vanilla",
+      "brand": "Oikos",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 190,
+        "protein_g": 13,
+        "added_sugar_g": null,
+        "sugar_g": 13,
+        "carbs_g": 15,
+        "fat_g": 9,
+        "fiber_g": 1.05,
+        "sodium_mg": 45
+      },
+      "ingredients": "Yogurt (Cultured Grade A Non Fat Milk, Cream, Active Yogurt Cultures), Water, Almond Butter, Cane Sugar, Contains Less Than 1% Of Lemon Juice (From Concentrate), Natural Flavors, Modified Food Starch, Pectin, Sea Salt, Mixed Tocopherols (Preservative)",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "03947039": {
+      "barcode": "03947039",
+      "name": "Greek Yogurt Strawberry Raspberry",
+      "brand": "Oikos",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": null,
+        "protein_g": null,
+        "added_sugar_g": null,
+        "sugar_g": null,
+        "carbs_g": null,
+        "fat_g": null,
+        "fiber_g": null,
+        "sodium_mg": null
+      },
+      "source": "open_food_facts",
+      "confidence": "low"
+    },
+    "0056800511840": {
+      "barcode": "0056800511840",
+      "name": "Greek Yogurt",
+      "brand": "Oikos",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 90,
+        "protein_g": 8,
+        "added_sugar_g": null,
+        "sugar_g": 10,
+        "carbs_g": 11,
+        "fat_g": 1.5,
+        "fiber_g": 0,
+        "sodium_mg": 25
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632039200": {
+      "barcode": "0036632039200",
+      "name": "vanilla",
+      "brand": "too good & co.",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 90,
+        "protein_g": 13,
+        "added_sugar_g": null,
+        "sugar_g": 2,
+        "carbs_g": 4,
+        "fat_g": 2,
+        "fiber_g": 0,
+        "sodium_mg": 40
+      },
+      "ingredients": "CULTURED GRADE A ULTRA-FILTERED NON FAT MILK, CULTURED GRADE A REDUCED FAT MILK, WATER, TAPIOCA STARCH, NATURAL FLAVORS, LEMON JUICE CONCENTRATE, GELLAN GUM, FRUIT & VEGETABLE JUICE CONCENTRATE (FOR COLOR), STEVIA EXTRACT, SEA SALT, VANILLA BEAN SPECKS, VITAMIN D3, ACTIVE YOGURT CULTURES L. BULGARICUS & S. THERMOPHILUS",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632039026": {
+      "barcode": "0036632039026",
+      "name": "Two Good Blueberry Yogurt-Cultured Ultra-Filtered Milk",
+      "brand": "Danone",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 79.5,
+        "protein_g": 12,
+        "added_sugar_g": null,
+        "sugar_g": 2,
+        "carbs_g": 3,
+        "fat_g": 2,
+        "fiber_g": 0,
+        "sodium_mg": 35.6
+      },
+      "ingredients": "cultured reduced fat milk, water, less than 1%: tapioca starch, lemon juice concentrate, natural flavors, fruit juice (for color), gellan gum, stevia leaf reb m, sea salt, active yogurt cultures l. bulgaricus , s. thermophilus,",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632039194": {
+      "barcode": "0036632039194",
+      "name": "Two Good Plain Yogurt-Cultured Ultra-Filtered Milk",
+      "brand": "Two Good",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 90,
+        "protein_g": 14,
+        "added_sugar_g": null,
+        "sugar_g": 2,
+        "carbs_g": 3,
+        "fat_g": 2,
+        "fiber_g": 0,
+        "sodium_mg": 30
+      },
+      "ingredients": "Cultured reduced fat milk, water, less than 1%: tapioca starch, lemon juice concentrate, gellan gum, vitamin d3, active yogurt cultures l. bulgaricus & s. thermophilus.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632039460": {
+      "barcode": "0036632039460",
+      "name": "Two Good Black Cherry Yogurt-Cultured Ultra-Filtered Milk",
+      "brand": "Danone",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 80,
+        "protein_g": 12,
+        "added_sugar_g": null,
+        "sugar_g": 2,
+        "carbs_g": 4,
+        "fat_g": 2,
+        "fiber_g": null,
+        "sodium_mg": 35
+      },
+      "ingredients": "cultured reduced fat milk, water, less than 1%: lemon juice concentrate, turmeric and fruit & vegetable juice concentrate (for color), natural flavors, tapioca, starch, gellan gum, stevia leaf, sea salt, vitamin D3, active yogurt cultures L. bulgaricus & S. Thermophilus.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632039668": {
+      "barcode": "0036632039668",
+      "name": "Two Good Smoothie Drinks - Strawberry Banana",
+      "brand": "Two Good",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 70,
+        "protein_g": 10,
+        "added_sugar_g": null,
+        "sugar_g": 1.45,
+        "carbs_g": 2.42,
+        "fat_g": 2,
+        "fiber_g": null,
+        "sodium_mg": 105
+      },
+      "ingredients": "CULTURED GRADE A REDUCED FAT MILK, WATER, CULTURED GRADE A ULTRA-FILTERED NON FAT MILK, BANANA PUREE, STRAWBERRY PUREE, LESS THAN 1%: NATURAL FLAVORS, PECTIN, SEA SALT, FRUIT & VEGETABLE JUICE CONCENTRATE (FOR COLOR), LACTASE, STEVIA LEAF (REB M AND D), SODIUM CITRATE, LEMON JUICE CONCENTRATE, VITAMIN D3  YOGURT CULTURES L. BULGARICUS & S. THERMOPHILUS",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632040435": {
+      "barcode": "0036632040435",
+      "name": "Key Lime Yogurt",
+      "brand": "Two Good",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 80,
+        "protein_g": 12,
+        "added_sugar_g": null,
+        "sugar_g": 2,
+        "carbs_g": 4,
+        "fat_g": 2,
+        "fiber_g": 4,
+        "sodium_mg": 45
+      },
+      "ingredients": "CULTURED GRADE A ULTRA-FILTERED NON FAT MILK, CULTURED GRADE A REDUCED FAT MILK, WATER, TAPIOCA STARCH, KEY LIME PUREE LESS THAN 1% LEMON JUICE CONCENTRATE, NATURAL FLAVORS, GELLAN GUM, STEVIA LEAF (REB M AND D), SODIUM CITRATE, SEA SALT, VITAMIN D3 ACTIVE YOGURT CULTURES L. BULGARICUS &S. THERMOPHILUS",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632039323": {
+      "barcode": "0036632039323",
+      "name": "Two Good Coconut Yogurt-Cultured Ultra-Filtered Milk",
+      "brand": "Two Good",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 53.333333333333,
+        "protein_g": 8,
+        "added_sugar_g": null,
+        "sugar_g": 1.3333333333333,
+        "carbs_g": 2,
+        "fat_g": 1.3333333333333,
+        "fiber_g": 0,
+        "sodium_mg": null
+      },
+      "ingredients": "cultured grade a ultra-filtered non fat milk, cultured grade a reduced fat milk, water, less than 1%: tapioca starch, natural flavors, lemon juice concentrate, gellan gum, stevia extract, sea salt, vitamin d3, active yogurt cultures l. bulgaricus ,  s. thermophilus",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632039507": {
+      "barcode": "0036632039507",
+      "name": "two good pumpkin yogurt",
+      "brand": "Unknown",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 53.333333333333,
+        "protein_g": 8,
+        "added_sugar_g": null,
+        "sugar_g": 1.3333333333333,
+        "carbs_g": 2,
+        "fat_g": 1.3333333333333,
+        "fiber_g": null,
+        "sodium_mg": null
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632039477": {
+      "barcode": "0036632039477",
+      "name": "Two Good Strawberry Banana Yogurt",
+      "brand": "Unknown",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 53.333333333333,
+        "protein_g": 8,
+        "added_sugar_g": null,
+        "sugar_g": 1.3333333333333,
+        "carbs_g": 2,
+        "fat_g": 1.3333333333333,
+        "fiber_g": 0,
+        "sodium_mg": null
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0033334039064": {
+      "barcode": "0033334039064",
+      "name": "Low-fat Greek yogurt",
+      "brand": "Two Good",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 80,
+        "protein_g": 12,
+        "added_sugar_g": null,
+        "sugar_g": 2,
+        "carbs_g": 4,
+        "fat_g": 2,
+        "fiber_g": null,
+        "sodium_mg": 35
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "03683460": {
+      "barcode": "03683460",
+      "name": "Two Good vanilla yogurt",
+      "brand": "Two Good",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 153,
+        "protein_g": 22.1,
+        "added_sugar_g": null,
+        "sugar_g": 3.4,
+        "carbs_g": 6.8,
+        "fat_g": 3.4,
+        "fiber_g": null,
+        "sodium_mg": null
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0033334039682": {
+      "barcode": "0033334039682",
+      "name": "Peach Smoothie Yogurt",
+      "brand": "Two Good Smoothie",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 70,
+        "protein_g": 10,
+        "added_sugar_g": null,
+        "sugar_g": null,
+        "carbs_g": 5,
+        "fat_g": 2,
+        "fiber_g": null,
+        "sodium_mg": null
+      },
+      "source": "open_food_facts",
+      "confidence": "low"
+    },
+    "0032664039058": {
+      "barcode": "0032664039058",
+      "name": "Yogurt",
+      "brand": "Two Good",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 80,
+        "protein_g": 12,
+        "added_sugar_g": null,
+        "sugar_g": 2,
+        "carbs_g": 3,
+        "fat_g": 2,
+        "fiber_g": null,
+        "sodium_mg": null
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0033334039224": {
+      "barcode": "0033334039224",
+      "name": "Coconut Yogurt",
+      "brand": "Two Good",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 120,
+        "protein_g": 18,
+        "added_sugar_g": null,
+        "sugar_g": 3,
+        "carbs_g": 6,
+        "fat_g": 3,
+        "fiber_g": null,
+        "sodium_mg": null
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036634069038": {
+      "barcode": "0036634069038",
+      "name": "Strawberry Yogurt",
+      "brand": "Two Good",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 80,
+        "protein_g": 12,
+        "added_sugar_g": null,
+        "sugar_g": 2,
+        "carbs_g": 4,
+        "fat_g": 2,
+        "fiber_g": null,
+        "sodium_mg": null
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0036632040442": {
+      "barcode": "0036632040442",
+      "name": "Yogurt",
+      "brand": "Two Good",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 80,
+        "protein_g": 12,
+        "added_sugar_g": null,
+        "sugar_g": 2,
+        "carbs_g": 4,
+        "fat_g": 2,
+        "fiber_g": 0,
+        "sodium_mg": 45
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0033334039019": {
+      "barcode": "0033334039019",
+      "name": "Strawberry Yogurt",
+      "brand": "Two Good",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 80,
+        "protein_g": 12,
+        "added_sugar_g": null,
+        "sugar_g": 2,
+        "carbs_g": 4,
+        "fat_g": 2,
+        "fiber_g": null,
+        "sodium_mg": null
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "09275881": {
+      "barcode": "09275881",
+      "name": "Vanilla Yogurt",
+      "brand": "Two Good",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 120,
+        "protein_g": 18,
+        "added_sugar_g": null,
+        "sugar_g": 3,
+        "carbs_g": 6,
+        "fat_g": 3,
+        "fiber_g": null,
+        "sodium_mg": null
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0053500820616": {
+      "barcode": "0053500820616",
+      "name": "Raspberry yogurt",
+      "brand": "Two Good",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 57,
+        "protein_g": 7.6,
+        "added_sugar_g": null,
+        "sugar_g": 1.9,
+        "carbs_g": 3.8,
+        "fat_g": 1.43,
+        "fiber_g": null,
+        "sodium_mg": null
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0096619000036": {
+      "barcode": "0096619000036",
+      "name": "Greek Yogurt plain",
+      "brand": "Kirkland Signature",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 141,
+        "protein_g": 8,
+        "added_sugar_g": null,
+        "sugar_g": 12,
+        "carbs_g": 13,
+        "fat_g": 9,
+        "fiber_g": 0,
+        "sodium_mg": 130
+      },
+      "ingredients": "Milk, Vitamin D3",
+      "source": "open_food_facts",
+      "confidence": "high"
+    },
+    "3090089483556": {
+      "barcode": "3090089483556",
+      "name": "Organic Greek Yogurt, Plain",
+      "brand": "Kirkland",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 100,
+        "protein_g": 18,
+        "added_sugar_g": null,
+        "sugar_g": 3,
+        "carbs_g": 7,
+        "fat_g": null,
+        "fiber_g": null,
+        "sodium_mg": 60000
+      },
+      "ingredients": "",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0096619385089": {
+      "barcode": "0096619385089",
+      "name": "GREEK YOGURT PLAIN NONFAT",
+      "brand": "Kirkland Signature",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": null,
+        "protein_g": null,
+        "added_sugar_g": null,
+        "sugar_g": null,
+        "carbs_g": null,
+        "fat_g": null,
+        "fiber_g": null,
+        "sodium_mg": null
+      },
+      "source": "open_food_facts",
+      "confidence": "low"
+    },
+    "0003340087496": {
+      "barcode": "0003340087496",
+      "name": "Organic Greek Yogurt",
+      "brand": "Kirkland",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 100,
+        "protein_g": 18,
+        "added_sugar_g": null,
+        "sugar_g": 3,
+        "carbs_g": 7,
+        "fat_g": 0,
+        "fiber_g": 0,
+        "sodium_mg": 60
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "8963570088156": {
+      "barcode": "8963570088156",
+      "name": "Organic Greek Yogurt Plain",
+      "brand": "KIRKLAND signature",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 100,
+        "protein_g": 18,
+        "added_sugar_g": null,
+        "sugar_g": 3,
+        "carbs_g": 7,
+        "fat_g": 0,
+        "fiber_g": 0,
+        "sodium_mg": 60
+      },
+      "ingredients": "organic pasteurized grade a nonfat milk, live and active cultures (streptococcus thermophilus, lactobacillus bulgaricus, lactobacillus acidophilus, bifidus, lactobacillus casei)",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0009661948355": {
+      "barcode": "0009661948355",
+      "name": "Organic Greek Plain Yogurt",
+      "brand": "Kirkland Signature",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 100,
+        "protein_g": 18,
+        "added_sugar_g": null,
+        "sugar_g": 3,
+        "carbs_g": 7,
+        "fat_g": 0,
+        "fiber_g": null,
+        "sodium_mg": 60
+      },
+      "source": "open_food_facts",
+      "confidence": "medium"
+    },
+    "0196633818553": {
+      "barcode": "0196633818553",
+      "name": "Greek Yogurt plain",
+      "brand": "Kirkland Signature",
+      "category": "greek_yogurt",
+      "nutrition": {
+        "calories": 170,
+        "protein_g": 30.6,
+        "added_sugar_g": null,
+        "sugar_g": 6.8,
+        "carbs_g": 11.9,
+        "fat_g": 0,
+        "fiber_g": 0,
+        "sodium_mg": 111
+      },
+      "ingredients": "PASTEURIZED GRADE A NONFAT MILK, LIVE AND ACTIVE CULTURES (STREPTOCOCCUS THERMOPHILUS, LACTOBACILLUS BULGARICUS, LACTOBACILLUS ACIDOPHILUS, BIFIDUS, LACTOBACILLUS CASEI). CONTAINS: MILK.",
+      "source": "open_food_facts",
+      "confidence": "medium"
+    }
+  }
+}

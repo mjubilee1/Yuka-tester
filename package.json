@@ -12,6 +12,8 @@
     "fetch:seeds": "tsx scripts/fetch-seed-barcodes.ts",
     "analyze:capture": "tsx scripts/analyze-capture.ts",
     "analyze:concierge": "tsx scripts/analyze-concierge.ts",
+    "sync:mobile-cache": "cp data/product-cache/index.json mobile/assets/product-cache.json && cp data/curated-products.json mobile/assets/curated-products.json 2>/dev/null || cp data/product-cache/index.json mobile/assets/product-cache.json",
+    "mobile": "cd mobile && npm start",
     "test:scoring": "tsx scoring/src/rules.test.ts"
   },
   "devDependencies": {
