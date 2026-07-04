@@ -11,7 +11,8 @@
       "supportsTablet": true,
       "infoPlist": {
         "NSCameraUsageDescription": "Scan barcodes on protein bars and Greek yogurt to get buy/skip recommendations."
-      }
+      },
+      "bundleIdentifier": "com.jubileeinvestments.cut-cart"
     },
     "android": {
       "adaptiveIcon": {

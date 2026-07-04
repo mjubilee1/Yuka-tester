@@ -2,6 +2,7 @@ import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { VerdictBadge } from "@/components/ui";
+import { theme } from "@/constants/theme";
 import { useTripStore } from "@/store/trip";
 
 export default function TripScreen() {
@@ -9,12 +10,14 @@ export default function TripScreen() {
   const lastTripSummary = useTripStore((s) => s.lastTripSummary);
 
   const summary = lastTripSummary;
-  const showActive = !summary && activeScans.length > 0;
 
   if (!summary && activeScans.length === 0) {
     return (
       <SafeAreaView style={styles.safe}>
         <View style={styles.empty}>
+          <View style={styles.emptyIcon}>
+            <Text style={styles.emptyIconText}>🛒</Text>
+          </View>
           <Text style={styles.emptyTitle}>No trips yet</Text>
           <Text style={styles.emptyText}>
             Scan products on the Shop tab, then end your trip to see a cart audit here.
@@ -33,6 +36,8 @@ export default function TripScreen() {
     scans: activeScans,
   };
 
+  const showActive = !summary && activeScans.length > 0;
+
   return (
     <SafeAreaView style={styles.safe}>
       <ScrollView contentContainerStyle={styles.container}>
@@ -43,14 +48,15 @@ export default function TripScreen() {
 
         <View style={styles.summaryCard}>
           <View style={styles.row}>
-            <Stat label="Buy" value={data.buy} />
-            <Stat label="Maybe" value={data.maybe} />
-            <Stat label="Avoid" value={data.avoid} />
+            <Stat label="Buy" value={data.buy} color={theme.colors.buy} />
+            <Stat label="Maybe" value={data.maybe} color={theme.colors.maybe} />
+            <Stat label="Avoid" value={data.avoid} color={theme.colors.avoid} />
           </View>
-          <Text style={styles.macroSummary}>
-            Trip totals: {Math.round(data.totalProtein)}g protein ·{" "}
-            {Math.round(data.totalSugar)}g sugar
-          </Text>
+          <View style={styles.macroBar}>
+            <Text style={styles.macroSummary}>
+              {Math.round(data.totalProtein)}g protein · {Math.round(data.totalSugar)}g sugar
+            </Text>
+          </View>
         </View>
 
         <Text style={styles.sectionTitle}>Scans</Text>
@@ -73,46 +79,98 @@ export default function TripScreen() {
   );
 }
 
-function Stat({ label, value }: { label: string; value: number }) {
+function Stat({
+  label,
+  value,
+  color,
+}: {
+  label: string;
+  value: number;
+  color: string;
+}) {
   return (
-    <View style={styles.stat}>
-      <Text style={styles.statValue}>{value}</Text>
+    <View style={[styles.stat, { backgroundColor: `${color}15` }]}>
+      <Text style={[styles.statValue, { color }]}>{value}</Text>
       <Text style={styles.statLabel}>{label}</Text>
     </View>
   );
 }
 
+const { colors, radius } = theme;
+
 const styles = StyleSheet.create({
-  safe: { flex: 1, backgroundColor: "#fff" },
+  safe: { flex: 1, backgroundColor: colors.background },
   container: { padding: 24, paddingBottom: 48 },
-  empty: { flex: 1, justifyContent: "center", padding: 32 },
-  emptyTitle: { fontSize: 22, fontWeight: "700", color: "#18181b", textAlign: "center" },
+  empty: { flex: 1, justifyContent: "center", padding: 32, alignItems: "center" },
+  emptyIcon: {
+    width: 72,
+    height: 72,
+    borderRadius: 36,
+    backgroundColor: colors.primaryMuted,
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: 16,
+  },
+  emptyIconText: { fontSize: 32 },
+  emptyTitle: {
+    fontSize: 22,
+    fontWeight: "800",
+    color: colors.text,
+    textAlign: "center",
+  },
   emptyText: {
     fontSize: 15,
-    color: "#71717a",
+    color: colors.textSecondary,
     textAlign: "center",
     marginTop: 12,
     lineHeight: 22,
   },
-  title: { fontSize: 28, fontWeight: "800", color: "#18181b" },
-  hint: { fontSize: 14, color: "#ca8a04", marginTop: 8 },
+  title: { fontSize: 28, fontWeight: "800", color: colors.text },
+  hint: {
+    fontSize: 14,
+    color: colors.maybe,
+    marginTop: 8,
+    fontWeight: "600",
+  },
   summaryCard: {
-    backgroundColor: "#fafafa",
-    borderRadius: 16,
+    backgroundColor: colors.surface,
+    borderRadius: radius.xl,
     padding: 20,
     marginTop: 20,
-    borderWidth: 1,
-    borderColor: "#e4e4e7",
+    borderWidth: 2,
+    borderColor: colors.borderMuted,
   },
-  row: { flexDirection: "row", justifyContent: "space-around" },
-  stat: { alignItems: "center" },
-  statValue: { fontSize: 32, fontWeight: "800", color: "#18181b" },
-  statLabel: { fontSize: 13, color: "#71717a", marginTop: 4 },
-  macroSummary: { fontSize: 14, color: "#52525b", marginTop: 16, textAlign: "center" },
+  row: { flexDirection: "row", justifyContent: "space-between", gap: 10 },
+  stat: {
+    flex: 1,
+    alignItems: "center",
+    paddingVertical: 14,
+    borderRadius: radius.md,
+  },
+  statValue: { fontSize: 30, fontWeight: "800" },
+  statLabel: {
+    fontSize: 12,
+    color: colors.textSecondary,
+    marginTop: 4,
+    fontWeight: "600",
+  },
+  macroBar: {
+    backgroundColor: colors.surfaceAlt,
+    borderRadius: radius.md,
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    marginTop: 16,
+  },
+  macroSummary: {
+    fontSize: 15,
+    color: colors.primaryDark,
+    textAlign: "center",
+    fontWeight: "700",
+  },
   sectionTitle: {
     fontSize: 18,
-    fontWeight: "700",
-    color: "#18181b",
+    fontWeight: "800",
+    color: colors.text,
     marginTop: 28,
     marginBottom: 12,
   },
@@ -120,12 +178,24 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     paddingVertical: 14,
+    paddingHorizontal: 4,
     borderBottomWidth: 1,
-    borderBottomColor: "#f4f4f5",
+    borderBottomColor: colors.borderMuted,
     gap: 12,
   },
   scanInfo: { flex: 1 },
-  scanBrand: { fontSize: 12, color: "#71717a", fontWeight: "600" },
-  scanName: { fontSize: 15, fontWeight: "600", color: "#18181b", marginTop: 2 },
-  reason: { fontSize: 12, color: "#a1a1aa", marginTop: 4 },
+  scanBrand: {
+    fontSize: 12,
+    color: colors.primary,
+    fontWeight: "700",
+    textTransform: "uppercase",
+    letterSpacing: 0.5,
+  },
+  scanName: {
+    fontSize: 15,
+    fontWeight: "700",
+    color: colors.text,
+    marginTop: 2,
+  },
+  reason: { fontSize: 12, color: colors.textMuted, marginTop: 4 },
 });

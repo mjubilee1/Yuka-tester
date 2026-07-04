@@ -4,6 +4,7 @@ import { ActivityIndicator, ScrollView, StyleSheet, Text, View } from "react-nat
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { AppButton, MacroRow, VerdictBadge } from "@/components/ui";
+import { theme } from "@/constants/theme";
 import { lookupProduct } from "@/lib/products/lookup";
 import { compareProducts } from "@/lib/scoring/score";
 import type { CompareResult } from "@/lib/scoring/types";
@@ -48,7 +49,7 @@ export default function CompareScreen() {
   if (!comparison) {
     return (
       <View style={styles.center}>
-        <ActivityIndicator size="large" />
+        <ActivityIndicator size="large" color={theme.colors.primary} />
       </View>
     );
   }
@@ -62,7 +63,7 @@ export default function CompareScreen() {
         <Text style={styles.summary}>{params.summary ?? summary}</Text>
 
         <View style={styles.winnerCard}>
-          <Text style={styles.cardLabel}>Winner for cutting</Text>
+          <Text style={styles.winnerLabel}>Winner for cutting</Text>
           <Text style={styles.brand}>{winner.product.brand}</Text>
           <Text style={styles.name}>{winner.product.name}</Text>
           <VerdictBadge verdict={winner.verdict} size="medium" />
@@ -93,31 +94,72 @@ export default function CompareScreen() {
   );
 }
 
+const { colors, radius } = theme;
+
 const styles = StyleSheet.create({
-  safe: { flex: 1, backgroundColor: "#fff" },
+  safe: { flex: 1, backgroundColor: colors.background },
   container: { padding: 24, paddingBottom: 40 },
-  center: { flex: 1, justifyContent: "center", alignItems: "center" },
-  title: { fontSize: 28, fontWeight: "800", color: "#18181b" },
-  summary: { fontSize: 16, color: "#16a34a", fontWeight: "600", marginTop: 12, lineHeight: 24 },
+  center: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: colors.background,
+  },
+  title: { fontSize: 28, fontWeight: "800", color: colors.text },
+  summary: {
+    fontSize: 16,
+    color: colors.primaryDark,
+    fontWeight: "700",
+    marginTop: 12,
+    lineHeight: 24,
+    backgroundColor: colors.primaryMuted,
+    padding: 14,
+    borderRadius: radius.md,
+  },
   winnerCard: {
-    backgroundColor: "#f0fdf4",
-    borderRadius: 16,
+    backgroundColor: colors.buyBg,
+    borderRadius: radius.xl,
     padding: 20,
     marginTop: 24,
-    borderWidth: 1,
-    borderColor: "#bbf7d0",
+    borderWidth: 2,
+    borderColor: colors.border,
   },
   loserCard: {
-    backgroundColor: "#fafafa",
-    borderRadius: 16,
+    backgroundColor: colors.surface,
+    borderRadius: radius.xl,
     padding: 20,
     marginTop: 16,
     marginBottom: 24,
     borderWidth: 1,
-    borderColor: "#e4e4e7",
+    borderColor: colors.borderMuted,
   },
-  cardLabel: { fontSize: 12, fontWeight: "700", color: "#71717a", textTransform: "uppercase" },
-  brand: { fontSize: 13, color: "#71717a", marginTop: 8, fontWeight: "600" },
-  name: { fontSize: 18, fontWeight: "700", color: "#18181b", marginTop: 4, marginBottom: 12 },
+  winnerLabel: {
+    fontSize: 12,
+    fontWeight: "800",
+    color: colors.buy,
+    textTransform: "uppercase",
+    letterSpacing: 1,
+  },
+  cardLabel: {
+    fontSize: 12,
+    fontWeight: "700",
+    color: colors.textMuted,
+    textTransform: "uppercase",
+    letterSpacing: 0.8,
+  },
+  brand: {
+    fontSize: 13,
+    color: colors.primary,
+    marginTop: 8,
+    fontWeight: "700",
+    textTransform: "uppercase",
+  },
+  name: {
+    fontSize: 18,
+    fontWeight: "800",
+    color: colors.text,
+    marginTop: 4,
+    marginBottom: 12,
+  },
   spacer: { height: 8 },
 });

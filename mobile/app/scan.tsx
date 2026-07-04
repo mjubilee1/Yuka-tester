@@ -12,6 +12,7 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { AppButton } from "@/components/ui";
+import { theme } from "@/constants/theme";
 import { lookupProduct } from "@/lib/products/lookup";
 import { compareProducts, scoreProduct } from "@/lib/scoring/score";
 import { useTripStore } from "@/store/trip";
@@ -127,7 +128,7 @@ export default function ScanScreen() {
         </View>
         {loading && (
           <View style={styles.loading}>
-            <ActivityIndicator color="#fff" size="large" />
+            <ActivityIndicator color={theme.colors.white} size="large" />
           </View>
         )}
         <ManualEntry
@@ -160,7 +161,7 @@ function ManualEntry({
         value={manualCode}
         onChangeText={setManualCode}
         placeholder="0894700010137"
-        placeholderTextColor="#a1a1aa"
+        placeholderTextColor={theme.colors.textMuted}
         keyboardType="number-pad"
       />
       <AppButton title="Look up" onPress={onSubmit} variant="secondary" />
@@ -169,47 +170,81 @@ function ManualEntry({
   );
 }
 
+const { colors, radius } = theme;
+
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#000" },
-  center: { flex: 1, justifyContent: "center", alignItems: "center" },
-  permission: { flex: 1, padding: 24, justifyContent: "center" },
-  permissionTitle: { fontSize: 22, fontWeight: "700", marginBottom: 8 },
-  permissionText: { fontSize: 15, color: "#71717a", marginBottom: 24, lineHeight: 22 },
+  container: { flex: 1, backgroundColor: colors.black },
+  center: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: colors.background,
+  },
+  permission: {
+    flex: 1,
+    padding: 24,
+    justifyContent: "center",
+    backgroundColor: colors.background,
+  },
+  permissionTitle: {
+    fontSize: 24,
+    fontWeight: "800",
+    marginBottom: 8,
+    color: colors.text,
+  },
+  permissionText: {
+    fontSize: 15,
+    color: colors.textSecondary,
+    marginBottom: 24,
+    lineHeight: 22,
+  },
   overlay: { flex: 1, justifyContent: "space-between", padding: 16 },
   close: {
     alignSelf: "flex-start",
-    backgroundColor: "rgba(0,0,0,0.5)",
-    width: 40,
-    height: 40,
-    borderRadius: 20,
+    backgroundColor: "rgba(16, 185, 129, 0.85)",
+    width: 44,
+    height: 44,
+    borderRadius: 22,
     alignItems: "center",
     justifyContent: "center",
   },
-  closeText: { color: "#fff", fontSize: 18 },
+  closeText: { color: colors.white, fontSize: 18, fontWeight: "700" },
   frame: {
     alignSelf: "center",
-    backgroundColor: "rgba(0,0,0,0.55)",
-    paddingHorizontal: 20,
-    paddingVertical: 12,
-    borderRadius: 12,
+    backgroundColor: "rgba(16, 185, 129, 0.9)",
+    paddingHorizontal: 22,
+    paddingVertical: 14,
+    borderRadius: radius.lg,
+    borderWidth: 2,
+    borderColor: colors.white,
   },
-  frameText: { color: "#fff", fontSize: 16, fontWeight: "600" },
+  frameText: { color: colors.white, fontSize: 16, fontWeight: "700" },
   loading: { alignSelf: "center" },
   manual: {
-    backgroundColor: "rgba(255,255,255,0.95)",
-    borderRadius: 16,
+    backgroundColor: colors.surface,
+    borderRadius: radius.xl,
     padding: 16,
     marginBottom: 8,
+    borderWidth: 2,
+    borderColor: colors.primary,
   },
-  manualLabel: { fontSize: 12, color: "#71717a", marginBottom: 8 },
+  manualLabel: {
+    fontSize: 12,
+    color: colors.primaryDark,
+    marginBottom: 8,
+    fontWeight: "700",
+    textTransform: "uppercase",
+    letterSpacing: 0.5,
+  },
   input: {
-    borderWidth: 1,
-    borderColor: "#e4e4e7",
-    borderRadius: 10,
+    borderWidth: 2,
+    borderColor: colors.borderMuted,
+    borderRadius: radius.sm,
     padding: 12,
     fontSize: 16,
     marginBottom: 12,
-    backgroundColor: "#fff",
+    backgroundColor: colors.background,
+    color: colors.text,
   },
   spacer: { height: 16 },
 });

@@ -4,6 +4,7 @@ import { ActivityIndicator, ScrollView, StyleSheet, Text, View } from "react-nat
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { AppButton, MacroRow, VerdictBadge } from "@/components/ui";
+import { theme } from "@/constants/theme";
 import { lookupProduct } from "@/lib/products/lookup";
 import { scoreProduct } from "@/lib/scoring/score";
 import type { ScoreResult } from "@/lib/scoring/types";
@@ -64,7 +65,7 @@ export default function ResultScreen() {
   if (loading || !score) {
     return (
       <View style={styles.center}>
-        <ActivityIndicator size="large" />
+        <ActivityIndicator size="large" color={theme.colors.primary} />
       </View>
     );
   }
@@ -72,9 +73,11 @@ export default function ResultScreen() {
   return (
     <SafeAreaView style={styles.safe}>
       <ScrollView contentContainerStyle={styles.container}>
-        <Text style={styles.brand}>{score.product.brand}</Text>
-        <Text style={styles.name}>{score.product.name}</Text>
-        <Text style={styles.category}>{score.product.category.replace("_", " ")}</Text>
+        <View style={styles.productCard}>
+          <Text style={styles.brand}>{score.product.brand}</Text>
+          <Text style={styles.name}>{score.product.name}</Text>
+          <Text style={styles.category}>{score.product.category.replace("_", " ")}</Text>
+        </View>
 
         <VerdictBadge verdict={score.verdict} />
 
@@ -114,19 +117,68 @@ export default function ResultScreen() {
   );
 }
 
+const { colors, radius } = theme;
+
 const styles = StyleSheet.create({
-  safe: { flex: 1, backgroundColor: "#fff" },
+  safe: { flex: 1, backgroundColor: colors.background },
   container: { padding: 24, paddingBottom: 40 },
-  center: { flex: 1, justifyContent: "center", alignItems: "center" },
-  brand: { fontSize: 14, fontWeight: "600", color: "#71717a", textTransform: "uppercase" },
-  name: { fontSize: 24, fontWeight: "800", color: "#18181b", marginTop: 4 },
-  category: { fontSize: 13, color: "#a1a1aa", marginTop: 4, marginBottom: 20 },
-  confidence: { fontSize: 12, color: "#71717a", marginTop: 12 },
-  explanation: { fontSize: 15, color: "#3f3f46", lineHeight: 22, marginTop: 8 },
-  flags: { marginTop: 16, marginBottom: 24 },
-  flag: { fontSize: 14, color: "#52525b", lineHeight: 20, marginBottom: 6 },
-  errorTitle: { fontSize: 22, fontWeight: "700", color: "#18181b" },
-  errorText: { fontSize: 15, color: "#71717a", lineHeight: 22, marginVertical: 20 },
+  center: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: colors.background,
+  },
+  productCard: {
+    backgroundColor: colors.surface,
+    borderRadius: radius.lg,
+    padding: 16,
+    marginBottom: 20,
+    borderWidth: 1,
+    borderColor: colors.borderMuted,
+  },
+  brand: {
+    fontSize: 13,
+    fontWeight: "700",
+    color: colors.primary,
+    textTransform: "uppercase",
+    letterSpacing: 0.8,
+  },
+  name: { fontSize: 24, fontWeight: "800", color: colors.text, marginTop: 4 },
+  category: {
+    fontSize: 13,
+    color: colors.textMuted,
+    marginTop: 4,
+    fontWeight: "500",
+    textTransform: "capitalize",
+  },
+  confidence: {
+    fontSize: 12,
+    color: colors.textSecondary,
+    marginTop: 14,
+    fontWeight: "600",
+  },
+  explanation: {
+    fontSize: 16,
+    color: colors.text,
+    lineHeight: 24,
+    marginTop: 8,
+    fontWeight: "500",
+  },
+  flags: {
+    marginTop: 16,
+    marginBottom: 24,
+    backgroundColor: colors.surfaceAlt,
+    borderRadius: radius.md,
+    padding: 14,
+  },
+  flag: { fontSize: 14, color: colors.textSecondary, lineHeight: 22, marginBottom: 4 },
+  errorTitle: { fontSize: 22, fontWeight: "800", color: colors.text },
+  errorText: {
+    fontSize: 15,
+    color: colors.textSecondary,
+    lineHeight: 22,
+    marginVertical: 20,
+  },
   spacer: { height: 12 },
   spacerSm: { height: 8 },
 });

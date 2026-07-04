@@ -3,6 +3,7 @@ import { SymbolView } from "expo-symbols";
 import { Platform } from "react-native";
 
 import Colors from "@/constants/Colors";
+import { theme } from "@/constants/theme";
 import { useColorScheme } from "@/components/useColorScheme";
 import { useClientOnlyValue } from "@/components/useClientOnlyValue";
 
@@ -13,6 +14,13 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
+        tabBarInactiveTintColor: Colors[colorScheme ?? "light"].tabIconDefault,
+        tabBarStyle: {
+          backgroundColor: theme.colors.surface,
+          borderTopColor: theme.colors.borderMuted,
+          borderTopWidth: 1,
+          paddingTop: 4,
+        },
         headerShown: useClientOnlyValue(false, true),
       }}
     >

@@ -3,6 +3,7 @@ import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { AppButton } from "@/components/ui";
+import { theme } from "@/constants/theme";
 import { REASON_CHIPS, type ReasonChip } from "@/lib/scoring/types";
 import { useTripStore } from "@/store/trip";
 
@@ -39,19 +40,32 @@ export default function ReasonScreen() {
   );
 }
 
+const { colors, radius } = theme;
+
 const styles = StyleSheet.create({
-  safe: { flex: 1, backgroundColor: "#fff" },
+  safe: { flex: 1, backgroundColor: colors.background },
   container: { padding: 24, paddingBottom: 40 },
-  title: { fontSize: 28, fontWeight: "800", color: "#18181b" },
-  subtitle: { fontSize: 15, color: "#71717a", marginTop: 8, marginBottom: 24, lineHeight: 22 },
+  title: { fontSize: 28, fontWeight: "800", color: colors.text },
+  subtitle: {
+    fontSize: 15,
+    color: colors.textSecondary,
+    marginTop: 8,
+    marginBottom: 24,
+    lineHeight: 22,
+  },
   chip: {
-    backgroundColor: "#f4f4f5",
-    borderRadius: 12,
+    backgroundColor: colors.surface,
+    borderRadius: radius.md,
     paddingVertical: 16,
     paddingHorizontal: 18,
     marginBottom: 10,
+    borderWidth: 2,
+    borderColor: colors.borderMuted,
   },
-  chipPressed: { backgroundColor: "#e4e4e7" },
-  chipText: { fontSize: 16, fontWeight: "600", color: "#18181b" },
+  chipPressed: {
+    backgroundColor: colors.primaryMuted,
+    borderColor: colors.primary,
+  },
+  chipText: { fontSize: 16, fontWeight: "700", color: colors.text },
   spacer: { height: 8 },
 });

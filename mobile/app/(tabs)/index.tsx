@@ -3,6 +3,7 @@ import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { AppButton } from "@/components/ui";
+import { theme } from "@/constants/theme";
 import { getCacheSize } from "@/lib/products/lookup";
 import { goalConfig } from "@/lib/scoring/score";
 import { useTripStore } from "@/store/trip";
@@ -21,7 +22,9 @@ export default function HomeScreen() {
   return (
     <SafeAreaView style={styles.safe}>
       <ScrollView contentContainerStyle={styles.container}>
-        <Text style={styles.kicker}>Cut Cart</Text>
+        <View style={styles.heroBadge}>
+          <Text style={styles.heroBadgeText}>Cut Cart</Text>
+        </View>
         <Text style={styles.title}>Know what to buy{"\n"}before it goes in the cart</Text>
         <Text style={styles.subtitle}>
           {goalConfig.displayName} · Protein bars & Greek yogurt · {getCacheSize()} products
@@ -31,9 +34,9 @@ export default function HomeScreen() {
           <View style={styles.tripCard}>
             <Text style={styles.tripTitle}>Current trip</Text>
             <View style={styles.counts}>
-              <CountPill label="Buy" value={buy} color="#16a34a" />
-              <CountPill label="Maybe" value={maybe} color="#ca8a04" />
-              <CountPill label="Avoid" value={avoid} color="#dc2626" />
+              <CountPill label="Buy" value={buy} color={theme.colors.buy} />
+              <CountPill label="Maybe" value={maybe} color={theme.colors.maybe} />
+              <CountPill label="Avoid" value={avoid} color={theme.colors.avoid} />
             </View>
             <Text style={styles.scanCount}>{activeScans.length} scans</Text>
           </View>
@@ -81,53 +84,85 @@ function CountPill({
   color: string;
 }) {
   return (
-    <View style={styles.pill}>
+    <View style={[styles.pill, { backgroundColor: `${color}18` }]}>
       <Text style={[styles.pillValue, { color }]}>{value}</Text>
       <Text style={styles.pillLabel}>{label}</Text>
     </View>
   );
 }
 
+const { colors, radius } = theme;
+
 const styles = StyleSheet.create({
-  safe: { flex: 1, backgroundColor: "#fff" },
+  safe: { flex: 1, backgroundColor: colors.background },
   container: { padding: 24, paddingBottom: 48 },
-  kicker: {
-    fontSize: 14,
-    fontWeight: "600",
-    color: "#71717a",
+  heroBadge: {
+    alignSelf: "flex-start",
+    backgroundColor: colors.primary,
+    paddingHorizontal: 14,
+    paddingVertical: 6,
+    borderRadius: radius.sm,
+    marginBottom: 12,
+  },
+  heroBadgeText: {
+    fontSize: 13,
+    fontWeight: "800",
+    color: colors.white,
+    letterSpacing: 1.2,
     textTransform: "uppercase",
-    letterSpacing: 1,
   },
   title: {
     fontSize: 32,
     fontWeight: "800",
-    color: "#18181b",
-    marginTop: 8,
+    color: colors.text,
     lineHeight: 38,
   },
-  subtitle: { fontSize: 15, color: "#71717a", marginTop: 12, lineHeight: 22 },
+  subtitle: {
+    fontSize: 15,
+    color: colors.textSecondary,
+    marginTop: 12,
+    lineHeight: 22,
+    fontWeight: "500",
+  },
   tripCard: {
-    backgroundColor: "#fafafa",
-    borderRadius: 16,
+    backgroundColor: colors.surface,
+    borderRadius: radius.xl,
     padding: 20,
     marginTop: 28,
     marginBottom: 28,
-    borderWidth: 1,
-    borderColor: "#e4e4e7",
+    borderWidth: 2,
+    borderColor: colors.borderMuted,
   },
-  tripTitle: { fontSize: 16, fontWeight: "700", color: "#18181b" },
-  counts: { flexDirection: "row", gap: 16, marginTop: 16 },
-  pill: { alignItems: "center" },
+  tripTitle: { fontSize: 16, fontWeight: "800", color: colors.primaryDark },
+  counts: { flexDirection: "row", gap: 12, marginTop: 16 },
+  pill: {
+    flex: 1,
+    alignItems: "center",
+    paddingVertical: 12,
+    borderRadius: radius.md,
+  },
   pillValue: { fontSize: 28, fontWeight: "800" },
-  pillLabel: { fontSize: 12, color: "#71717a", marginTop: 2 },
-  scanCount: { fontSize: 13, color: "#a1a1aa", marginTop: 12 },
+  pillLabel: {
+    fontSize: 12,
+    color: colors.textSecondary,
+    marginTop: 2,
+    fontWeight: "600",
+  },
+  scanCount: { fontSize: 13, color: colors.textMuted, marginTop: 14, fontWeight: "500" },
   compareBanner: {
-    backgroundColor: "#eff6ff",
-    borderRadius: 12,
+    backgroundColor: colors.accentLight,
+    borderRadius: radius.md,
     padding: 14,
     marginBottom: 20,
+    borderWidth: 1,
+    borderColor: colors.accent,
   },
-  compareText: { fontSize: 14, color: "#1d4ed8", lineHeight: 20 },
+  compareText: {
+    fontSize: 14,
+    color: colors.primaryDark,
+    lineHeight: 20,
+    fontWeight: "600",
+  },
   spacer: { height: 12 },
   spacerSm: { height: 8 },
 });

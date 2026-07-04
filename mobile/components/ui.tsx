@@ -1,5 +1,6 @@
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import type { Verdict } from "@/lib/scoring/types";
+import { theme } from "@/constants/theme";
 import { verdictColor, verdictLabel } from "@/store/trip";
 
 interface Props {
@@ -33,17 +34,37 @@ interface MacroProps {
 export function MacroRow({ protein, sugar, calories }: MacroProps) {
   return (
     <View style={styles.macros}>
-      <MacroItem label="Protein" value={protein != null ? `${protein}g` : "—"} />
-      <MacroItem label="Sugar" value={sugar != null ? `${sugar}g` : "—"} />
-      <MacroItem label="Cal" value={calories != null ? `${calories}` : "—"} />
+      <MacroItem
+        label="Protein"
+        value={protein != null ? `${protein}g` : "—"}
+        color={theme.colors.protein}
+      />
+      <MacroItem
+        label="Sugar"
+        value={sugar != null ? `${sugar}g` : "—"}
+        color={theme.colors.sugar}
+      />
+      <MacroItem
+        label="Cal"
+        value={calories != null ? `${calories}` : "—"}
+        color={theme.colors.calories}
+      />
     </View>
   );
 }
 
-function MacroItem({ label, value }: { label: string; value: string }) {
+function MacroItem({
+  label,
+  value,
+  color,
+}: {
+  label: string;
+  value: string;
+  color: string;
+}) {
   return (
     <View style={styles.macroItem}>
-      <Text style={styles.macroValue}>{value}</Text>
+      <Text style={[styles.macroValue, { color }]}>{value}</Text>
       <Text style={styles.macroLabel}>{label}</Text>
     </View>
   );
@@ -79,23 +100,30 @@ export function AppButton({ title, onPress, variant = "primary" }: ButtonProps) 
   );
 }
 
+const { colors, radius } = theme;
+
 const styles = StyleSheet.create({
   badge: {
-    paddingHorizontal: 20,
-    paddingVertical: 10,
-    borderRadius: 12,
+    paddingHorizontal: 22,
+    paddingVertical: 12,
+    borderRadius: radius.md,
     alignSelf: "flex-start",
+    shadowColor: colors.primaryDark,
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.25,
+    shadowRadius: 6,
+    elevation: 4,
   },
   badgeMedium: {
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    borderRadius: 8,
+    paddingHorizontal: 14,
+    paddingVertical: 7,
+    borderRadius: radius.sm,
   },
   text: {
-    color: "#fff",
+    color: colors.white,
     fontSize: 22,
     fontWeight: "800",
-    letterSpacing: 1,
+    letterSpacing: 1.2,
   },
   textMedium: {
     fontSize: 14,
@@ -103,37 +131,58 @@ const styles = StyleSheet.create({
   macros: {
     flexDirection: "row",
     justifyContent: "space-around",
-    backgroundColor: "#f4f4f5",
-    borderRadius: 12,
-    paddingVertical: 16,
+    backgroundColor: colors.surfaceAlt,
+    borderRadius: radius.lg,
+    paddingVertical: 18,
     marginVertical: 12,
+    borderWidth: 1,
+    borderColor: colors.borderMuted,
   },
   macroItem: { alignItems: "center" },
-  macroValue: { fontSize: 20, fontWeight: "700", color: "#18181b" },
-  macroLabel: { fontSize: 12, color: "#71717a", marginTop: 4 },
+  macroValue: { fontSize: 22, fontWeight: "800" },
+  macroLabel: {
+    fontSize: 12,
+    color: colors.textSecondary,
+    marginTop: 4,
+    fontWeight: "600",
+    textTransform: "uppercase",
+    letterSpacing: 0.5,
+  },
   button: {
-    backgroundColor: "#18181b",
-    paddingVertical: 16,
+    backgroundColor: colors.primary,
+    paddingVertical: 17,
     paddingHorizontal: 24,
-    borderRadius: 14,
+    borderRadius: radius.lg,
     alignItems: "center",
+    shadowColor: colors.primaryDark,
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
+    elevation: 4,
   },
   buttonSecondary: {
-    backgroundColor: "#f4f4f5",
+    backgroundColor: colors.surface,
+    borderWidth: 2,
+    borderColor: colors.primary,
+    shadowOpacity: 0,
+    elevation: 0,
   },
   buttonGhost: {
     backgroundColor: "transparent",
+    shadowOpacity: 0,
+    elevation: 0,
   },
-  buttonPressed: { opacity: 0.85 },
+  buttonPressed: { opacity: 0.88, transform: [{ scale: 0.98 }] },
   buttonText: {
-    color: "#fff",
+    color: colors.white,
     fontSize: 17,
-    fontWeight: "600",
+    fontWeight: "700",
+    letterSpacing: 0.3,
   },
   buttonTextSecondary: {
-    color: "#18181b",
+    color: colors.primaryDark,
   },
   buttonTextGhost: {
-    color: "#71717a",
+    color: colors.textSecondary,
   },
 });

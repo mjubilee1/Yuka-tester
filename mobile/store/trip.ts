@@ -85,11 +85,11 @@ export const useTripStore = create<TripState>()(
 export function verdictColor(verdict: Verdict): string {
   switch (verdict) {
     case "buy":
-      return "#16a34a";
+      return "#10B981";
     case "maybe":
-      return "#ca8a04";
+      return "#F59E0B";
     case "avoid":
-      return "#dc2626";
+      return "#EF4444";
   }
 }
 
