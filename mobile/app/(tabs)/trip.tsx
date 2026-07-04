@@ -3,15 +3,20 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 import { VerdictBadge } from "@/components/ui";
 import { theme } from "@/constants/theme";
-import { useTripStore } from "@/store/trip";
+import { formatTripDelta } from "@/lib/scoring/score";
+import { cartScans, useTripStore, type TripScan } from "@/store/trip";
 
 export default function TripScreen() {
   const activeScans = useTripStore((s) => s.activeScans);
   const lastTripSummary = useTripStore((s) => s.lastTripSummary);
+  const previousTripSummary = useTripStore((s) => s.previousTripSummary);
+  const tripHistory = useTripStore((s) => s.tripHistory);
 
-  const summary = lastTripSummary;
+  const liveCart = cartScans(activeScans);
+  const liveLeft = activeScans.filter((s) => s.disposition === "left");
+  const showActive = activeScans.length > 0;
 
-  if (!summary && activeScans.length === 0) {
+  if (!lastTripSummary && activeScans.length === 0) {
     return (
       <SafeAreaView style={styles.safe}>
         <View style={styles.empty}>
@@ -20,60 +25,137 @@ export default function TripScreen() {
           </View>
           <Text style={styles.emptyTitle}>No trips yet</Text>
           <Text style={styles.emptyText}>
-            Scan products on the Shop tab, then end your trip to see a cart audit here.
+            Scan, tap In cart or Left it, then end your trip on Shop for a cart audit.
           </Text>
         </View>
       </SafeAreaView>
     );
   }
 
-  const data = summary ?? {
-    buy: activeScans.filter((s) => s.score.verdict === "buy").length,
-    maybe: activeScans.filter((s) => s.score.verdict === "maybe").length,
-    avoid: activeScans.filter((s) => s.score.verdict === "avoid").length,
-    totalProtein: activeScans.reduce((a, s) => a + (s.score.metrics.protein_g ?? 0), 0),
-    totalSugar: activeScans.reduce((a, s) => a + (s.score.metrics.added_sugar_g ?? 0), 0),
-    scans: activeScans,
-  };
+  const cartItems: TripScan[] = showActive
+    ? liveCart
+    : (lastTripSummary?.scans ?? []);
+  const leftBehind: TripScan[] = showActive
+    ? liveLeft
+    : (lastTripSummary?.leftBehind ?? []);
 
-  const showActive = !summary && activeScans.length > 0;
+  const buy = cartItems.filter((s) => s.score.verdict === "buy").length;
+  const maybe = cartItems.filter((s) => s.score.verdict === "maybe").length;
+  const avoid = cartItems.filter((s) => s.score.verdict === "avoid").length;
+  const totalProtein = cartItems.reduce(
+    (a, s) => a + (s.score.metrics.protein_g ?? 0),
+    0
+  );
+  const totalSugar = cartItems.reduce(
+    (a, s) => a + (s.score.metrics.added_sugar_g ?? 0),
+    0
+  );
+
+  // Live trip: vs last completed. Finished trip: vs the one before it.
+  const tripDelta = showActive
+    ? formatTripDelta(
+        { totalProtein, totalSugar },
+        lastTripSummary
+          ? {
+              totalProtein: lastTripSummary.totalProtein,
+              totalSugar: lastTripSummary.totalSugar,
+            }
+          : null
+      )
+    : formatTripDelta(
+        { totalProtein, totalSugar },
+        previousTripSummary
+          ? {
+              totalProtein: previousTripSummary.totalProtein,
+              totalSugar: previousTripSummary.totalSugar,
+            }
+          : null
+      );
 
   return (
     <SafeAreaView style={styles.safe}>
       <ScrollView contentContainerStyle={styles.container}>
         <Text style={styles.title}>Cart audit</Text>
         {showActive && (
-          <Text style={styles.hint}>Live trip — end trip on Shop tab to finalize</Text>
+          <Text style={styles.hint}>Live trip — only In cart items count</Text>
+        )}
+
+        {tripDelta && (
+          <View style={styles.deltaCard}>
+            <Text style={styles.deltaText}>{tripDelta}</Text>
+          </View>
         )}
 
         <View style={styles.summaryCard}>
           <View style={styles.row}>
-            <Stat label="Buy" value={data.buy} color={theme.colors.buy} />
-            <Stat label="Maybe" value={data.maybe} color={theme.colors.maybe} />
-            <Stat label="Avoid" value={data.avoid} color={theme.colors.avoid} />
+            <Stat label="Buy" value={buy} color={theme.colors.buy} />
+            <Stat label="Maybe" value={maybe} color={theme.colors.maybe} />
+            <Stat label="Avoid" value={avoid} color={theme.colors.avoid} />
           </View>
           <View style={styles.macroBar}>
             <Text style={styles.macroSummary}>
-              {Math.round(data.totalProtein)}g protein · {Math.round(data.totalSugar)}g sugar
+              {Math.round(totalProtein)}g protein · {Math.round(totalSugar)}g sugar
             </Text>
+            <Text style={styles.macroHint}>In cart only</Text>
           </View>
         </View>
 
-        <Text style={styles.sectionTitle}>Scans</Text>
-        {data.scans.map((scan) => (
-          <View key={scan.id} style={styles.scanRow}>
-            <View style={styles.scanInfo}>
-              <Text style={styles.scanBrand}>{scan.score.product.brand}</Text>
-              <Text style={styles.scanName} numberOfLines={2}>
-                {scan.score.product.name}
-              </Text>
-              {scan.reason && (
-                <Text style={styles.reason}>Reason: {scan.reason}</Text>
-              )}
+        <Text style={styles.sectionTitle}>In cart</Text>
+        {cartItems.length === 0 ? (
+          <Text style={styles.emptySection}>Nothing in cart yet</Text>
+        ) : (
+          cartItems.map((scan) => (
+            <View key={scan.id} style={styles.scanRow}>
+              <View style={styles.scanInfo}>
+                <Text style={styles.scanBrand}>{scan.score.product.brand}</Text>
+                <Text style={styles.scanName} numberOfLines={2}>
+                  {scan.score.product.name}
+                </Text>
+                {scan.score.servingLabel ? (
+                  <Text style={styles.serving}>{scan.score.servingLabel}</Text>
+                ) : null}
+              </View>
+              <VerdictBadge verdict={scan.score.verdict} size="medium" />
             </View>
-            <VerdictBadge verdict={scan.score.verdict} size="medium" />
-          </View>
-        ))}
+          ))
+        )}
+
+        {leftBehind.length > 0 && (
+          <>
+            <Text style={styles.sectionTitle}>Left behind</Text>
+            {leftBehind.map((scan) => (
+              <View key={scan.id} style={styles.scanRow}>
+                <View style={styles.scanInfo}>
+                  <Text style={styles.scanBrand}>{scan.score.product.brand}</Text>
+                  <Text style={styles.scanName} numberOfLines={2}>
+                    {scan.score.product.name}
+                  </Text>
+                  {scan.reason ? (
+                    <Text style={styles.reason}>{scan.reason}</Text>
+                  ) : null}
+                </View>
+                <VerdictBadge verdict={scan.score.verdict} size="medium" />
+              </View>
+            ))}
+          </>
+        )}
+
+        {!showActive && tripHistory.length > 1 && (
+          <>
+            <Text style={styles.sectionTitle}>Recent trips</Text>
+            {tripHistory.map((trip, i) => (
+              <View key={trip.endedAt ?? i} style={styles.historyRow}>
+                <Text style={styles.historyLabel}>
+                  {i === 0 ? "This trip" : i === 1 ? "Last trip" : "2 trips ago"}
+                </Text>
+                <Text style={styles.historyMacros}>
+                  {Math.round(trip.totalProtein)}g protein ·{" "}
+                  {Math.round(trip.totalSugar)}g sugar · {trip.scans.length} in cart
+                </Text>
+              </View>
+            ))}
+          </>
+        )}
       </ScrollView>
     </SafeAreaView>
   );
@@ -132,11 +214,22 @@ const styles = StyleSheet.create({
     marginTop: 8,
     fontWeight: "600",
   },
+  deltaCard: {
+    marginTop: 16,
+    backgroundColor: colors.primaryMuted,
+    borderRadius: radius.md,
+    padding: 14,
+  },
+  deltaText: {
+    fontSize: 16,
+    fontWeight: "800",
+    color: colors.primaryDark,
+  },
   summaryCard: {
     backgroundColor: colors.surface,
     borderRadius: radius.xl,
     padding: 20,
-    marginTop: 20,
+    marginTop: 16,
     borderWidth: 2,
     borderColor: colors.borderMuted,
   },
@@ -167,12 +260,24 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontWeight: "700",
   },
+  macroHint: {
+    fontSize: 12,
+    color: colors.textMuted,
+    textAlign: "center",
+    marginTop: 4,
+    fontWeight: "600",
+  },
   sectionTitle: {
     fontSize: 18,
     fontWeight: "800",
     color: colors.text,
     marginTop: 28,
     marginBottom: 12,
+  },
+  emptySection: {
+    fontSize: 14,
+    color: colors.textMuted,
+    fontWeight: "500",
   },
   scanRow: {
     flexDirection: "row",
@@ -197,5 +302,22 @@ const styles = StyleSheet.create({
     color: colors.text,
     marginTop: 2,
   },
-  reason: { fontSize: 12, color: colors.textMuted, marginTop: 4 },
+  serving: { fontSize: 12, color: colors.textMuted, marginTop: 2 },
+  reason: { fontSize: 12, color: colors.textMuted, marginTop: 4, fontWeight: "600" },
+  historyRow: {
+    paddingVertical: 12,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.borderMuted,
+  },
+  historyLabel: {
+    fontSize: 13,
+    fontWeight: "800",
+    color: colors.primaryDark,
+  },
+  historyMacros: {
+    fontSize: 14,
+    fontWeight: "600",
+    color: colors.textSecondary,
+    marginTop: 4,
+  },
 });

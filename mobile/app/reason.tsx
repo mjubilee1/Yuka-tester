@@ -12,29 +12,29 @@ export default function ReasonScreen() {
   const { scanId } = useLocalSearchParams<{ scanId: string }>();
   const setReason = useTripStore((s) => s.setReason);
 
-  const pick = (chip: ReasonChip) => {
-    if (scanId) setReason(scanId, chip);
-    router.back();
+  const finish = (chip?: ReasonChip) => {
+    if (scanId && chip) setReason(scanId, chip);
+    router.replace("/scan");
   };
 
   return (
     <SafeAreaView style={styles.safe}>
       <ScrollView contentContainerStyle={styles.container}>
-        <Text style={styles.title}>Why?</Text>
-        <Text style={styles.subtitle}>Quick tap — helps us learn what matters at the shelf</Text>
+        <Text style={styles.title}>Why are you skipping it?</Text>
+        <Text style={styles.subtitle}>One tap — then keep moving</Text>
 
         {REASON_CHIPS.map((chip) => (
           <Pressable
             key={chip}
             style={({ pressed }) => [styles.chip, pressed && styles.chipPressed]}
-            onPress={() => pick(chip)}
+            onPress={() => finish(chip)}
           >
             <Text style={styles.chipText}>{chip}</Text>
           </Pressable>
         ))}
 
         <View style={styles.spacer} />
-        <AppButton title="Skip" variant="ghost" onPress={() => router.back()} />
+        <AppButton title="Skip" variant="ghost" onPress={() => finish()} />
       </ScrollView>
     </SafeAreaView>
   );
@@ -45,7 +45,7 @@ const { colors, radius } = theme;
 const styles = StyleSheet.create({
   safe: { flex: 1, backgroundColor: colors.background },
   container: { padding: 24, paddingBottom: 40 },
-  title: { fontSize: 28, fontWeight: "800", color: colors.text },
+  title: { fontSize: 26, fontWeight: "800", color: colors.text },
   subtitle: {
     fontSize: 15,
     color: colors.textSecondary,

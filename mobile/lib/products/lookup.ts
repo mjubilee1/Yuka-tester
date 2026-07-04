@@ -1,3 +1,4 @@
+import { inferCategory, servingLabelFor } from "../scoring/rules";
 import type { NutritionFacts, Product, ProductCategory } from "../scoring/types";
 
 interface OffNutriments {
@@ -9,6 +10,7 @@ interface OffNutriments {
   sugars?: number;
   "sugars-added_serving"?: number;
   "sugars-added"?: number;
+  serving_quantity?: number;
 }
 
 interface OffProduct {
@@ -18,6 +20,9 @@ interface OffProduct {
   categories?: string;
   nutriments?: OffNutriments;
   completeness?: number;
+  serving_size?: string;
+  serving_quantity?: number;
+  product_quantity?: number | string;
 }
 
 interface CacheIndex {
@@ -25,6 +30,7 @@ interface CacheIndex {
 }
 
 const cacheData = require("../../assets/product-cache.json") as CacheIndex;
+const staplesData = require("../../assets/curated-staples.json") as CacheIndex;
 
 export function normalizeBarcode(barcode: string): string {
   return barcode.replace(/\D/g, "");
@@ -70,17 +76,12 @@ function extractNutrition(n: OffNutriments | undefined): NutritionFacts {
 
 function mapOffToProduct(off: OffProduct): Product {
   const name = off.product_name ?? "Unknown product";
-  const category: ProductCategory = off.categories?.toLowerCase().includes("yogurt")
-    ? "greek_yogurt"
-    : off.categories?.toLowerCase().includes("bar")
-      ? "protein_bar"
-      : "unknown";
-
+  const category = inferCategory(name, off.categories);
   const nutrition = extractNutrition(off.nutriments);
   const hasCore =
     nutrition.calories !== null &&
     nutrition.protein_g !== null &&
-    nutrition.sugar_g !== null;
+    (nutrition.sugar_g !== null || nutrition.added_sugar_g !== null);
   const c = off.completeness ?? 0;
   let confidence: Product["confidence"] = "missing";
   if (c >= 0.7 && hasCore) confidence = "high";
@@ -95,19 +96,58 @@ function mapOffToProduct(off: OffProduct): Product {
     nutrition,
     source: "open_food_facts",
     confidence,
+    serving_label: offServingLabel(off, category),
   };
+}
+
+function offServingLabel(
+  off: OffProduct,
+  category: ProductCategory
+): string | null {
+  const size = off.serving_size?.trim();
+  if (size) {
+    const qty = off.serving_quantity ?? off.nutriments?.serving_quantity;
+    if (qty && !size.includes(String(qty))) {
+      return `Per serving (${size})`;
+    }
+    return `Per serving (${size})`;
+  }
+  return servingLabelFor({ serving_label: null, category });
+}
+
+/** Enrich cache hits with category fix + serving label when missing. */
+function normalizeProduct(product: Product): Product {
+  const category =
+    product.category === "unknown"
+      ? inferCategory(product.name)
+      : product.category;
+  const serving_label =
+    product.serving_label ??
+    servingLabelFor({ serving_label: null, category });
+  return { ...product, category, serving_label };
 }
 
 export function lookupCache(barcode: string): Product | null {
   for (const variant of barcodeVariants(barcode)) {
+    const staple = staplesData.products[variant];
+    if (staple) return normalizeProduct(staple);
+
     const hit = cacheData.products[variant];
-    if (hit) return hit;
+    if (hit) return normalizeProduct(hit);
   }
   return null;
 }
 
 export function getCacheSize(): number {
-  return Object.keys(cacheData.products).length;
+  const keys = new Set([
+    ...Object.keys(cacheData.products),
+    ...Object.keys(staplesData.products),
+  ]);
+  return keys.size;
+}
+
+export function getStapleCount(): number {
+  return Object.keys(staplesData.products).length;
 }
 
 async function fetchOff(barcode: string): Promise<Product | null> {

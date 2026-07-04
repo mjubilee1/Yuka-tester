@@ -14,7 +14,8 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { AppButton } from "@/components/ui";
 import { theme } from "@/constants/theme";
 import { lookupProduct } from "@/lib/products/lookup";
-import { compareProducts, scoreProduct } from "@/lib/scoring/score";
+import { compareProducts } from "@/lib/scoring/score";
+import { useCutProfile } from "@/store/profile";
 import { useTripStore } from "@/store/trip";
 
 export default function ScanScreen() {
@@ -23,6 +24,7 @@ export default function ScanScreen() {
   const [manualCode, setManualCode] = useState("");
   const [loading, setLoading] = useState(false);
   const scannedRef = useRef(false);
+  const profile = useCutProfile();
   const compareSlot = useTripStore((s) => s.compareSlot);
   const setCompareSlot = useTripStore((s) => s.setCompareSlot);
 
@@ -52,20 +54,19 @@ export default function ScanScreen() {
             });
             return;
           }
-          const comparison = compareProducts(slotProduct, product);
+          const comparison = compareProducts(slotProduct, product, profile);
           setCompareSlot(null);
           router.replace({
             pathname: "/compare",
             params: {
               winnerBarcode: comparison.winner.product.barcode,
               loserBarcode: comparison.loser.product.barcode,
-              summary: comparison.summary,
+              headline: comparison.headline,
             },
           });
           return;
         }
 
-        const score = scoreProduct(product);
         router.replace({
           pathname: "/result",
           params: { barcode: product.barcode },
@@ -77,7 +78,7 @@ export default function ScanScreen() {
         }, 2000);
       }
     },
-    [compareSlot, loading, router, setCompareSlot]
+    [compareSlot, loading, profile, router, setCompareSlot]
   );
 
   if (!permission) {
@@ -93,7 +94,7 @@ export default function ScanScreen() {
       <SafeAreaView style={styles.permission}>
         <Text style={styles.permissionTitle}>Camera access needed</Text>
         <Text style={styles.permissionText}>
-          Scan barcodes on protein bars and Greek yogurt in the store.
+          Scan bars, yogurt, cottage cheese, or protein milk in the store.
         </Text>
         <AppButton title="Allow camera" onPress={requestPermission} />
         <View style={styles.spacer} />
@@ -155,7 +156,7 @@ function ManualEntry({
 }) {
   return (
     <View style={styles.manual}>
-      <Text style={styles.manualLabel}>Or enter barcode (simulator)</Text>
+      <Text style={styles.manualLabel}>Or enter barcode</Text>
       <TextInput
         style={styles.input}
         value={manualCode}

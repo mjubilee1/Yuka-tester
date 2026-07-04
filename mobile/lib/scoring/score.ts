@@ -1,10 +1,18 @@
+import { confidenceLabel } from "./confidence";
 import cuttingConfig from "./cutting.json";
 import {
+  adjustThresholds,
+  DEFAULT_PROFILE,
+  type CutProfile,
+} from "./profile";
+import {
   buildFlags,
+  buildRuleLines,
   computeVerdict,
   getThresholds,
   inferCategory,
   renderExplanation,
+  servingLabelFor,
 } from "./rules";
 import type {
   CompareResult,
@@ -20,12 +28,17 @@ function verdictRank(v: Verdict): number {
   return v === "buy" ? 3 : v === "maybe" ? 2 : 1;
 }
 
-export function scoreProduct(product: Product): ScoreResult {
+export function scoreProduct(
+  product: Product,
+  profile: CutProfile = DEFAULT_PROFILE
+): ScoreResult {
   const category =
     product.category === "unknown" ? inferCategory(product.name) : product.category;
-  const thresholds = getThresholds(goalConfig, category);
-  const flags = buildFlags(product.nutrition, thresholds);
+  const base = getThresholds(goalConfig, category);
+  const thresholds = adjustThresholds(base, profile);
+  const flags = buildFlags(product.nutrition, thresholds, category);
   const verdict = computeVerdict(product.nutrition, thresholds);
+  const ruleLines = buildRuleLines(product.nutrition, thresholds, category, verdict);
   const explanation = renderExplanation(verdict, flags, product.name);
 
   const addedSugar = product.nutrition.added_sugar_g ?? product.nutrition.sugar_g;
@@ -39,8 +52,11 @@ export function scoreProduct(product: Product): ScoreResult {
   return {
     verdict,
     flags,
+    ruleLines,
     explanation,
     confidence: product.confidence,
+    confidenceLabel: confidenceLabel(product.confidence),
+    servingLabel: servingLabelFor({ ...product, category }),
     product: {
       barcode: product.barcode,
       name: product.name,
@@ -56,9 +72,53 @@ export function scoreProduct(product: Product): ScoreResult {
   };
 }
 
-export function compareProducts(a: Product, b: Product): CompareResult {
-  const scoreA = scoreProduct(a);
-  const scoreB = scoreProduct(b);
+function formatDelta(value: number | null, unit: string): string | null {
+  if (value === null || value === 0) return null;
+  const sign = value > 0 ? "+" : "";
+  return `${sign}${value}${unit}`;
+}
+
+export function formatCompareHeadline(
+  winnerName: string,
+  deltas: CompareResult["deltas"]
+): string {
+  const parts: string[] = [];
+  const protein = formatDelta(deltas.protein_g, "g protein");
+  if (protein) parts.push(protein);
+
+  // deltas.added_sugar_g is (loser - winner): positive => winner has less sugar
+  if (deltas.added_sugar_g !== null && deltas.added_sugar_g !== 0) {
+    const less = deltas.added_sugar_g > 0;
+    parts.push(
+      less
+        ? `−${Math.abs(deltas.added_sugar_g)}g sugar`
+        : `+${Math.abs(deltas.added_sugar_g)}g sugar`
+    );
+  }
+
+  if (deltas.calories !== null && deltas.calories !== 0) {
+    // deltas.calories is (loser - winner): positive => winner has fewer calories
+    const less = deltas.calories > 0;
+    parts.push(
+      less
+        ? `−${Math.abs(deltas.calories)} cal`
+        : `+${Math.abs(deltas.calories)} cal`
+    );
+  }
+
+  if (parts.length === 0) {
+    return `Winner: ${winnerName} — similar macros`;
+  }
+  return `Winner: ${winnerName} — ${parts.join(" · ")}`;
+}
+
+export function compareProducts(
+  a: Product,
+  b: Product,
+  profile: CutProfile = DEFAULT_PROFILE
+): CompareResult {
+  const scoreA = scoreProduct(a, profile);
+  const scoreB = scoreProduct(b, profile);
 
   let winner: ScoreResult;
   let loser: ScoreResult;
@@ -87,26 +147,34 @@ export function compareProducts(a: Product, b: Product): CompareResult {
 
   const deltas = {
     protein_g: delta(winner.metrics.protein_g, loser.metrics.protein_g),
+    // positive => winner has less sugar / fewer calories (better for cut)
     added_sugar_g: delta(loser.metrics.added_sugar_g, winner.metrics.added_sugar_g),
     calories: delta(loser.metrics.calories, winner.metrics.calories),
   };
 
+  const shortName =
+    winner.product.brand && winner.product.brand !== "Unknown"
+      ? winner.product.brand
+      : winner.product.name.split(" ").slice(0, 2).join(" ");
+
+  const headline = formatCompareHeadline(shortName, deltas);
+  const summary = headline;
+
+  return { winner, loser, deltas, headline, summary };
+}
+
+export function formatTripDelta(
+  current: { totalProtein: number; totalSugar: number },
+  previous: { totalProtein: number; totalSugar: number } | null
+): string | null {
+  if (!previous) return null;
   const parts: string[] = [];
-  if (deltas.protein_g !== null && deltas.protein_g !== 0) {
-    parts.push(`${deltas.protein_g > 0 ? "+" : ""}${deltas.protein_g}g protein`);
-  }
-  if (deltas.added_sugar_g !== null && deltas.added_sugar_g !== 0) {
-    parts.push(
-      `${deltas.added_sugar_g > 0 ? "-" : "+"}${Math.abs(deltas.added_sugar_g)}g sugar`
-    );
-  }
-
-  const summary =
-    parts.length > 0
-      ? `${winner.product.name} wins for cutting (${parts.join(", ")}).`
-      : `${winner.product.name} wins for cutting — similar macros, slightly better efficiency.`;
-
-  return { winner, loser, deltas, summary };
+  const dProtein = Math.round(current.totalProtein - previous.totalProtein);
+  const dSugar = Math.round(current.totalSugar - previous.totalSugar);
+  if (dProtein !== 0) parts.push(`${dProtein > 0 ? "+" : ""}${dProtein}g protein`);
+  if (dSugar !== 0) parts.push(`${dSugar > 0 ? "+" : ""}${dSugar}g sugar`);
+  if (parts.length === 0) return "Same protein & sugar as last shop";
+  return `${parts.join(" · ")} vs last shop`;
 }
 
 export { goalConfig };

@@ -14,6 +14,18 @@
     "calories": { "buy_max": 150, "maybe_max": 200 },
     "protein_per_calorie_min": { "buy": 0.1, "maybe": 0.07 }
   },
+  "cottage_cheese": {
+    "added_sugar_g": { "buy_max": 5, "maybe_max": 10 },
+    "protein_g": { "buy_min": 12, "maybe_min": 10 },
+    "calories": { "buy_max": 120, "maybe_max": 160 },
+    "protein_per_calorie_min": { "buy": 0.1, "maybe": 0.08 }
+  },
+  "protein_milk": {
+    "added_sugar_g": { "buy_max": 6, "maybe_max": 12 },
+    "protein_g": { "buy_min": 13, "maybe_min": 10 },
+    "calories": { "buy_max": 180, "maybe_max": 240 },
+    "protein_per_calorie_min": { "buy": 0.1, "maybe": 0.07 }
+  },
   "default": {
     "added_sugar_g": { "buy_max": 5, "maybe_max": 9 },
     "protein_g": { "buy_min": 15, "maybe_min": 10 },

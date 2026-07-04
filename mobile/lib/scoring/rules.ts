@@ -52,11 +52,23 @@ function proteinPerCalorie(n: NutritionFacts): number | null {
 
 export function inferCategory(name: string, categories?: string): ProductCategory {
   const text = `${name} ${categories ?? ""}`.toLowerCase();
+  if (text.includes("cottage")) return "cottage_cheese";
+  if (
+    text.includes("core power") ||
+    text.includes("protein shake") ||
+    text.includes("protein milk") ||
+    text.includes("fairlife") ||
+    text.includes("premier protein") ||
+    (text.includes("ultra-filtered") && text.includes("milk")) ||
+    (text.includes("milk") && text.includes("protein"))
+  ) {
+    return "protein_milk";
+  }
   if (
     text.includes("protein bar") ||
     text.includes("nutrition bar") ||
     text.includes("energy bar") ||
-    text.includes("bar")
+    (text.includes("bar") && !text.includes("chocolate bar"))
   ) {
     return "protein_bar";
   }
@@ -72,64 +84,79 @@ export function getThresholds(
 ): CategoryThresholds {
   if (category === "protein_bar") return config.protein_bar;
   if (category === "greek_yogurt") return config.greek_yogurt;
+  if (category === "cottage_cheese") return config.cottage_cheese;
+  if (category === "protein_milk") return config.protein_milk;
   return config.default;
+}
+
+function categoryShort(category: ProductCategory): string {
+  if (category === "protein_bar") return "bars";
+  if (category === "greek_yogurt") return "yogurt";
+  if (category === "cottage_cheese") return "cottage cheese";
+  if (category === "protein_milk") return "protein milk";
+  return "this";
 }
 
 export function buildFlags(
   nutrition: NutritionFacts,
-  thresholds: CategoryThresholds
+  thresholds: CategoryThresholds,
+  category: ProductCategory = "unknown"
 ): Flag[] {
   const flags: Flag[] = [];
   const addedSugar = getAddedSugar(nutrition);
   const ppc = proteinPerCalorie(nutrition);
+  const cat = categoryShort(category);
 
   if (addedSugar !== null) {
     const v = rateHighIsBad(addedSugar, thresholds.added_sugar_g);
+    const buyMax = thresholds.added_sugar_g.buy_max;
     if (v === "avoid") {
       flags.push({
         id: "added_sugar_high",
         severity: "critical",
-        message: `${addedSugar}g sugar — above cutting limit (≤${thresholds.added_sugar_g.buy_max}g ideal).`,
+        message: `Sugar ${addedSugar}g — buy max ${buyMax}g for ${cat} on a cut.`,
       });
     } else if (v === "maybe") {
       flags.push({
         id: "added_sugar_moderate",
         severity: "warn",
-        message: `${addedSugar}g sugar — acceptable occasionally, not daily.`,
+        message: `Sugar ${addedSugar}g — buy max ${buyMax}g for ${cat}; occasional OK.`,
       });
     }
   }
 
   if (nutrition.protein_g !== null) {
     const v = rateLowIsBad(nutrition.protein_g, thresholds.protein_g);
+    const buyMin = thresholds.protein_g.buy_min;
     if (v === "avoid") {
       flags.push({
         id: "protein_low",
         severity: "critical",
-        message: `${nutrition.protein_g}g protein — below ${thresholds.protein_g.maybe_min}g target for cutting.`,
+        message: `Protein ${nutrition.protein_g}g — buy min ${buyMin}g for ${cat} on a cut.`,
       });
     } else if (v === "maybe") {
       flags.push({
         id: "protein_moderate",
         severity: "warn",
-        message: `${nutrition.protein_g}g protein — OK but not optimal (aim ≥${thresholds.protein_g.buy_min}g).`,
+        message: `Protein ${nutrition.protein_g}g — buy min ${buyMin}g for ${cat}; OK not optimal.`,
       });
     }
   }
 
   if (nutrition.calories !== null) {
     const v = rateHighIsBad(nutrition.calories, thresholds.calories);
+    const buyMax = thresholds.calories.buy_max;
     if (v === "avoid") {
       flags.push({
         id: "calories_high",
         severity: "critical",
-        message: `${nutrition.calories} cal — calorie-dense for a cutting snack.`,
+        message: `${nutrition.calories} cal — buy max ${buyMax} for ${cat} on a cut.`,
       });
     } else if (v === "maybe") {
       flags.push({
         id: "calories_moderate",
         severity: "warn",
-        message: `${nutrition.calories} cal — fine if it fits your daily budget.`,
+        message: `${nutrition.calories} cal — buy max ${buyMax} for ${cat}; fits if budget allows.`,
       });
     }
   }
@@ -146,11 +173,45 @@ export function buildFlags(
     flags.push({
       id: "data_incomplete",
       severity: "info",
-      message: "Nutrition data incomplete — verdict is low confidence.",
+      message: "Thin data — verify protein / sugar on the package.",
     });
   }
 
   return flags;
+}
+
+/** Plain-English rules for the result screen (trust in the number). */
+export function buildRuleLines(
+  nutrition: NutritionFacts,
+  thresholds: CategoryThresholds,
+  category: ProductCategory,
+  verdict: Verdict
+): string[] {
+  const flags = buildFlags(nutrition, thresholds, category);
+  const critical = flags.filter((f) => f.severity === "critical" || f.severity === "warn");
+  if (critical.length > 0) {
+    return critical.slice(0, 3).map((f) => f.message);
+  }
+  // Buy: keep result screen fast — no long rule essay
+  if (verdict === "buy") return [];
+  return ["Not enough nutrition data to fully score — check the package."];
+}
+
+export function servingLabelFor(
+  product: { serving_label?: string | null; category: ProductCategory }
+): string {
+  if (product.serving_label) return product.serving_label;
+  if (product.category === "protein_bar") return "Per serving (1 bar) — check package if multi-pack";
+  if (product.category === "greek_yogurt") {
+    return "Per serving (est.) — confirm cup vs container on package";
+  }
+  if (product.category === "cottage_cheese") {
+    return "Per serving (est. ½ cup) — confirm on package";
+  }
+  if (product.category === "protein_milk") {
+    return "Per serving (est.) — confirm cup vs bottle on package";
+  }
+  return "As listed — check package";
 }
 
 export function computeVerdict(
@@ -182,12 +243,13 @@ export function computeVerdict(
 export function renderExplanation(
   verdict: Verdict,
   flags: Flag[],
-  productName: string
+  _productName: string
 ): string {
-  const verdictLabel = verdict.toUpperCase();
   const topFlags = flags.filter((f) => f.severity !== "info").slice(0, 2);
   if (topFlags.length === 0) {
-    return `${productName} — ${verdictLabel}. Fits cutting goals based on available nutrition data.`;
+    return verdict === "buy"
+      ? "Fits your cut targets."
+      : "Check macros on the package.";
   }
-  return `${productName} — ${verdictLabel}. ${topFlags.map((f) => f.message).join(" ")}`;
+  return topFlags.map((f) => f.message).join(" ");
 }

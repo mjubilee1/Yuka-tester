@@ -1,12 +1,18 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
-import type { ReasonChip, ScoreResult, Verdict } from "@/lib/scoring/types";
+import type {
+  ReasonChip,
+  ScanDisposition,
+  ScoreResult,
+  Verdict,
+} from "@/lib/scoring/types";
 
 export interface TripScan {
   id: string;
   barcode: string;
   score: ScoreResult;
+  disposition: ScanDisposition;
   reason?: ReasonChip;
   timestamp: string;
 }
@@ -18,12 +24,17 @@ export interface TripSummary {
   totalProtein: number;
   totalSugar: number;
   scans: TripScan[];
+  leftBehind: TripScan[];
+  endedAt: string;
 }
 
 interface TripState {
   compareSlot: ScoreResult | null;
   activeScans: TripScan[];
   lastTripSummary: TripSummary | null;
+  previousTripSummary: TripSummary | null;
+  /** Newest first, max 3 completed trips */
+  tripHistory: TripSummary[];
   setCompareSlot: (score: ScoreResult | null) => void;
   addScan: (scan: TripScan) => void;
   setReason: (scanId: string, reason: ReasonChip) => void;
@@ -32,13 +43,16 @@ interface TripState {
 }
 
 function buildSummary(scans: TripScan[]): TripSummary {
+  const cart = scans.filter((s) => s.disposition === "cart");
+  const leftBehind = scans.filter((s) => s.disposition === "left");
+
   let buy = 0;
   let maybe = 0;
   let avoid = 0;
   let totalProtein = 0;
   let totalSugar = 0;
 
-  for (const s of scans) {
+  for (const s of cart) {
     if (s.score.verdict === "buy") buy++;
     else if (s.score.verdict === "maybe") maybe++;
     else avoid++;
@@ -46,7 +60,16 @@ function buildSummary(scans: TripScan[]): TripSummary {
     totalSugar += s.score.metrics.added_sugar_g ?? 0;
   }
 
-  return { buy, maybe, avoid, totalProtein, totalSugar, scans };
+  return {
+    buy,
+    maybe,
+    avoid,
+    totalProtein,
+    totalSugar,
+    scans: cart,
+    leftBehind,
+    endedAt: new Date().toISOString(),
+  };
 }
 
 export const useTripStore = create<TripState>()(
@@ -55,6 +78,8 @@ export const useTripStore = create<TripState>()(
       compareSlot: null,
       activeScans: [],
       lastTripSummary: null,
+      previousTripSummary: null,
+      tripHistory: [],
       setCompareSlot: (score) => set({ compareSlot: score }),
       addScan: (scan) =>
         set((state) => ({ activeScans: [...state.activeScans, scan] })),
@@ -66,21 +91,42 @@ export const useTripStore = create<TripState>()(
         })),
       endTrip: () => {
         const summary = buildSummary(get().activeScans);
-        set({ lastTripSummary: summary, activeScans: [], compareSlot: null });
+        const history = [summary, ...get().tripHistory].slice(0, 3);
+        set({
+          previousTripSummary: get().lastTripSummary,
+          lastTripSummary: summary,
+          tripHistory: history,
+          activeScans: [],
+          compareSlot: null,
+        });
         return summary;
       },
       clearActiveTrip: () => set({ activeScans: [], compareSlot: null }),
     }),
     {
       name: "cut-cart-trip",
+      version: 3,
       storage: createJSONStorage(() => AsyncStorage),
+      migrate: () => ({
+        compareSlot: null,
+        activeScans: [],
+        lastTripSummary: null,
+        previousTripSummary: null,
+        tripHistory: [],
+      }),
       partialize: (state) => ({
         lastTripSummary: state.lastTripSummary,
+        previousTripSummary: state.previousTripSummary,
+        tripHistory: state.tripHistory,
         activeScans: state.activeScans,
       }),
     }
   )
 );
+
+export function cartScans(scans: TripScan[]): TripScan[] {
+  return scans.filter((s) => s.disposition === "cart");
+}
 
 export function verdictColor(verdict: Verdict): string {
   switch (verdict) {

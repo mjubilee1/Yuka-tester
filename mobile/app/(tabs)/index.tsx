@@ -1,23 +1,27 @@
 import { useRouter } from "expo-router";
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { AppButton } from "@/components/ui";
 import { theme } from "@/constants/theme";
 import { getCacheSize } from "@/lib/products/lookup";
-import { goalConfig } from "@/lib/scoring/score";
-import { useTripStore } from "@/store/trip";
+import { profileSummary } from "@/lib/scoring/profile";
+import { useCutProfile } from "@/store/profile";
+import { cartScans, useTripStore } from "@/store/trip";
 
 export default function HomeScreen() {
   const router = useRouter();
+  const profile = useCutProfile();
   const activeScans = useTripStore((s) => s.activeScans);
   const compareSlot = useTripStore((s) => s.compareSlot);
   const endTrip = useTripStore((s) => s.endTrip);
   const clearActiveTrip = useTripStore((s) => s.clearActiveTrip);
 
-  const buy = activeScans.filter((s) => s.score.verdict === "buy").length;
-  const maybe = activeScans.filter((s) => s.score.verdict === "maybe").length;
-  const avoid = activeScans.filter((s) => s.score.verdict === "avoid").length;
+  const inCart = cartScans(activeScans);
+  const buy = inCart.filter((s) => s.score.verdict === "buy").length;
+  const maybe = inCart.filter((s) => s.score.verdict === "maybe").length;
+  const avoid = inCart.filter((s) => s.score.verdict === "avoid").length;
+  const leftCount = activeScans.filter((s) => s.disposition === "left").length;
 
   return (
     <SafeAreaView style={styles.safe}>
@@ -26,27 +30,37 @@ export default function HomeScreen() {
           <Text style={styles.heroBadgeText}>Cut Cart</Text>
         </View>
         <Text style={styles.title}>Know what to buy{"\n"}before it goes in the cart</Text>
+
+        <Pressable
+          style={styles.profileChip}
+          onPress={() => router.push("/profile")}
+        >
+          <Text style={styles.profileChipText}>{profileSummary(profile)}</Text>
+          <Text style={styles.profileChipEdit}>Edit</Text>
+        </Pressable>
+
         <Text style={styles.subtitle}>
-          {goalConfig.displayName} · Protein bars & Greek yogurt · {getCacheSize()} products
+          Bars · yogurt · cottage cheese · protein milk · {getCacheSize()} products
         </Text>
 
-        {activeScans.length > 0 && (
+        {inCart.length > 0 && (
           <View style={styles.tripCard}>
-            <Text style={styles.tripTitle}>Current trip</Text>
+            <Text style={styles.tripTitle}>In cart</Text>
             <View style={styles.counts}>
               <CountPill label="Buy" value={buy} color={theme.colors.buy} />
               <CountPill label="Maybe" value={maybe} color={theme.colors.maybe} />
               <CountPill label="Avoid" value={avoid} color={theme.colors.avoid} />
             </View>
-            <Text style={styles.scanCount}>{activeScans.length} scans</Text>
+            {leftCount > 0 && (
+              <Text style={styles.scanCount}>{leftCount} left behind</Text>
+            )}
           </View>
         )}
 
         {compareSlot && (
           <View style={styles.compareBanner}>
             <Text style={styles.compareText}>
-              Compare mode: scan second product to compare with{" "}
-              {compareSlot.product.name}
+              Scan 2nd product to compare with {compareSlot.product.name}
             </Text>
           </View>
         )}
@@ -117,19 +131,42 @@ const styles = StyleSheet.create({
     color: colors.text,
     lineHeight: 38,
   },
+  profileChip: {
+    flexDirection: "row",
+    alignItems: "center",
+    alignSelf: "flex-start",
+    marginTop: 14,
+    backgroundColor: colors.surface,
+    borderRadius: radius.md,
+    paddingVertical: 10,
+    paddingHorizontal: 14,
+    borderWidth: 1,
+    borderColor: colors.borderMuted,
+    gap: 10,
+  },
+  profileChipText: {
+    fontSize: 14,
+    fontWeight: "700",
+    color: colors.primaryDark,
+  },
+  profileChipEdit: {
+    fontSize: 13,
+    fontWeight: "700",
+    color: colors.primary,
+  },
   subtitle: {
-    fontSize: 15,
+    fontSize: 14,
     color: colors.textSecondary,
-    marginTop: 12,
-    lineHeight: 22,
+    marginTop: 10,
+    lineHeight: 20,
     fontWeight: "500",
   },
   tripCard: {
     backgroundColor: colors.surface,
     borderRadius: radius.xl,
     padding: 20,
-    marginTop: 28,
-    marginBottom: 28,
+    marginTop: 24,
+    marginBottom: 24,
     borderWidth: 2,
     borderColor: colors.borderMuted,
   },

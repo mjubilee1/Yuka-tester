@@ -1,0 +1,271 @@
+{
+  "note": "High-confidence cut staples with label-accurate per-serving macros",
+  "products": {
+    "859977005014": {
+      "barcode": "859977005014",
+      "name": "Classic Cottage Cheese",
+      "brand": "Good Culture",
+      "category": "cottage_cheese",
+      "nutrition": {
+        "calories": 110,
+        "protein_g": 19,
+        "added_sugar_g": 0,
+        "sugar_g": 3,
+        "carbs_g": 3,
+        "fat_g": 2.5,
+        "fiber_g": 0,
+        "sodium_mg": 340
+      },
+      "serving_label": "Per serving (110g / ½ cup)",
+      "source": "curated_label",
+      "confidence": "high"
+    },
+    "859977005021": {
+      "barcode": "859977005021",
+      "name": "Low-Fat Classic Cottage Cheese",
+      "brand": "Good Culture",
+      "category": "cottage_cheese",
+      "nutrition": {
+        "calories": 80,
+        "protein_g": 14,
+        "added_sugar_g": 0,
+        "sugar_g": 3,
+        "carbs_g": 3,
+        "fat_g": 1,
+        "fiber_g": 0,
+        "sodium_mg": 320
+      },
+      "serving_label": "Per serving (110g / ½ cup)",
+      "source": "curated_label",
+      "confidence": "high"
+    },
+    "073420000123": {
+      "barcode": "073420000123",
+      "name": "Pure & Natural Cottage Cheese 4%",
+      "brand": "Daisy",
+      "category": "cottage_cheese",
+      "nutrition": {
+        "calories": 110,
+        "protein_g": 12,
+        "added_sugar_g": 0,
+        "sugar_g": 4,
+        "carbs_g": 4,
+        "fat_g": 5,
+        "fiber_g": 0,
+        "sodium_mg": 400
+      },
+      "serving_label": "Per serving (113g / ½ cup)",
+      "source": "curated_label",
+      "confidence": "high"
+    },
+    "073420000130": {
+      "barcode": "073420000130",
+      "name": "Pure & Natural Cottage Cheese Low Fat 2%",
+      "brand": "Daisy",
+      "category": "cottage_cheese",
+      "nutrition": {
+        "calories": 90,
+        "protein_g": 13,
+        "added_sugar_g": 0,
+        "sugar_g": 4,
+        "carbs_g": 4,
+        "fat_g": 2.5,
+        "fiber_g": 0,
+        "sodium_mg": 390
+      },
+      "serving_label": "Per serving (113g / ½ cup)",
+      "source": "curated_label",
+      "confidence": "high"
+    },
+    "021000614807": {
+      "barcode": "021000614807",
+      "name": "Cottage Cheese Lowfat 2%",
+      "brand": "Breakstone's",
+      "category": "cottage_cheese",
+      "nutrition": {
+        "calories": 90,
+        "protein_g": 12,
+        "added_sugar_g": 0,
+        "sugar_g": 4,
+        "carbs_g": 5,
+        "fat_g": 2.5,
+        "fiber_g": 0,
+        "sodium_mg": 380
+      },
+      "serving_label": "Per serving (113g / ½ cup)",
+      "source": "curated_label",
+      "confidence": "high"
+    },
+    "070470003563": {
+      "barcode": "070470003563",
+      "name": "Cottage Doubles Peach",
+      "brand": "Breakstone's",
+      "category": "cottage_cheese",
+      "nutrition": {
+        "calories": 140,
+        "protein_g": 12,
+        "added_sugar_g": 10,
+        "sugar_g": 15,
+        "carbs_g": 18,
+        "fat_g": 2.5,
+        "fiber_g": 0,
+        "sodium_mg": 360
+      },
+      "serving_label": "Per serving (133g container)",
+      "source": "curated_label",
+      "confidence": "high"
+    },
+    "811620021977": {
+      "barcode": "811620021977",
+      "name": "Core Power Chocolate Protein Milkshake",
+      "brand": "fairlife",
+      "category": "protein_milk",
+      "nutrition": {
+        "calories": 170,
+        "protein_g": 26,
+        "added_sugar_g": 4,
+        "sugar_g": 5,
+        "carbs_g": 8,
+        "fat_g": 4.5,
+        "fiber_g": 1,
+        "sodium_mg": 260
+      },
+      "serving_label": "Per bottle (414ml)",
+      "source": "curated_label",
+      "confidence": "high"
+    },
+    "811620021984": {
+      "barcode": "811620021984",
+      "name": "Core Power Vanilla Protein Milkshake",
+      "brand": "fairlife",
+      "category": "protein_milk",
+      "nutrition": {
+        "calories": 170,
+        "protein_g": 26,
+        "added_sugar_g": 4,
+        "sugar_g": 5,
+        "carbs_g": 8,
+        "fat_g": 4.5,
+        "fiber_g": 0,
+        "sodium_mg": 240
+      },
+      "serving_label": "Per bottle (414ml)",
+      "source": "curated_label",
+      "confidence": "high"
+    },
+    "811620022004": {
+      "barcode": "811620022004",
+      "name": "Core Power Elite Chocolate",
+      "brand": "fairlife",
+      "category": "protein_milk",
+      "nutrition": {
+        "calories": 230,
+        "protein_g": 42,
+        "added_sugar_g": 2,
+        "sugar_g": 3,
+        "carbs_g": 6,
+        "fat_g": 3.5,
+        "fiber_g": 1,
+        "sodium_mg": 280
+      },
+      "serving_label": "Per bottle (414ml)",
+      "source": "curated_label",
+      "confidence": "high"
+    },
+    "811620020147": {
+      "barcode": "811620020147",
+      "name": "Ultra-Filtered 2% Reduced Fat Milk",
+      "brand": "fairlife",
+      "category": "protein_milk",
+      "nutrition": {
+        "calories": 120,
+        "protein_g": 13,
+        "added_sugar_g": 0,
+        "sugar_g": 6,
+        "carbs_g": 6,
+        "fat_g": 4.5,
+        "fiber_g": 0,
+        "sodium_mg": 120
+      },
+      "serving_label": "Per serving (240ml / 1 cup)",
+      "source": "curated_label",
+      "confidence": "high"
+    },
+    "811620020130": {
+      "barcode": "811620020130",
+      "name": "Ultra-Filtered Fat Free Milk",
+      "brand": "fairlife",
+      "category": "protein_milk",
+      "nutrition": {
+        "calories": 80,
+        "protein_g": 13,
+        "added_sugar_g": 0,
+        "sugar_g": 6,
+        "carbs_g": 6,
+        "fat_g": 0,
+        "fiber_g": 0,
+        "sodium_mg": 120
+      },
+      "serving_label": "Per serving (240ml / 1 cup)",
+      "source": "curated_label",
+      "confidence": "high"
+    },
+    "811620020154": {
+      "barcode": "811620020154",
+      "name": "Ultra-Filtered Whole Milk",
+      "brand": "fairlife",
+      "category": "protein_milk",
+      "nutrition": {
+        "calories": 150,
+        "protein_g": 13,
+        "added_sugar_g": 0,
+        "sugar_g": 6,
+        "carbs_g": 6,
+        "fat_g": 8,
+        "fiber_g": 0,
+        "sodium_mg": 120
+      },
+      "serving_label": "Per serving (240ml / 1 cup)",
+      "source": "curated_label",
+      "confidence": "high"
+    },
+    "643843200021": {
+      "barcode": "643843200021",
+      "name": "Chocolate Protein Shake",
+      "brand": "Premier Protein",
+      "category": "protein_milk",
+      "nutrition": {
+        "calories": 160,
+        "protein_g": 30,
+        "added_sugar_g": 1,
+        "sugar_g": 1,
+        "carbs_g": 4,
+        "fat_g": 3,
+        "fiber_g": 1,
+        "sodium_mg": 200
+      },
+      "serving_label": "Per bottle (325ml)",
+      "source": "curated_label",
+      "confidence": "high"
+    },
+    "643843200014": {
+      "barcode": "643843200014",
+      "name": "Vanilla Protein Shake",
+      "brand": "Premier Protein",
+      "category": "protein_milk",
+      "nutrition": {
+        "calories": 160,
+        "protein_g": 30,
+        "added_sugar_g": 1,
+        "sugar_g": 1,
+        "carbs_g": 4,
+        "fat_g": 3,
+        "fiber_g": 1,
+        "sodium_mg": 190
+      },
+      "serving_label": "Per bottle (325ml)",
+      "source": "curated_label",
+      "confidence": "high"
+    }
+  }
+}

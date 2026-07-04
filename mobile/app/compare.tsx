@@ -3,11 +3,18 @@ import { useEffect, useState } from "react";
 import { ActivityIndicator, ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import { AppButton, MacroRow, VerdictBadge } from "@/components/ui";
+import {
+  AppButton,
+  ConfidenceLine,
+  MacroRow,
+  RuleLines,
+  VerdictBadge,
+} from "@/components/ui";
 import { theme } from "@/constants/theme";
 import { lookupProduct } from "@/lib/products/lookup";
 import { compareProducts } from "@/lib/scoring/score";
 import type { CompareResult } from "@/lib/scoring/types";
+import { useCutProfile } from "@/store/profile";
 import { useTripStore } from "@/store/trip";
 
 export default function CompareScreen() {
@@ -15,8 +22,9 @@ export default function CompareScreen() {
   const params = useLocalSearchParams<{
     winnerBarcode: string;
     loserBarcode: string;
-    summary?: string;
+    headline?: string;
   }>();
+  const profile = useCutProfile();
   const addScan = useTripStore((s) => s.addScan);
   const [comparison, setComparison] = useState<CompareResult | null>(null);
 
@@ -26,25 +34,19 @@ export default function CompareScreen() {
       lookupProduct(params.loserBarcode),
     ]).then(([a, b]) => {
       if (!a || !b) return;
-      const result = compareProducts(a, b);
-      setComparison(result);
-
-      const ts = new Date().toISOString();
-      const existing = new Set(
-        useTripStore.getState().activeScans.map((s) => s.barcode)
+      setComparison(
+        compareProducts(a, b, {
+          weightBand: profile.weightBand,
+          aggressiveness: profile.aggressiveness,
+        })
       );
-
-      for (const score of [result.winner, result.loser]) {
-        if (existing.has(score.product.barcode)) continue;
-        addScan({
-          id: `${Date.now()}-${score.product.barcode}`,
-          barcode: score.product.barcode,
-          score,
-          timestamp: ts,
-        });
-      }
     });
-  }, [params.winnerBarcode, params.loserBarcode, addScan]);
+  }, [
+    params.winnerBarcode,
+    params.loserBarcode,
+    profile.weightBand,
+    profile.aggressiveness,
+  ]);
 
   if (!comparison) {
     return (
@@ -54,23 +56,57 @@ export default function CompareScreen() {
     );
   }
 
-  const { winner, loser, summary } = comparison;
+  const { winner, loser, headline } = comparison;
+  const title = params.headline ?? headline;
+
+  const addWinnerToCart = () => {
+    addScan({
+      id: `${Date.now()}-${winner.product.barcode}`,
+      barcode: winner.product.barcode,
+      score: winner,
+      disposition: "cart",
+      timestamp: new Date().toISOString(),
+    });
+    router.replace("/scan");
+  };
+
+  const leaveBoth = () => {
+    const ts = new Date().toISOString();
+    const loserId = `${Date.now()}-${loser.product.barcode}`;
+    addScan({
+      id: `${Date.now()}-${winner.product.barcode}`,
+      barcode: winner.product.barcode,
+      score: winner,
+      disposition: "left",
+      timestamp: ts,
+    });
+    addScan({
+      id: loserId,
+      barcode: loser.product.barcode,
+      score: loser,
+      disposition: "left",
+      timestamp: ts,
+    });
+    router.replace({ pathname: "/reason", params: { scanId: loserId } });
+  };
 
   return (
     <SafeAreaView style={styles.safe}>
       <ScrollView contentContainerStyle={styles.container}>
-        <Text style={styles.title}>Comparison</Text>
-        <Text style={styles.summary}>{params.summary ?? summary}</Text>
+        <Text style={styles.headline}>{title}</Text>
 
         <View style={styles.winnerCard}>
-          <Text style={styles.winnerLabel}>Winner for cutting</Text>
+          <Text style={styles.winnerLabel}>Winner for your cut</Text>
           <Text style={styles.brand}>{winner.product.brand}</Text>
           <Text style={styles.name}>{winner.product.name}</Text>
           <VerdictBadge verdict={winner.verdict} size="medium" />
+          <ConfidenceLine label={winner.confidenceLabel} />
+          <RuleLines lines={winner.ruleLines} />
           <MacroRow
             protein={winner.metrics.protein_g}
             sugar={winner.metrics.added_sugar_g}
             calories={winner.metrics.calories}
+            servingLabel={winner.servingLabel}
           />
         </View>
 
@@ -83,12 +119,15 @@ export default function CompareScreen() {
             protein={loser.metrics.protein_g}
             sugar={loser.metrics.added_sugar_g}
             calories={loser.metrics.calories}
+            servingLabel={loser.servingLabel}
           />
         </View>
 
-        <AppButton title="Scan another" onPress={() => router.replace("/scan")} />
+        <AppButton title="In cart (winner)" onPress={addWinnerToCart} />
         <View style={styles.spacer} />
-        <AppButton title="Done" variant="ghost" onPress={() => router.back()} />
+        <AppButton title="Left both" variant="danger" onPress={leaveBoth} />
+        <View style={styles.spacer} />
+        <AppButton title="Scan another" variant="ghost" onPress={() => router.replace("/scan")} />
       </ScrollView>
     </SafeAreaView>
   );
@@ -105,13 +144,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: colors.background,
   },
-  title: { fontSize: 28, fontWeight: "800", color: colors.text },
-  summary: {
-    fontSize: 16,
+  headline: {
+    fontSize: 20,
     color: colors.primaryDark,
-    fontWeight: "700",
-    marginTop: 12,
-    lineHeight: 24,
+    fontWeight: "800",
+    lineHeight: 28,
     backgroundColor: colors.primaryMuted,
     padding: 14,
     borderRadius: radius.md,
@@ -120,7 +157,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.buyBg,
     borderRadius: radius.xl,
     padding: 20,
-    marginTop: 24,
+    marginTop: 20,
     borderWidth: 2,
     borderColor: colors.border,
   },
@@ -129,7 +166,7 @@ const styles = StyleSheet.create({
     borderRadius: radius.xl,
     padding: 20,
     marginTop: 16,
-    marginBottom: 24,
+    marginBottom: 20,
     borderWidth: 1,
     borderColor: colors.borderMuted,
   },
@@ -161,5 +198,5 @@ const styles = StyleSheet.create({
     marginTop: 4,
     marginBottom: 12,
   },
-  spacer: { height: 8 },
+  spacer: { height: 10 },
 });

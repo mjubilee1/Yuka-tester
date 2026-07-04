@@ -1,25 +1,41 @@
 import { useLocalSearchParams, useRouter } from "expo-router";
-import { useEffect, useState } from "react";
-import { ActivityIndicator, ScrollView, StyleSheet, Text, View } from "react-native";
+import { useEffect, useMemo, useState } from "react";
+import {
+  ActivityIndicator,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import { AppButton, MacroRow, VerdictBadge } from "@/components/ui";
+import {
+  AppButton,
+  ConfidenceLine,
+  MacroRow,
+  RuleLines,
+  VerdictBadge,
+} from "@/components/ui";
 import { theme } from "@/constants/theme";
 import { lookupProduct } from "@/lib/products/lookup";
 import { scoreProduct } from "@/lib/scoring/score";
 import type { ScoreResult } from "@/lib/scoring/types";
+import { useCutProfile } from "@/store/profile";
 import { useTripStore } from "@/store/trip";
 
 export default function ResultScreen() {
   const router = useRouter();
   const params = useLocalSearchParams<{ barcode?: string; error?: string }>();
+  const profile = useCutProfile();
   const addScan = useTripStore((s) => s.addScan);
   const setCompareSlot = useTripStore((s) => s.setCompareSlot);
   const [score, setScore] = useState<ScoreResult | null>(null);
   const [loading, setLoading] = useState(true);
+  const [priceText, setPriceText] = useState("");
 
   useEffect(() => {
-    if (params.error === "not_found") {
+    if (params.error === "not_found" || params.error === "compare_lost") {
       setLoading(false);
       return;
     }
@@ -33,28 +49,52 @@ export default function ResultScreen() {
         setLoading(false);
         return;
       }
-      const result = scoreProduct(product);
-      setScore(result);
-      const id = `${Date.now()}-${product.barcode}`;
-      addScan({ id, barcode: product.barcode, score: result, timestamp: new Date().toISOString() });
+      setScore(
+        scoreProduct(product, {
+          weightBand: profile.weightBand,
+          aggressiveness: profile.aggressiveness,
+        })
+      );
       setLoading(false);
-
-      if (result.verdict === "avoid" || result.verdict === "maybe") {
-        setTimeout(() => {
-          router.push({ pathname: "/reason", params: { scanId: id } });
-        }, 400);
-      }
     });
-  }, [params.barcode, params.error, addScan, router]);
+  }, [params.barcode, params.error, profile.weightBand, profile.aggressiveness]);
 
-  if (params.error === "not_found") {
+  const proteinPerDollar = useMemo(() => {
+    if (!score?.metrics.protein_g) return null;
+    const price = parseFloat(priceText);
+    if (!price || price <= 0) return null;
+    const per20 = (price / score.metrics.protein_g) * 20;
+    return per20;
+  }, [priceText, score]);
+
+  const commit = (disposition: "cart" | "left") => {
+    if (!score) return;
+    const id = `${Date.now()}-${score.product.barcode}`;
+    addScan({
+      id,
+      barcode: score.product.barcode,
+      score,
+      disposition,
+      timestamp: new Date().toISOString(),
+    });
+    if (disposition === "left") {
+      router.replace({ pathname: "/reason", params: { scanId: id } });
+      return;
+    }
+    router.replace("/scan");
+  };
+
+  if (params.error === "not_found" || params.error === "compare_lost") {
     return (
       <SafeAreaView style={styles.safe}>
         <View style={styles.container}>
-          <Text style={styles.errorTitle}>Not in catalog yet</Text>
+          <Text style={styles.errorTitle}>
+            {params.error === "compare_lost" ? "Compare reset" : "Not in catalog yet"}
+          </Text>
           <Text style={styles.errorText}>
-            Barcode {params.barcode} isn&apos;t in our protein bar / yogurt database. Try
-            another product or check the barcode.
+            {params.error === "compare_lost"
+              ? "Couldn’t load the first product. Scan again."
+              : "We cover bars, Greek yogurt, cottage cheese, and protein milk. Try another cut staple."}
           </Text>
           <AppButton title="Scan again" onPress={() => router.replace("/scan")} />
         </View>
@@ -70,48 +110,68 @@ export default function ResultScreen() {
     );
   }
 
+  const isBuy = score.verdict === "buy";
+  const showConfidence = !isBuy || score.confidence !== "high";
+  const showRules = !isBuy && score.ruleLines.length > 0;
+
   return (
     <SafeAreaView style={styles.safe}>
-      <ScrollView contentContainerStyle={styles.container}>
+      <ScrollView
+        contentContainerStyle={styles.container}
+        keyboardShouldPersistTaps="handled"
+      >
         <View style={styles.productCard}>
           <Text style={styles.brand}>{score.product.brand}</Text>
           <Text style={styles.name}>{score.product.name}</Text>
-          <Text style={styles.category}>{score.product.category.replace("_", " ")}</Text>
+          <Text style={styles.category}>
+            {score.product.category.replace(/_/g, " ")}
+          </Text>
         </View>
 
         <VerdictBadge verdict={score.verdict} />
-
-        <Text style={styles.confidence}>Confidence: {score.confidence.toUpperCase()}</Text>
-        <Text style={styles.explanation}>{score.explanation}</Text>
+        {showConfidence ? <ConfidenceLine label={score.confidenceLabel} /> : null}
+        {showRules ? <RuleLines lines={score.ruleLines} /> : null}
 
         <MacroRow
           protein={score.metrics.protein_g}
           sugar={score.metrics.added_sugar_g}
           calories={score.metrics.calories}
+          servingLabel={score.servingLabel}
         />
 
-        {score.flags.length > 0 && (
-          <View style={styles.flags}>
-            {score.flags.map((f) => (
-              <Text key={f.id} style={styles.flag}>
-                • {f.message}
-              </Text>
-            ))}
-          </View>
-        )}
+        <View style={styles.priceRow}>
+          <Text style={styles.priceLabel}>$</Text>
+          <TextInput
+            style={styles.priceInput}
+            value={priceText}
+            onChangeText={setPriceText}
+            placeholder="price (optional)"
+            placeholderTextColor={theme.colors.textMuted}
+            keyboardType="decimal-pad"
+            returnKeyType="done"
+          />
+          {proteinPerDollar != null && (
+            <Text style={styles.ppd}>
+              ${proteinPerDollar.toFixed(2)} / 20g protein
+            </Text>
+          )}
+        </View>
 
+        <View style={styles.actions}>
+          <AppButton title="In cart" onPress={() => commit("cart")} />
+          <View style={styles.spacer} />
+          <AppButton title="Left it" variant="danger" onPress={() => commit("left")} />
+        </View>
+
+        <View style={styles.spacer} />
         <AppButton
-          title="Compare with another"
+          title="Compare"
           variant="secondary"
           onPress={() => {
             setCompareSlot(score);
             router.replace("/scan");
           }}
         />
-        <View style={styles.spacer} />
-        <AppButton title="Scan next product" onPress={() => router.replace("/scan")} />
-        <View style={styles.spacerSm} />
-        <AppButton title="Done" variant="ghost" onPress={() => router.back()} />
       </ScrollView>
     </SafeAreaView>
   );
@@ -132,7 +192,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.surface,
     borderRadius: radius.lg,
     padding: 16,
-    marginBottom: 20,
+    marginBottom: 16,
     borderWidth: 1,
     borderColor: colors.borderMuted,
   },
@@ -143,35 +203,44 @@ const styles = StyleSheet.create({
     textTransform: "uppercase",
     letterSpacing: 0.8,
   },
-  name: { fontSize: 24, fontWeight: "800", color: colors.text, marginTop: 4 },
+  name: { fontSize: 22, fontWeight: "800", color: colors.text, marginTop: 4 },
   category: {
-    fontSize: 13,
+    fontSize: 12,
     color: colors.textMuted,
     marginTop: 4,
-    fontWeight: "500",
+    fontWeight: "600",
     textTransform: "capitalize",
   },
-  confidence: {
-    fontSize: 12,
+  priceRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 8,
+    marginBottom: 12,
+    flexWrap: "wrap",
+  },
+  priceLabel: {
+    fontSize: 18,
+    fontWeight: "800",
     color: colors.textSecondary,
-    marginTop: 14,
-    fontWeight: "600",
   },
-  explanation: {
+  priceInput: {
+    minWidth: 120,
+    borderWidth: 1,
+    borderColor: colors.borderMuted,
+    borderRadius: radius.sm,
+    paddingHorizontal: 12,
+    paddingVertical: 10,
     fontSize: 16,
+    fontWeight: "600",
     color: colors.text,
-    lineHeight: 24,
-    marginTop: 8,
-    fontWeight: "500",
+    backgroundColor: colors.surface,
   },
-  flags: {
-    marginTop: 16,
-    marginBottom: 24,
-    backgroundColor: colors.surfaceAlt,
-    borderRadius: radius.md,
-    padding: 14,
+  ppd: {
+    fontSize: 13,
+    fontWeight: "700",
+    color: colors.primaryDark,
   },
-  flag: { fontSize: 14, color: colors.textSecondary, lineHeight: 22, marginBottom: 4 },
+  actions: { marginTop: 4 },
   errorTitle: { fontSize: 22, fontWeight: "800", color: colors.text },
   errorText: {
     fontSize: 15,
@@ -180,5 +249,4 @@ const styles = StyleSheet.create({
     marginVertical: 20,
   },
   spacer: { height: 12 },
-  spacerSm: { height: 8 },
 });

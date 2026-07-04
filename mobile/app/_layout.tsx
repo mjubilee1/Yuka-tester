@@ -56,6 +56,7 @@ function RootLayoutNav() {
         <Stack.Screen name="result" options={{ title: "Verdict", presentation: "modal" }} />
         <Stack.Screen name="reason" options={{ title: "Why?", presentation: "modal" }} />
         <Stack.Screen name="compare" options={{ title: "Compare", presentation: "modal" }} />
+        <Stack.Screen name="profile" options={{ title: "Your cut", presentation: "modal" }} />
       </Stack>
     </ThemeProvider>
   );

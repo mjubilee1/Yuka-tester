@@ -29,26 +29,47 @@ interface MacroProps {
   protein: number | null;
   sugar: number | null;
   calories: number | null;
+  servingLabel?: string;
 }
 
-export function MacroRow({ protein, sugar, calories }: MacroProps) {
+export function MacroRow({ protein, sugar, calories, servingLabel }: MacroProps) {
   return (
-    <View style={styles.macros}>
-      <MacroItem
-        label="Protein"
-        value={protein != null ? `${protein}g` : "—"}
-        color={theme.colors.protein}
-      />
-      <MacroItem
-        label="Sugar"
-        value={sugar != null ? `${sugar}g` : "—"}
-        color={theme.colors.sugar}
-      />
-      <MacroItem
-        label="Cal"
-        value={calories != null ? `${calories}` : "—"}
-        color={theme.colors.calories}
-      />
+    <View style={styles.macrosWrap}>
+      {servingLabel ? <Text style={styles.serving}>{servingLabel}</Text> : null}
+      <View style={styles.macros}>
+        <MacroItem
+          label="Protein"
+          value={protein != null ? `${protein}g` : "—"}
+          color={theme.colors.protein}
+        />
+        <MacroItem
+          label="Sugar"
+          value={sugar != null ? `${sugar}g` : "—"}
+          color={theme.colors.sugar}
+        />
+        <MacroItem
+          label="Cal"
+          value={calories != null ? `${calories}` : "—"}
+          color={theme.colors.calories}
+        />
+      </View>
+    </View>
+  );
+}
+
+export function ConfidenceLine({ label }: { label: string }) {
+  return <Text style={styles.confidence}>{label}</Text>;
+}
+
+export function RuleLines({ lines }: { lines: string[] }) {
+  if (lines.length === 0) return null;
+  return (
+    <View style={styles.rules}>
+      {lines.map((line) => (
+        <Text key={line} style={styles.ruleLine}>
+          {line}
+        </Text>
+      ))}
     </View>
   );
 }
@@ -73,7 +94,7 @@ function MacroItem({
 interface ButtonProps {
   title: string;
   onPress: () => void;
-  variant?: "primary" | "secondary" | "ghost";
+  variant?: "primary" | "secondary" | "ghost" | "danger";
 }
 
 export function AppButton({ title, onPress, variant = "primary" }: ButtonProps) {
@@ -84,6 +105,7 @@ export function AppButton({ title, onPress, variant = "primary" }: ButtonProps) 
         styles.button,
         variant === "secondary" && styles.buttonSecondary,
         variant === "ghost" && styles.buttonGhost,
+        variant === "danger" && styles.buttonDanger,
         pressed && styles.buttonPressed,
       ]}
     >
@@ -92,6 +114,7 @@ export function AppButton({ title, onPress, variant = "primary" }: ButtonProps) 
           styles.buttonText,
           variant === "secondary" && styles.buttonTextSecondary,
           variant === "ghost" && styles.buttonTextGhost,
+          variant === "danger" && styles.buttonTextDanger,
         ]}
       >
         {title}
@@ -128,13 +151,19 @@ const styles = StyleSheet.create({
   textMedium: {
     fontSize: 14,
   },
+  macrosWrap: { marginVertical: 12 },
+  serving: {
+    fontSize: 13,
+    fontWeight: "700",
+    color: colors.textSecondary,
+    marginBottom: 8,
+  },
   macros: {
     flexDirection: "row",
     justifyContent: "space-around",
     backgroundColor: colors.surfaceAlt,
     borderRadius: radius.lg,
     paddingVertical: 18,
-    marginVertical: 12,
     borderWidth: 1,
     borderColor: colors.borderMuted,
   },
@@ -147,6 +176,26 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     textTransform: "uppercase",
     letterSpacing: 0.5,
+  },
+  confidence: {
+    fontSize: 13,
+    color: colors.textSecondary,
+    marginTop: 10,
+    fontWeight: "600",
+  },
+  rules: {
+    marginTop: 12,
+    marginBottom: 8,
+    backgroundColor: colors.surfaceAlt,
+    borderRadius: radius.md,
+    padding: 14,
+    gap: 8,
+  },
+  ruleLine: {
+    fontSize: 15,
+    color: colors.text,
+    lineHeight: 21,
+    fontWeight: "600",
   },
   button: {
     backgroundColor: colors.primary,
@@ -172,6 +221,13 @@ const styles = StyleSheet.create({
     shadowOpacity: 0,
     elevation: 0,
   },
+  buttonDanger: {
+    backgroundColor: colors.surface,
+    borderWidth: 2,
+    borderColor: colors.avoid,
+    shadowOpacity: 0,
+    elevation: 0,
+  },
   buttonPressed: { opacity: 0.88, transform: [{ scale: 0.98 }] },
   buttonText: {
     color: colors.white,
@@ -184,5 +240,8 @@ const styles = StyleSheet.create({
   },
   buttonTextGhost: {
     color: colors.textSecondary,
+  },
+  buttonTextDanger: {
+    color: colors.avoid,
   },
 });

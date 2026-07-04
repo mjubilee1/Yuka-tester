@@ -1,6 +1,17 @@
 export type Verdict = "buy" | "maybe" | "avoid";
 
-export type ProductCategory = "protein_bar" | "greek_yogurt" | "unknown";
+export type ProductCategory =
+  | "protein_bar"
+  | "greek_yogurt"
+  | "cottage_cheese"
+  | "protein_milk"
+  | "unknown";
+
+export type WeightBand = "under_160" | "160_200" | "over_200";
+
+export type CutAggressiveness = "easy" | "normal" | "aggressive";
+
+export type ScanDisposition = "cart" | "left";
 
 export interface NutritionFacts {
   calories: number | null;
@@ -22,6 +33,8 @@ export interface Product {
   ingredients?: string;
   source?: string;
   confidence: "high" | "medium" | "low" | "missing";
+  /** e.g. "Per serving (150g)" — omit when unknown */
+  serving_label?: string | null;
 }
 
 export interface ThresholdRange {
@@ -43,6 +56,8 @@ export interface GoalConfig {
   displayName: string;
   protein_bar: CategoryThresholds;
   greek_yogurt: CategoryThresholds;
+  cottage_cheese: CategoryThresholds;
+  protein_milk: CategoryThresholds;
   default: CategoryThresholds;
 }
 
@@ -55,8 +70,12 @@ export interface Flag {
 export interface ScoreResult {
   verdict: Verdict;
   flags: Flag[];
+  /** Plain-English rule lines (metric vs threshold) */
+  ruleLines: string[];
   explanation: string;
   confidence: Product["confidence"];
+  confidenceLabel: string;
+  servingLabel: string;
   product: Pick<Product, "barcode" | "name" | "brand" | "category">;
   metrics: {
     protein_g: number | null;
@@ -74,6 +93,8 @@ export interface CompareResult {
     added_sugar_g: number | null;
     calories: number | null;
   };
+  /** Fast aisle headline: "Winner: Quest — +8g protein · −3g sugar" */
+  headline: string;
   summary: string;
 }
 
