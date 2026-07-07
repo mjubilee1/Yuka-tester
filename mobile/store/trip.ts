@@ -32,9 +32,6 @@ interface TripState {
   compareSlot: ScoreResult | null;
   activeScans: TripScan[];
   lastTripSummary: TripSummary | null;
-  previousTripSummary: TripSummary | null;
-  /** Newest first, max 3 completed trips */
-  tripHistory: TripSummary[];
   setCompareSlot: (score: ScoreResult | null) => void;
   addScan: (scan: TripScan) => void;
   setReason: (scanId: string, reason: ReasonChip) => void;
@@ -78,8 +75,6 @@ export const useTripStore = create<TripState>()(
       compareSlot: null,
       activeScans: [],
       lastTripSummary: null,
-      previousTripSummary: null,
-      tripHistory: [],
       setCompareSlot: (score) => set({ compareSlot: score }),
       addScan: (scan) =>
         set((state) => ({ activeScans: [...state.activeScans, scan] })),
@@ -91,11 +86,8 @@ export const useTripStore = create<TripState>()(
         })),
       endTrip: () => {
         const summary = buildSummary(get().activeScans);
-        const history = [summary, ...get().tripHistory].slice(0, 3);
         set({
-          previousTripSummary: get().lastTripSummary,
           lastTripSummary: summary,
-          tripHistory: history,
           activeScans: [],
           compareSlot: null,
         });
@@ -105,19 +97,15 @@ export const useTripStore = create<TripState>()(
     }),
     {
       name: "cut-cart-trip",
-      version: 3,
+      version: 4,
       storage: createJSONStorage(() => AsyncStorage),
       migrate: () => ({
         compareSlot: null,
         activeScans: [],
         lastTripSummary: null,
-        previousTripSummary: null,
-        tripHistory: [],
       }),
       partialize: (state) => ({
         lastTripSummary: state.lastTripSummary,
-        previousTripSummary: state.previousTripSummary,
-        tripHistory: state.tripHistory,
         activeScans: state.activeScans,
       }),
     }

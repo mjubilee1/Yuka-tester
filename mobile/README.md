@@ -34,8 +34,7 @@ npm start
 - Plain-English rules + human confidence
 - Serving size on every verdict
 - Compare with deltas first
-- Optional price → $/20g protein
-- Trip delta vs last shop + last 3 trips
+- Cart audit: in cart + left behind (with reasons)
 - Categories: bars, Greek yogurt, cottage cheese, protein milk
 
 ## Sync product cache from parent project

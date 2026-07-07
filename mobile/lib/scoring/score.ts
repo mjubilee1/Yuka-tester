@@ -163,18 +163,4 @@ export function compareProducts(
   return { winner, loser, deltas, headline, summary };
 }
 
-export function formatTripDelta(
-  current: { totalProtein: number; totalSugar: number },
-  previous: { totalProtein: number; totalSugar: number } | null
-): string | null {
-  if (!previous) return null;
-  const parts: string[] = [];
-  const dProtein = Math.round(current.totalProtein - previous.totalProtein);
-  const dSugar = Math.round(current.totalSugar - previous.totalSugar);
-  if (dProtein !== 0) parts.push(`${dProtein > 0 ? "+" : ""}${dProtein}g protein`);
-  if (dSugar !== 0) parts.push(`${dSugar > 0 ? "+" : ""}${dSugar}g sugar`);
-  if (parts.length === 0) return "Same protein & sugar as last shop";
-  return `${parts.join(" · ")} vs last shop`;
-}
-
 export { goalConfig };

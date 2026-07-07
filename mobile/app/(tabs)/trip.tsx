@@ -3,14 +3,11 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 import { VerdictBadge } from "@/components/ui";
 import { theme } from "@/constants/theme";
-import { formatTripDelta } from "@/lib/scoring/score";
 import { cartScans, useTripStore, type TripScan } from "@/store/trip";
 
 export default function TripScreen() {
   const activeScans = useTripStore((s) => s.activeScans);
   const lastTripSummary = useTripStore((s) => s.lastTripSummary);
-  const previousTripSummary = useTripStore((s) => s.previousTripSummary);
-  const tripHistory = useTripStore((s) => s.tripHistory);
 
   const liveCart = cartScans(activeScans);
   const liveLeft = activeScans.filter((s) => s.disposition === "left");
@@ -51,39 +48,12 @@ export default function TripScreen() {
     0
   );
 
-  // Live trip: vs last completed. Finished trip: vs the one before it.
-  const tripDelta = showActive
-    ? formatTripDelta(
-        { totalProtein, totalSugar },
-        lastTripSummary
-          ? {
-              totalProtein: lastTripSummary.totalProtein,
-              totalSugar: lastTripSummary.totalSugar,
-            }
-          : null
-      )
-    : formatTripDelta(
-        { totalProtein, totalSugar },
-        previousTripSummary
-          ? {
-              totalProtein: previousTripSummary.totalProtein,
-              totalSugar: previousTripSummary.totalSugar,
-            }
-          : null
-      );
-
   return (
     <SafeAreaView style={styles.safe}>
       <ScrollView contentContainerStyle={styles.container}>
         <Text style={styles.title}>Cart audit</Text>
         {showActive && (
           <Text style={styles.hint}>Live trip — only In cart items count</Text>
-        )}
-
-        {tripDelta && (
-          <View style={styles.deltaCard}>
-            <Text style={styles.deltaText}>{tripDelta}</Text>
-          </View>
         )}
 
         <View style={styles.summaryCard}>
@@ -135,23 +105,6 @@ export default function TripScreen() {
                   ) : null}
                 </View>
                 <VerdictBadge verdict={scan.score.verdict} size="medium" />
-              </View>
-            ))}
-          </>
-        )}
-
-        {!showActive && tripHistory.length > 1 && (
-          <>
-            <Text style={styles.sectionTitle}>Recent trips</Text>
-            {tripHistory.map((trip, i) => (
-              <View key={trip.endedAt ?? i} style={styles.historyRow}>
-                <Text style={styles.historyLabel}>
-                  {i === 0 ? "This trip" : i === 1 ? "Last trip" : "2 trips ago"}
-                </Text>
-                <Text style={styles.historyMacros}>
-                  {Math.round(trip.totalProtein)}g protein ·{" "}
-                  {Math.round(trip.totalSugar)}g sugar · {trip.scans.length} in cart
-                </Text>
               </View>
             ))}
           </>
@@ -213,17 +166,6 @@ const styles = StyleSheet.create({
     color: colors.maybe,
     marginTop: 8,
     fontWeight: "600",
-  },
-  deltaCard: {
-    marginTop: 16,
-    backgroundColor: colors.primaryMuted,
-    borderRadius: radius.md,
-    padding: 14,
-  },
-  deltaText: {
-    fontSize: 16,
-    fontWeight: "800",
-    color: colors.primaryDark,
   },
   summaryCard: {
     backgroundColor: colors.surface,
@@ -304,20 +246,4 @@ const styles = StyleSheet.create({
   },
   serving: { fontSize: 12, color: colors.textMuted, marginTop: 2 },
   reason: { fontSize: 12, color: colors.textMuted, marginTop: 4, fontWeight: "600" },
-  historyRow: {
-    paddingVertical: 12,
-    borderBottomWidth: 1,
-    borderBottomColor: colors.borderMuted,
-  },
-  historyLabel: {
-    fontSize: 13,
-    fontWeight: "800",
-    color: colors.primaryDark,
-  },
-  historyMacros: {
-    fontSize: 14,
-    fontWeight: "600",
-    color: colors.textSecondary,
-    marginTop: 4,
-  },
 });

@@ -1,13 +1,6 @@
 import { useLocalSearchParams, useRouter } from "expo-router";
-import { useEffect, useMemo, useState } from "react";
-import {
-  ActivityIndicator,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
-} from "react-native";
+import { useEffect, useState } from "react";
+import { ActivityIndicator, ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import {
@@ -32,7 +25,6 @@ export default function ResultScreen() {
   const setCompareSlot = useTripStore((s) => s.setCompareSlot);
   const [score, setScore] = useState<ScoreResult | null>(null);
   const [loading, setLoading] = useState(true);
-  const [priceText, setPriceText] = useState("");
 
   useEffect(() => {
     if (params.error === "not_found" || params.error === "compare_lost") {
@@ -58,14 +50,6 @@ export default function ResultScreen() {
       setLoading(false);
     });
   }, [params.barcode, params.error, profile.weightBand, profile.aggressiveness]);
-
-  const proteinPerDollar = useMemo(() => {
-    if (!score?.metrics.protein_g) return null;
-    const price = parseFloat(priceText);
-    if (!price || price <= 0) return null;
-    const per20 = (price / score.metrics.protein_g) * 20;
-    return per20;
-  }, [priceText, score]);
 
   const commit = (disposition: "cart" | "left") => {
     if (!score) return;
@@ -116,10 +100,7 @@ export default function ResultScreen() {
 
   return (
     <SafeAreaView style={styles.safe}>
-      <ScrollView
-        contentContainerStyle={styles.container}
-        keyboardShouldPersistTaps="handled"
-      >
+      <ScrollView contentContainerStyle={styles.container}>
         <View style={styles.productCard}>
           <Text style={styles.brand}>{score.product.brand}</Text>
           <Text style={styles.name}>{score.product.name}</Text>
@@ -139,34 +120,22 @@ export default function ResultScreen() {
           servingLabel={score.servingLabel}
         />
 
-        <View style={styles.priceRow}>
-          <Text style={styles.priceLabel}>$</Text>
-          <TextInput
-            style={styles.priceInput}
-            value={priceText}
-            onChangeText={setPriceText}
-            placeholder="price (optional)"
-            placeholderTextColor={theme.colors.textMuted}
-            keyboardType="decimal-pad"
-            returnKeyType="done"
-          />
-          {proteinPerDollar != null && (
-            <Text style={styles.ppd}>
-              ${proteinPerDollar.toFixed(2)} / 20g protein
-            </Text>
-          )}
-        </View>
-
         <View style={styles.actions}>
           <AppButton title="In cart" onPress={() => commit("cart")} />
           <View style={styles.spacer} />
           <AppButton title="Left it" variant="danger" onPress={() => commit("left")} />
+          <View style={styles.spacer} />
+          <AppButton
+            title="Just looking"
+            variant="secondary"
+            onPress={() => router.replace("/scan")}
+          />
         </View>
 
         <View style={styles.spacer} />
         <AppButton
           title="Compare"
-          variant="secondary"
+          variant="ghost"
           onPress={() => {
             setCompareSlot(score);
             router.replace("/scan");
@@ -211,36 +180,7 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     textTransform: "capitalize",
   },
-  priceRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 8,
-    marginBottom: 12,
-    flexWrap: "wrap",
-  },
-  priceLabel: {
-    fontSize: 18,
-    fontWeight: "800",
-    color: colors.textSecondary,
-  },
-  priceInput: {
-    minWidth: 120,
-    borderWidth: 1,
-    borderColor: colors.borderMuted,
-    borderRadius: radius.sm,
-    paddingHorizontal: 12,
-    paddingVertical: 10,
-    fontSize: 16,
-    fontWeight: "600",
-    color: colors.text,
-    backgroundColor: colors.surface,
-  },
-  ppd: {
-    fontSize: 13,
-    fontWeight: "700",
-    color: colors.primaryDark,
-  },
-  actions: { marginTop: 4 },
+  actions: { marginTop: 8 },
   errorTitle: { fontSize: 22, fontWeight: "800", color: colors.text },
   errorText: {
     fontSize: 15,

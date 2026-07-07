@@ -127,7 +127,11 @@ export default function CompareScreen() {
         <View style={styles.spacer} />
         <AppButton title="Left both" variant="danger" onPress={leaveBoth} />
         <View style={styles.spacer} />
-        <AppButton title="Scan another" variant="ghost" onPress={() => router.replace("/scan")} />
+        <AppButton
+          title="Just looking"
+          variant="secondary"
+          onPress={() => router.replace("/scan")}
+        />
       </ScrollView>
     </SafeAreaView>
   );
